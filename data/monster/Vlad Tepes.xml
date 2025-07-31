@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Vlad Tepes" level="4000" maglevel="4500" experience="8500000" pushable="0" armor="28" defense="25" canpushitems="1" staticattack="50" changetarget="200" speed="220">
+    <health now="2000450" max="2000450"/>
+    <look type="68" head="20" body="30" legs="40" feet="50" corpse="2155"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="86" effect="9" splash="255"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="15" attack="70000"/>
+        <attack name="lifedrain" interval="1000" chance="90" range="7" target="0" radius="1" min="-40000" max="-90000">
+            <attribute key="areaEffect" value="redshimmer"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="invisible"/>
+    </defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="BLOOD!"/>
+        <voice sentence="I smell a living!"/>
+        <voice sentence="Let me Impale you!"/>
+        <voice sentence="I call you my bats!, come!"/>
+    </voices>
+    <loot>
+</loot>
+</monster>

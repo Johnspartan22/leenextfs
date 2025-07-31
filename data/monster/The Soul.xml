@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="The Soul" level="500" maglevel="500" experience="9000000" pushable="0" armor="35" defense="40" canpushitems="1" staticattack="50" changetarget="200" speed="270">
+    <health now="5000000" max="5000000"/>
+    <look type="99" head="95" body="116" legs="119" feet="115" corpse="3025"/>
+    <combat targetdistance="1" runonhealth="80"/>
+    <immunities>
+        <immunity physical="1"/>
+        <immunity energy="1"/>
+        <immunity earth="1"/>
+        <immunity ice="1"/>
+        <immunity holy="1"/>
+        <immunity death="1"/>
+        <immunity lifedrain="1"/>
+        <immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+        <immunity invisible="1"/>
+        <immunity poison="1"/>
+    </immunities>
+    <attacks>
+        <attack name="physical" interval="1000" chance="90" range="7" target="1" radius="4" min="-30000" max="-90000">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+    </attacks>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="Oh... A little intruder..."/>
+    </voices>
+    <loot>
+        <item id="2471" chance="1500"/>
+        <item id="2466" chance="1500"/>
+        <item id="2470" chance="1500"/>
+        <item id="2646" chance="1500"/>
+        <item id="2523" chance="1500"/>
+        <item id="2113" chance="500"/>
+        <item id="5080" chance="500"/>
+        <item id="3954" chance="500"/>
+        <item id="2404" chance="1500"/>
+        <item id="2449" chance="1500"/>
+        <item id="2435" chance="1500"/>
+        <item id="3965" chance="1500"/>
+        <item id="2450" chance="1500"/>
+        <item id="2453" chance="1500"/>
+        <item id="2468" chance="1500"/>
+        <item id="2164" chance="1500"/>
+        <item id="2399" countmax="100" chance1="13333" chancemax="0"/>
+        <item id="2270" chance="4500"/>
+        <item id="2474" chance="2500"/>
+        <item id="2195" chance="2500"/>
+        <item id="2656" chance="2500"/>
+        <item id="3983" chance="2500"/>
+        <item id="2160" countmax="100" chance1="13333" chancemax="0"/>
+        <item id="2160" countmax="100" chance1="13333" chancemax="0"/>
+        <item id="2197" chance="6500"/>
+        <item id="2529" chance="500"/>
+        <item id="3965" chance="500"/>
+        <item id="2450" chance="500"/>
+        <item id="2453" chance="500"/>
+        <item id="2468" chance="500"/>
+        <item id="2164" chance="500"/>
+        <item id="2399" countmax="100" chance1="3333" chancemax="0"/>
+        <item id="2474" chance="500"/>
+        <item id="2195" chance="500"/>
+        <item id="2656" chance="500"/>
+        <item id="3983" chance="500"/>
+    </loot>
+</monster>

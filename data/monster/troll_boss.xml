@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Troll" nameDescription="a troll" race="blood" experience="20" speed="126" manacost="290">
-    <health now="50" max="50"/>
+<monster name="Troll Boss" nameDescription="a troll" race="blood" experience="40" speed="252" manacost="290">
+    <health now="100" max="100"/>
     <look type="15" head="0" body="0" legs="0" feet="0" corpse="3067"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
@@ -15,9 +15,13 @@
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="15"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="trollBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="15" attack="10"/>
+        <attack name="melee" interval="2000" skill="15" attack="20"/>
     </attacks>
     <defenses armor="6" defense="8"/>
     <immunities>
@@ -31,9 +35,6 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <voices interval="5000" chance="10">
         <voice sentence="Grrrr"/>
         <voice sentence="Groar"/>
@@ -42,21 +43,6 @@
         <voice sentence="Hmmm, dogs."/>
     </voices>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2148" countmax="10" chance="100000"/>
-        <item id="2389" countmax="1" chance="33333"/>
-        <item id="2643" chance="10000"/>
-        <item id="2461" chance="20000"/>
-        <item id="2120" chance="23333"/>
-        <item id="2172" chance="3333"/>
-        <item id="1987" chance="100000">
-            <inside>
-                <item id="2512" chance="6666"/>
-                <item id="2666" countmax="2" chance="30000"/>
-                <item id="2380" chance="10000"/>
-                <item id="2170" chance="1428"/>
-                <item id="2448" chance="10000"/>
-            </inside>
-        </item>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

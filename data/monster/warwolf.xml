@@ -1,29 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Tiger" nameDescription="a tiger" race="blood" experience="40" speed="200" manacost="420">
-    <health now="75" max="75"/>
-    <look type="125" head="0" body="0" legs="0" feet="0" corpse="4292"/>
-    <targetchange interval="2000" chance="5"/>
-    <strategy attack="70" defense="0"/>
+<monster name="War Wolf" nameDescription="a war wolf" race="blood" experience="55" speed="264" manacost="420">
+    <health now="140" max="140"/>
+    <look type="3" head="0" body="0" legs="0" feet="0" corpse="2969"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
     <flags>
-        <flag summonable="1"/>
+        <flag summonable="0"/>
         <flag attackable="1"/>
         <flag hostile="1"/>
         <flag illusionable="1"/>
         <flag convinceable="1"/>
         <flag pushable="0"/>
         <flag canpushitems="1"/>
-        <flag canpushcreatures="1"/>
+        <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="0"/>
     </flags>
     <attacks>
-        <attack name="melee" interval="2000" skill="42" attack="15"/>
+        <attack name="melee" interval="2000" skill="39" attack="24"/>
     </attacks>
-    <defenses armor="5" defense="15">
-        <defense name="speed" interval="1000" chance="12" speedchange="567" duration="3000">
-            <attribute key="areaEffect" value="redshimmer"/>
-        </defense>
-    </defenses>
+    <defenses armor="8" defense="16"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
@@ -38,10 +34,13 @@
     <script>
         <event name="BossSystem"/>
     </script>
+    <voices interval="5000" chance="10">
+        <voice sentence="Grrrrrrr"/>
+        <voice sentence="Yoooohhuuuu!" yell="1"/>
+    </voices>
     <loot>
         <item id="3976" countmax="10" chance="50000"/>
-        <item id="2671" countmax="2" chance="33333"/>
-        <item id="2666" countmax="3" chance="33333"/>
-        <item id="3976" countmax="10" chance="50000"/>
+        <item id="2671" countmax="5" chance="33333"/>
+        <item id="5897" countmax="1" chance="6666"/>
     </loot>
 </monster>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Troll" nameDescription="a troll" race="blood" experience="20" speed="126" manacost="290">
-    <health now="50" max="50"/>
-    <look type="15" head="0" body="0" legs="0" feet="0" corpse="3067"/>
+<monster name="Swamp Troll" nameDescription="a swamp troll" race="blood" experience="25" speed="128" manacost="320">
+    <health now="55" max="55"/>
+    <look type="76" head="0" body="0" legs="0" feet="0" corpse="2995"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
     <flags>
@@ -17,9 +17,9 @@
         <flag runonhealth="15"/>
     </flags>
     <attacks>
-        <attack name="melee" interval="2000" skill="15" attack="10"/>
+        <attack name="melee" interval="2000" skill="20" attack="12" poison="10"/>
     </attacks>
-    <defenses armor="6" defense="8"/>
+    <defenses armor="6" defense="10"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
@@ -36,26 +36,18 @@
     </script>
     <voices interval="5000" chance="10">
         <voice sentence="Grrrr"/>
-        <voice sentence="Groar"/>
-        <voice sentence="Gruntz!"/>
-        <voice sentence="Hmmm, bugs."/>
-        <voice sentence="Hmmm, dogs."/>
+        <voice sentence="Groar!"/>
+        <voice sentence="Me strong! Me ate spinach!"/>
     </voices>
     <loot>
         <item id="3976" countmax="10" chance="50000"/>
-        <item id="2148" countmax="10" chance="100000"/>
-        <item id="2389" countmax="1" chance="33333"/>
-        <item id="2643" chance="10000"/>
-        <item id="2461" chance="20000"/>
-        <item id="2120" chance="23333"/>
-        <item id="2172" chance="3333"/>
+        <item id="2148" countmax="12" chance="100000"/>
+        <item id="2667" countmax="1" chance="90000"/>
         <item id="1987" chance="100000">
             <inside>
-                <item id="2512" chance="6666"/>
-                <item id="2666" countmax="2" chance="30000"/>
-                <item id="2380" chance="10000"/>
-                <item id="2170" chance="1428"/>
-                <item id="2448" chance="10000"/>
+                <item id="2643" chance="20000"/>
+                <item id="2050" chance="20000"/>
+                <item id="2580" chance="20000"/>
             </inside>
         </item>
     </loot>

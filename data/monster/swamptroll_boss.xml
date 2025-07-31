@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Swamp Troll Boss" nameDescription="a swamp troll" race="blood" experience="50" speed="256" manacost="320">
+    <health now="110" max="110"/>
+    <look type="76" head="0" body="0" legs="0" feet="0" corpse="2995"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag runonhealth="15"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="swamptrollBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="20" attack="24" poison="10"/>
+    </attacks>
+    <defenses armor="6" defense="10"/>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="0"/>
+        <immunity fire="0"/>
+        <immunity poison="0"/>
+        <immunity lifedrain="0"/>
+        <immunity paralyze="0"/>
+        <immunity outfit="0"/>
+        <immunity drunk="0"/>
+        <immunity invisible="0"/>
+    </immunities>
+    <voices interval="5000" chance="10">
+        <voice sentence="Grrrr"/>
+        <voice sentence="Groar!"/>
+        <voice sentence="Me strong! Me ate spinach!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Tiger" nameDescription="a tiger" race="blood" experience="40" speed="200" manacost="420">
-    <health now="75" max="75"/>
+<monster name="Tiger Boss" nameDescription="a tiger" race="blood" experience="80" speed="400" manacost="420">
+    <health now="150" max="150"/>
     <look type="125" head="0" body="0" legs="0" feet="0" corpse="4292"/>
     <targetchange interval="2000" chance="5"/>
     <strategy attack="70" defense="0"/>
@@ -15,9 +15,13 @@
         <flag canpushcreatures="1"/>
         <flag targetdistance="1"/>
         <flag runonhealth="0"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="tigerBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="42" attack="15"/>
+        <attack name="melee" interval="2000" skill="42" attack="30"/>
     </attacks>
     <defenses armor="5" defense="15">
         <defense name="speed" interval="1000" chance="12" speedchange="567" duration="3000">
@@ -35,13 +39,7 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2671" countmax="2" chance="33333"/>
-        <item id="2666" countmax="3" chance="33333"/>
-        <item id="3976" countmax="10" chance="50000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Warlock" nameDescription="a warlock" race="blood" experience="4000" speed="230" manacost="0">
-    <health now="3200" max="3200"/>
+<monster name="Warlock Boss" nameDescription="a warlock" race="blood" experience="8000" speed="460" manacost="0">
+    <health now="6400" max="6400"/>
     <look type="130" head="0" body="52" legs="128" feet="95" corpse="3058"/>
     <targetchange interval="2000" chance="50"/>
     <strategy attack="100" defense="0"/>
@@ -15,17 +15,21 @@
         <flag canpushcreatures="1"/>
         <flag targetdistance="4"/>
         <flag runonhealth="1000"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="warlockBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="50" attack="40"/>
-        <attack name="physical" interval="1000" chance="50" range="7" min="-45" max="-105">
+        <attack name="melee" interval="2000" skill="50" attack="80"/>
+        <attack name="physical" interval="1000" chance="50" range="7" min="-90" max="-210">
             <attribute key="shootEffect" value="energy"/>
         </attack>
-        <attack name="manadrain" interval="1000" chance="17" range="7" min="-35" max="-75"/>
+        <attack name="manadrain" interval="1000" chance="17" range="7" min="-70" max="-150"/>
         <attack name="speed" interval="1000" chance="12" range="7" speedchange="-400" duration="40000">
             <attribute key="areaEffect" value="redshimmer"/>
         </attack>
-        <attack name="fire" interval="1000" chance="34" range="7" radius="3" target="1" min="-90" max="-170">
+        <attack name="fire" interval="1000" chance="34" range="7" radius="3" target="1" min="-180" max="-340">
             <attribute key="shootEffect" value="fire"/>
             <attribute key="areaEffect" value="firearea"/>
         </attack>
@@ -35,7 +39,7 @@
         <attack name="firefield" interval="1000" chance="20" range="7" radius="2" target="1">
             <attribute key="shootEffect" value="fire"/>
         </attack>
-        <attack name="energy" interval="1000" chance="13" length="8" spread="0" min="-145" max="-205">
+        <attack name="energy" interval="1000" chance="13" length="8" spread="0" min="-290" max="-410">
             <attribute key="areaEffect" value="energy"/>
         </attack>
     </attacks>
@@ -61,36 +65,12 @@
     <summons maxSummons="1">
         <summon name="stone golem" interval="1000" chance="10" max="1"/>
     </summons>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <voices interval="5000" chance="10">
         <voice sentence="Learn the secret of our magic! YOUR death!"/>
         <voice sentence="Even a rat is a better mage than you."/>
         <voice sentence="We don't like intruders!"/>
     </voices>
     <loot>
-        <item id="2148" countmax="100" chance="100000"/>
-        <item id="1986" chance="400"/>
-        <item id="2600" chance="10000"/>
-        <item id="2689" countmax="1" chance="11000"/>
-        <item id="2167" chance="3000"/>
-        <item id="2114" chance="1400"/>
-        <item id="1987" chance="100000">
-            <inside>
-                <item id="2148" countmax="50" chance="80000"/>
-                <item id="2146" countmax="2" chance="1400"/>
-                <item id="2178" countmax="1" chance="2500"/>
-                <item id="2679" countmax="4" chance="20000"/>
-                <item id="2047" chance="15000"/>
-                <item id="2411" chance="5000"/>
-                <item id="2792" countmax="5" chance="6666"/>
-                <item id="2793" countmax="2" chance="6666"/>
-                <item id="2656" chance="2000"/>
-                <item id="2466" chance="588"/>
-                <item id="2436" chance="1428"/>
-                <item id="2123" chance="500"/>
-            </inside>
-        </item>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

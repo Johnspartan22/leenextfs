@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="The Creator Boss" level="900" maglevel="450" experience="10000000" pushable="0" armor="129" defense="131" canpushitems="1" staticattack="50" changetarget="200" speed="480">
+    <health now="10000000" max="10000000"/>
+    <look type="130" head="0" body="114" legs="114" feet="114" corpse="3128"/>
+    <combat targetdistance="1" runonhealth="10000"/>
+    <attacks>
+        <attack name="physical" interval="1000" chance="90" range="7" target="1" radius="4" min="-60000" max="-180000">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="energy"/>
+        <defense immunity="fire"/>
+        <defense immunity="drunk"/>
+        <defense immunity="invisible"/>
+    </defenses>
+    <voices>
+        <voice sentence="..."/>
+    </voices>
+    <summons maxSummons="0">
+</summons>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="thecreatorBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

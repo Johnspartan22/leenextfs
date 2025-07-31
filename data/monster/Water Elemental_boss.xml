@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Water Elemental Boss" level="20000" maglevel="450" experience="1360000000" pushable="0" armor="15" defense="15" canpushitems="1" staticattack="50" changetarget="200" speed="580">
+    <health now="40000000" max="40000000"/>
+    <look type="166" head="20" body="30" legs="40" feet="50" corpse="2813"/>
+    <combat targetdistance="3" runonhealth="0"/>
+    <blood color="199" effect="0" splash="255"/>
+    <attacks>
+        <attack name="fire" interval="1000" chance="100" range="3" radius="2" target="1" min="-400000" max="-600000">
+            <attribute key="areaEffect" value="bluebubble"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="fire"/>
+        <defense immunity="invisible"/>
+    </defenses>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="waterelementalBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>
