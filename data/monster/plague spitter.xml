@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Plague Spitter" level="11000" maglevel="15000" experience="45000000" pushable="0" armor="10" defense="15" canpushitems="1" staticattack="15" changetarget="200" speed="200">
+    <health now="5000000" max="5000000"/>
+    <look type="122" head="20" body="30" legs="40" feet="50" corpse="4298"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="80000"/>
+        <attack name="physical" interval="1000" chance="90" length="1" target="1" spread="0" min="-100000" max="-250000">
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+    </attacks>
+    <defenses>
+</defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+</voices>
+    <loot>
+        <item id="2160" countmax="100" chance1="100000" chancemax="0"/>
+    </loot>
+</monster>

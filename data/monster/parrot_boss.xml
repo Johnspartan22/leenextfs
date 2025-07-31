@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Parrot" nameDescription="a parrot" race="blood" experience="0" speed="320" manacost="250">
-    <health now="25" max="25"/>
+<monster name="Parrot Boss" nameDescription="a parrot" race="blood" experience="0" speed="640" manacost="250">
+    <health now="50" max="50"/>
     <look type="217" head="0" body="0" legs="0" feet="0" corpse="4314"/>
     <targetchange interval="2000" chance="10"/>
     <strategy attack="100" defense="0"/>
@@ -15,9 +15,13 @@
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="25"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="parrotBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="13" attack="6"/>
+        <attack name="melee" interval="2000" skill="13" attack="12"/>
     </attacks>
     <defenses armor="2" defense="6"/>
     <immunities>
@@ -31,9 +35,6 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <voices interval="5000" chance="10">
         <voice sentence="BR? PL? SWE?"/>
         <voice sentence="Screeeeeeech!"/>
@@ -43,7 +44,6 @@
         <voice sentence="Hunterrr ish PK!"/>
     </voices>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="3976" countmax="3" chance="50000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

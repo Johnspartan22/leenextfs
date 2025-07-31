@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Orc Warlord Boss" level="300" maglevel="450" experience="300000" pushable="0" armor="35" defense="40" canpushitems="1" staticattack="50" changetarget="200" speed="400">
+    <health now="300000" max="300000"/>
+    <look type="7" head="20" body="30" legs="40" feet="50" corpse="2862"/>
+    <combat targetdistance="1" runonhealth="80"/>
+    <attacks>
+        <attack name="physical" min="-110000" max="-183600" probability="100"/>
+        <attack name="physical" interval="1000" chance="90" range="7" target="1" min="-30000" max="-35200">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+        <attack name="physical" interval="1000" chance="90" range="7" target="1" min="-6000" max="-10000">
+            <attribute key="shootEffect" value="fire"/>
+            <attribute key="areaEffect" value="energyarea"/>
+        </attack>
+    </attacks>
+    <voices>
+</voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="orcwarlordBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

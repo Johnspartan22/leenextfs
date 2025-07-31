@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Orc Shaman Boss" level="2000" maglevel="450" experience="324000000" pushable="0" armor="106" defense="103" canpushitems="1" staticattack="50" changetarget="200" speed="640">
+    <health now="5000000" max="5000000"/>
+    <look type="6" head="0" body="0" legs="0" feet="0" corpse="2860"/>
+    <combat targetdistance="5" runonhealth="50"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="5"/>
+        <flag runonhealth="50"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="orcshamanBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="energy" interval="500" chance="95" range="5" min="-96000" max="-160000">
+            <attribute key="shootEffect" value="fire"/>
+            <attribute key="areaEffect" value="energy"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="invisible"/>
+        <defense immunity="fire"/>
+        <defense immunity="energy"/>
+    </defenses>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

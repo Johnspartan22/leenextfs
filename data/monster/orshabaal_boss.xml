@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Demon God Boss" level="50" maglevel="450" experience="240000" pushable="0" armor="120" defense="120" canpushitems="1" staticattack="45" changetarget="200" speed="400">
+    <health now="600000" max="600000"/>
+    <look type="35" head="20" body="30" legs="40" feet="50" corpse="2916"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="199" effect="0" splash="255"/>
+    <attacks>
+        <attack name="physical" interval="1000" range="1" chance="100" min="-4000" max="-46000"/>
+        <attack name="energy" interval="1000" chance="90" length="8" spread="0" min="-800" max="-1240">
+            <attribute key="areaEffect" value="energy"/>
+        </attack>
+        <attack name="physical" interval="1000" chance="90" range="7" target="1" radius="4" min="-20000" max="-24000">
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="energy"/>
+        <defense immunity="fire"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <voices>
+        <voice sentence="PRAISED BE MY MASTERS, THE RUTHLESS SEVEN!"/>
+        <voice sentence="MUAHAHAHAHA!"/>
+    </voices>
+    <summons maxSummons="2">
+        <summon name="Demon" chance="400"/>
+    </summons>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="demongodBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

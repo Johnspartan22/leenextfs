@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Orc Shaman Boss" nameDescription="an orc shaman" race="blood" experience="220" speed="280" manacost="0">
+    <health now="230" max="230"/>
+    <look type="6" head="0" body="0" legs="0" feet="0" corpse="2860"/>
+    <targetchange interval="2000" chance="50"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="0"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="4"/>
+        <flag runonhealth="15"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="orcshamanBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="20" attack="26"/>
+        <attack name="energy" interval="1000" chance="13" range="7" min="-40" max="-60">
+            <attribute key="shootEffect" value="energy"/>
+            <attribute key="areaEffect" value="energy"/>
+        </attack>
+        <attack name="fire" interval="1000" chance="8" range="7" radius="1" target="1" min="-10" max="-90">
+            <attribute key="shootEffect" value="fire"/>
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+    </attacks>
+    <defenses armor="8" defense="10">
+        <defense name="healing" interval="1000" chance="25" min="27" max="43">
+            <attribute key="areaEffect" value="blueshimmer"/>
+        </defense>
+    </defenses>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="1"/>
+        <immunity fire="0"/>
+        <immunity poison="1"/>
+        <immunity lifedrain="0"/>
+        <immunity paralyze="0"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+        <immunity invisible="1"/>
+    </immunities>
+    <summons maxSummons="4">
+        <summon name="snake" interval="1000" chance="25" max="4"/>
+    </summons>
+    <voices interval="5000" chance="10">
+        <voice sentence="Grak brrretz gulu."/>
+        <voice sentence="Huumans stinkk!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

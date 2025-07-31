@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Petrified Hell Hound" level="1500" maglevel="1500" experience="55000000" pushable="0" armor="314" defense="136" canpushitems="1" staticattack="50" changetarget="200">
+    <health now="6000000" max="6000000"/>
+    <look type="101" head="20" body="30" legs="40" feet="50" corpse="3031"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="86" effect="9" splash="255"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="300000"/>
+        <attack name="star_monster" interval="1000" chance="70" target="0" min="-100000" max="-120000">
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="paralyze"/>
+    </defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="In grorlams name!"/>
+    </voices>
+    <loot>
+        <item id="2160" countmax="100" chance1="100000" chancemax="0"/>
+    </loot>
+</monster>
