@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Wolf Boss Boss" nameDescription="a wolf boss" race="blood" experience="120" speed="368" manacost="255">
+    <health now="100" max="100"/>
+    <look type="229" head="0" body="0" legs="0" feet="0" corpse="4368"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="1"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag runonhealth="0"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="wolfbossBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="40" attack="24"/>
+    </attacks>
+    <defenses armor="2" defense="8"/>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="0"/>
+        <immunity fire="1"/>
+        <immunity poison="0"/>
+        <immunity lifedrain="0"/>
+        <immunity paralyze="0"/>
+        <immunity outfit="0"/>
+        <immunity drunk="0"/>
+        <immunity invisible="0"/>
+    </immunities>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

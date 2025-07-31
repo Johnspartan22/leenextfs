@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Wolf" nameDescription="a wolf" race="blood" experience="18" speed="164" manacost="255">
-    <health now="25" max="25"/>
-    <look type="27" head="0" body="0" legs="0" feet="0" corpse="2826"/>
+<monster name="Winter Wolf Boss" nameDescription="a winter wolf" race="blood" experience="40" speed="340" manacost="260">
+    <health now="60" max="60"/>
+    <look type="52" head="0" body="0" legs="0" feet="0" corpse="2924"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
     <flags>
@@ -14,12 +14,16 @@
         <flag canpushitems="0"/>
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
-        <flag runonhealth="8"/>
+        <flag runonhealth="0"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="winterwolfBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="19" attack="12"/>
+        <attack name="melee" interval="2000" skill="21" attack="26"/>
     </attacks>
-    <defenses armor="1" defense="4"/>
+    <defenses armor="2" defense="6"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
@@ -31,11 +35,7 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2666" countmax="3" chance="90000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>
