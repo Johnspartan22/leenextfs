@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Elf" nameDescription="an elf" race="blood" experience="42" speed="190" manacost="320">
-    <health now="100" max="100"/>
+<monster name="Elf Boss" nameDescription="an elf" race="blood" experience="84" speed="380" manacost="320">
+    <health now="200" max="200"/>
     <look type="62" head="0" body="0" legs="0" feet="0" corpse="2945"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
@@ -15,10 +15,14 @@
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="0"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="elfBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="20" attack="12"/>
-        <attack name="physical" interval="1000" chance="5" range="7" min="-15" max="-35">
+        <attack name="melee" interval="2000" skill="20" attack="24"/>
+        <attack name="physical" interval="1000" chance="5" range="7" min="-30" max="-70">
             <attribute key="shootEffect" value="arrow"/>
         </attack>
     </attacks>
@@ -34,9 +38,6 @@
         <immunity drunk="1"/>
         <immunity invisible="1"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <voices interval="5000" chance="10">
         <voice sentence="Ulathil beia Thratha!"/>
         <voice sentence="Bahaha aka!"/>
@@ -45,21 +46,6 @@
         <voice sentence="Death to the defilers!"/>
     </voices>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2148" countmax="15" chance="100000"/>
-        <item id="2544" countmax="6" chance="800000"/>
-        <item id="2480" chance="10000"/>
-        <item id="2484" chance="20000"/>
-        <item id="2478" chance="4000"/>
-        <item id="2643" chance="25000"/>
-        <item id="2005" chance="6666"/>
-        <item id="1987" chance="100000">
-            <inside>
-                <item id="2397" chance="5000"/>
-                <item id="2674" countmax="4" chance="800000"/>
-                <item id="2642" chance="9000"/>
-                <item id="2456" chance="6666"/>
-            </inside>
-        </item>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Dwarf Boss" level="200" maglevel="450" experience="200000" pushable="0" armor="53" defense="54" canpushitems="1" staticattack="50" changetarget="200" speed="560">
+    <health now="180000" max="180000"/>
+    <look type="69" head="20" body="30" legs="40" feet="50" corpse="2960"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="86" effect="9" splash="255"/>
+    <attacks>
+        <attack type="melee" mindamage="11000" maxdamage="30000" probability="100"/>
+        <attack type="distance" name="largerock" mindamage="2020" maxdamage="8000" cycleticks="2000" probability="80"/>
+    </attacks>
+    <defenses>
+        <defense immunity="fire"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="dwarfBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

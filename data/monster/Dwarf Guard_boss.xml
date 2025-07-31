@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Dwarf Guard Boss" level="1500" maglevel="450" experience="110000000" pushable="0" armor="314" defense="136" canpushitems="1" staticattack="50" changetarget="200">
+    <health now="12000000" max="12000000"/>
+    <look type="70" head="20" body="30" legs="40" feet="50" corpse="2983"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="86" effect="9" splash="255"/>
+    <attacks>
+        <attack type="melee" mindamage="50" maxdamage="300000"/>
+        <attack type="instant" name="star" cycleticks="1000" probability="75"/>
+    </attacks>
+    <defenses>
+        <defense immunity="paralyze"/>
+    </defenses>
+    <voices>
+</voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="dwarfguardBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

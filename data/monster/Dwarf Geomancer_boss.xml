@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Dwarf Geomancer Boss" level="5300" maglevel="450" experience="360000" pushable="0" armor="41" defense="53" canpushitems="1" staticattack="40" changetarget="200" speed="800">
+    <health now="270000" max="270000"/>
+    <look type="66" head="20" body="30" legs="40" feet="50" corpse="2987"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="80" attack="40000"/>
+        <attack name="energy" interval="1000" chance="90" length="8" spread="0" min="-600000" max="-840000">
+            <attribute key="areaEffect" value="energy"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="energy"/>
+        <defense immunity="paralyze"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <voices>
+</voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="dwarfgeomancerBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

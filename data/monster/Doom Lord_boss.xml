@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Doom Lord Boss" level="200000" maglevel="450" experience="500000" pushable="0" armor="49" defense="51" canpushitems="1" staticattack="40" changetarget="200" speed="400">
+    <health now="1000000" max="1000000"/>
+    <look type="35" head="20" body="30" legs="40" feet="50" corpse="2156"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="199" effect="0" splash="255"/>
+    <attacks>
+        <attack name="melee" interval="2000" chance="100" min="-30384" max="-33020"/>
+        <attack name="healing" interval="5000" chance="50" min="2000" max="4000">
+            <attribute key="areaEffect" value="blueshimmer"/>
+        </attack>
+        <attack name="energy" interval="7000" chance="60" length="8" spread="0" min="-1600" max="-2400">
+            <attribute key="areaEffect" value="energy"/>
+        </attack>
+        <attack name="fire" interval="500" chance="60" target="1" radius="5" min="-1200" max="-1800">
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+        <attack name="fire" interval="900" chance="60" target="1" radius="5" min="-1400" max="-2000">
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="energy"/>
+        <defense immunity="fire"/>
+        <defense immunity="paralyze"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <voices>
+</voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="doomlordBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

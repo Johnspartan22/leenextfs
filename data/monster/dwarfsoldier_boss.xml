@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Dwarf Soldier Boss" nameDescription="a dwarf soldier" race="blood" experience="140" speed="352" manacost="360">
+    <health now="270" max="270"/>
+    <look type="71" head="0" body="0" legs="0" feet="0" corpse="2985"/>
+    <targetchange interval="2000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag runonhealth="0"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="dwarfsoldierBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="42" attack="42"/>
+        <attack name="physical" interval="1000" chance="13" range="7" min="-40" max="-80">
+            <attribute key="shootEffect" value="bolt"/>
+        </attack>
+    </attacks>
+    <defenses armor="9" defense="20"/>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="0"/>
+        <immunity fire="0"/>
+        <immunity poison="1"/>
+        <immunity lifedrain="0"/>
+        <immunity paralyze="0"/>
+        <immunity outfit="0"/>
+        <immunity drunk="0"/>
+        <immunity invisible="0"/>
+    </immunities>
+    <voices interval="5000" chance="10">
+        <voice sentence="Hail Durin!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>
