@@ -11,13 +11,13 @@ local newPosition = {
 	{x = 189, y = 653, z = 13}
 }
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition)
 	if item.itemid == 1945 then
 		local players = {}
 		for _, position in ipairs(playerPosition) do
 			local topPlayer = Tile(position):getTopCreature()
-			if not topPlayer or not topPlayer:isPlayer() or topPlayer:getLevel() < 100 or topPlayer:getStorageValue(30015) ~= -1 then
-				player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
+			if topPlayer == nil or not topPlayer:isPlayer() or topPlayer:getLevel() < 100 or topPlayer:getStorageValue(30015) ~= -1 then
+				player:sendTextMessage(MESSAGE_STATUS_SMALL, Game.getReturnMessage(RETURNVALUE_NOTPOSSIBLE))
 				return false
 			end
 			players[#players + 1] = topPlayer
@@ -30,7 +30,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end
 		item:transform(1946)
 	elseif item.itemid == 1946 then
-		player:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
+		player:sendTextMessage(MESSAGE_STATUS_SMALL, Game.getReturnMessage(RETURNVALUE_NOTPOSSIBLE))
 	end
 	return true
 end
