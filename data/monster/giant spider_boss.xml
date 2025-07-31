@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Giant Spider Boss" level="14" maglevel="450" experience="1800" pushable="0" armor="35" defense="37" canpushitems="1" staticattack="50" changetarget="200" speed="540">
+    <health now="2600" max="2600"/>
+    <look type="38" corpse="2857"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="30" effect="16" splash="4"/>
+    <attacks>
+        <attack type="melee" mindamage="120" maxdamage="300" probability="100"/>
+        <attack type="rune" name="gs poison" exhaustion="500" cycleticks="5000" probability="65"/>
+        <attack type="instant" name="gs_haste" exhaustion="500" cycleticks="8000" probability="75"/>
+        <attack type="instant" name="exura" exhaustion="500" cycleticks="3850" probability="40"/>
+    </attacks>
+    <defenses>
+        <defense immunity="fire"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <summons maxSummons="0">
+</summons>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="giantspiderBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

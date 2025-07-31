@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="First Mate Boss" level="500" maglevel="450" experience="18000000" pushable="0" armor="235" defense="240" canpushitems="1" staticattack="50" changetarget="200" speed="540">
+    <health now="10000000" max="10000000"/>
+    <look type="139" head="114" body="114" legs="114" feet="114" corpse="3058"/>
+    <combat targetdistance="1" runonhealth="80"/>
+    <attacks>
+        <attack type="melee" exhaustion="10" mindamage="90000" maxdamage="150000" cycleticks="1000" probability="95"/>
+        <attack type="rune" name="sudden death" cycleticks="100" probability="100"/>
+    </attacks>
+    <defenses>
+        <defense immunity="physical"/>
+        <defense immunity="poison"/>
+    </defenses>
+    <voices>
+        <voice sentence="Oh... A little intruder..."/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="firstmateBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

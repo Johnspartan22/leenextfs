@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Fernfang Boss" nameDescription="Fernfang" race="blood" experience="800" speed="540" manacost="0">
+    <health now="800" max="800"/>
+    <look type="206" head="0" body="0" legs="0" feet="0" corpse="3058"/>
+    <targetchange interval="2000" chance="7"/>
+    <strategy attack="70" defense="10"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="4"/>
+        <flag runonhealth="0"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="fernfangBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="50" attack="80"/>
+        <attack name="manadrain" interval="1000" chance="12" range="7" min="-50" max="-90"/>
+        <attack name="energy" interval="1000" chance="13" range="7" min="-140" max="-180">
+            <attribute key="shootEffect" value="energy"/>
+            <attribute key="areaEffect" value="energy"/>
+        </attack>
+        <attack name="physical" interval="1000" chance="10" range="7" min="-280" max="-360">
+            <attribute key="shootEffect" value="suddendeath"/>
+        </attack>
+    </attacks>
+    <defenses armor="25" defense="50">
+        <defense name="healing" interval="1000" chance="15" min="90" max="120">
+            <attribute key="areaEffect" value="blueshimmer"/>
+        </defense>
+        <defense name="speed" interval="1000" chance="7" speedchange="1701" duration="10000">
+            <attribute key="areaEffect" value="redshimmer"/>
+        </defense>
+        <defense name="strength" interval="1000" chance="5">
+            <attribute key="areaEffect" value="redshimmer"/>
+        </defense>
+        <defense name="outfit" interval="1000" chance="5" monster="war wolf" duration="14000">
+            <attribute key="areaEffect" value="blueshimmer"/>
+        </defense>
+    </defenses>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="0"/>
+        <immunity fire="0"/>
+        <immunity poison="1"/>
+        <immunity lifedrain="1"/>
+        <immunity paralyze="0"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+        <immunity invisible="1"/>
+    </immunities>
+    <summons max="4">
+        <summon name="war wolf" interval="1000" chance="13" max="4"/>
+    </summons>
+    <voices interval="5000" chance="10">
+        <voice sentence="You desecrated this place!"/>
+        <voice sentence="I will cleanse this isle!"/>
+        <voice sentence="Grrrrrrr"/>
+        <voice sentence="Yoooohhuuuu!" yell="1"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

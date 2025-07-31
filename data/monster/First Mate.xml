@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="First Mate" level="500" maglevel="500" experience="9000000" pushable="0" armor="235" defense="240" canpushitems="1" staticattack="50" changetarget="200" speed="270">
+    <health now="5000000" max="5000000"/>
+    <look type="139" head="114" body="114" legs="114" feet="114" corpse="3058"/>
+    <combat targetdistance="1" runonhealth="80"/>
+    <attacks>
+        <attack type="melee" exhaustion="10" mindamage="90000" maxdamage="150000" cycleticks="1000" probability="95"/>
+        <attack type="rune" name="sudden death" cycleticks="100" probability="100"/>
+    </attacks>
+    <defenses>
+        <defense immunity="physical"/>
+        <defense immunity="poison"/>
+    </defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="Oh... A little intruder..."/>
+    </voices>
+    <loot>
+        <item id="2471" chance="15000"/>
+        <item id="2466" chance="15000"/>
+        <item id="2470" chance="15000"/>
+        <item id="2646" chance="15000"/>
+        <item id="2523" chance="15000"/>
+        <item id="2113" chance="5000"/>
+        <item id="5080" chance="5000"/>
+        <item id="3954" chance="5000"/>
+        <item id="2404" chance="15000"/>
+        <item id="2449" chance="15000"/>
+        <item id="2435" chance="15000"/>
+        <item id="3965" chance="15000"/>
+        <item id="2450" chance="15000"/>
+        <item id="2453" chance="15000"/>
+        <item id="2468" chance="15000"/>
+        <item id="2164" chance="15000"/>
+        <item id="2399" countmax="100" chance1="13333" chancemax="0"/>
+        <item id="2270" chance="9000"/>
+        <item id="2474" chance="2500"/>
+        <item id="2195" chance="2500"/>
+        <item id="2656" chance="2500"/>
+        <item id="3983" chance="2500"/>
+        <item id="2160" countmax="100" chance1="13333" chancemax="0"/>
+        <item id="2160" countmax="100" chance1="13333" chancemax="0"/>
+        <item id="2197" chance="5000"/>
+        <item id="2529" chance="5000"/>
+        <item id="3965" chance="5000"/>
+        <item id="2450" chance="5000"/>
+        <item id="2453" chance="5000"/>
+        <item id="2468" chance="5000"/>
+        <item id="2164" chance="5000"/>
+        <item id="2399" countmax="100" chance1="3333" chancemax="0"/>
+        <item id="2474" chance="500"/>
+        <item id="2195" chance="500"/>
+        <item id="2656" chance="500"/>
+        <item id="3983" chance="500"/>
+    </loot>
+</monster>

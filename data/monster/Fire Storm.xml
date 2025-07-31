@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Fire Storm" level="20000" maglevel="30000" experience="800000" pushable="0" armor="15" defense="15" canpushitems="1" staticattack="50" changetarget="200" speed="290">
+    <health now="500000" max="500000"/>
+    <look type="49" head="20" body="30" legs="40" feet="50" corpse="2158"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="199" effect="0" splash="255"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="38" attack="38"/>
+        <attack name="fire" interval="1000" chance="25" range="7" radius="2" target="1" min="-550" max="-1505">
+            <attribute key="shootEffect" value="fire"/>
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+        <attack name="firefield" interval="1000" chance="34" range="7" radius="1" target="1">
+            <attribute key="shootEffect" value="fire"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="fire"/>
+        <defense immunity="invisible"/>
+    </defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+</monster>

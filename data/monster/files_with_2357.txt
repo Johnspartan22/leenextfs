@@ -1,0 +1,78 @@
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Agent Smith.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\amazon.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\amazonian.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\ancient scarab.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Angel.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Arch Angel.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\ArchAngel.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Archdemon Kalius.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\ashmunrah.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\bandit.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\banshee.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\beholder.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\black knight.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\black sheep.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\blue djinn.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\bone beast.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\chicken.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\crypt shambler.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Deck Hand.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\demodras.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\demon.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\documentcheck.py
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\dog.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\dragon lord.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\dragon.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Dwarf Geomancer.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Dwarf Soldier.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\dwarf.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\elder beholder.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Fallen Angel.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\gargoyle.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\gazer.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\giant spider.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\God.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\grorlam.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\hero.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\hydra.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Izual.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\larva.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\lizard sentinel.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\lizard templar.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Lucifer.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\merlkin.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Minotaur Archer.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Minotaur Guard.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Minotaur Mage.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\minotaur.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\morguthis.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Mutalisk.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\necromancer.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\necropharus.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\old widow.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Orc Berserker.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\orc boss.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Orc rider.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Orc Shaman.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Orc Spearman.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Orc Warlord.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Orc Warrior.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\orc.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\orshabaal.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Pirate.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\priestess.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\scarab.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\sibang.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\snake.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Souls Servent.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\spit nettle.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\stone golem.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\swamp troll.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Tunneler.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Ultralisk.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\valkyrie commander.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\valkyrie.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\wasp.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\yeti.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Backup\amazonian.xml
+C:\\Users\\Simon\Downloads\\7.72\\data\\monster\Backup\Souls Servent.xml

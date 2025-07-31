@@ -1,25 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Flamingo" nameDescription="a flamingo" race="blood" experience="0" speed="168" manacost="250">
-    <health now="25" max="25"/>
-    <look type="212" head="0" body="0" legs="0" feet="0" corpse="4301"/>
+<monster name="Frost Troll Boss" nameDescription="a frost troll" race="blood" experience="46" speed="280" manacost="300">
+    <health now="110" max="110"/>
+    <look type="53" head="0" body="0" legs="0" feet="0" corpse="2928"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
     <flags>
         <flag summonable="1"/>
         <flag attackable="1"/>
-        <flag hostile="0"/>
+        <flag hostile="1"/>
         <flag illusionable="1"/>
         <flag convinceable="1"/>
         <flag pushable="1"/>
         <flag canpushitems="0"/>
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
-        <flag runonhealth="25"/>
+        <flag runonhealth="10"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="frosttrollBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="9" attack="4"/>
+        <attack name="melee" interval="2000" skill="19" attack="22"/>
     </attacks>
-    <defenses armor="1" defense="6"/>
+    <defenses armor="7" defense="9"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
@@ -31,11 +35,11 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
+    <voices interval="5000" chance="10">
+        <voice sentence="Brrrr"/>
+        <voice sentence="Broar!"/>
+    </voices>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="3976" countmax="10" chance="50000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

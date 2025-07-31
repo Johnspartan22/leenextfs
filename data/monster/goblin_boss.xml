@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Goblin" nameDescription="a goblin" race="blood" experience="25" speed="120" manacost="290">
-    <health now="50" max="50"/>
+<monster name="Goblin Boss" nameDescription="a goblin" race="blood" experience="50" speed="240" manacost="290">
+    <health now="100" max="100"/>
     <look type="61" head="0" body="0" legs="0" feet="0" corpse="2940"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
@@ -15,10 +15,14 @@
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="15"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="goblinBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="15" attack="10"/>
-        <attack name="physical" interval="1000" chance="9" range="7" min="-15" max="-25">
+        <attack name="melee" interval="2000" skill="15" attack="20"/>
+        <attack name="physical" interval="1000" chance="9" range="7" min="-30" max="-50">
             <attribute key="shootEffect" value="smallstone"/>
         </attack>
     </attacks>
@@ -34,9 +38,6 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <voices interval="5000" chance="10">
         <voice sentence="Me have him!"/>
         <voice sentence="Zig Zag! Gobo attack!"/>
@@ -45,21 +46,6 @@
         <voice sentence="Me green, me mean!"/>
     </voices>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2148" countmax="10" chance="100000"/>
-        <item id="2420" chance="10000"/>
-        <item id="2461" chance="10000"/>
-        <item id="2406" chance="10000"/>
-        <item id="2467" chance="10000"/>
-        <item id="1987" chance="100000">
-            <inside>
-                <item id="2559" chance="10000"/>
-                <item id="1294" countmax="4" chance="20000"/>
-                <item id="2667" countmax="2" chance="20000"/>
-                <item id="2230" chance="10000"/>
-                <item id="2235" chance="10000"/>
-                <item id="2449" chance="10000"/>
-            </inside>
-        </item>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Ghostly visage" level="20000" maglevel="30000" experience="6500000" pushable="0" armor="2" defense="2" canpushitems="1" staticattack="50" changetarget="200" speed="260">
+    <health now="2000000" max="2000000"/>
+    <look type="48" head="20" body="30" legs="40" feet="50" corpse="2154"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="86" effect="9" splash="255"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="200000"/>
+    </attacks>
+    <defenses>
+</defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="Owned!"/>
+    </voices>
+    <loot>
+</loot>
+</monster>

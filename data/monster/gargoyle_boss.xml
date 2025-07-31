@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Petrified Imp Boss" level="200" maglevel="450" experience="200000" pushable="0" armor="90" defense="70" canpushitems="1" staticattack="50" changetarget="200" speed="400">
+    <health now="180000" max="180000"/>
+    <look type="95" head="20" body="30" legs="40" feet="50" corpse="3058"/>
+    <combat targetdistance="1" runonhealth="30"/>
+    <blood color="86" effect="9" splash="255"/>
+    <attacks>
+        <attack type="melee" mindamage="8400" maxdamage="25000"/>
+        <attack type="distance" name="smallstone" mindamage="7900" maxdamage="12000" cycleticks="2000" probability="90"/>
+        <attack type="instant" name="exori" exhaustion="50" cycleticks="500" probability="80"/>
+    </attacks>
+    <defenses>
+        <defense immunity="fire"/>
+    </defenses>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="petrifiedimpBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

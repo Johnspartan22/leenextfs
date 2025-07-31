@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Fire Devil Boss" nameDescription="a fire devil" race="blood" experience="220" speed="360" manacost="530">
+    <health now="400" max="400"/>
+    <look type="40" head="0" body="0" legs="0" feet="0" corpse="2886"/>
+    <targetchange interval="2000" chance="50"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="4"/>
+        <flag runonhealth="0"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="firedevilBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="30" attack="44"/>
+        <attack name="fire" interval="1000" chance="12" range="7" radius="4" target="1" min="-120" max="-180">
+            <attribute key="shootEffect" value="fire"/>
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+        <attack name="fire" interval="1000" chance="25" range="7" radius="2" target="1" min="-40" max="-100">
+            <attribute key="shootEffect" value="fire"/>
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+    </attacks>
+    <defenses armor="13" defense="15"/>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="0"/>
+        <immunity fire="1"/>
+        <immunity poison="0"/>
+        <immunity lifedrain="0"/>
+        <immunity paralyze="0"/>
+        <immunity outfit="0"/>
+        <immunity drunk="0"/>
+        <immunity invisible="0"/>
+    </immunities>
+    <voices interval="5000" chance="10">
+        <voice sentence="Hot, eh?"/>
+        <voice sentence="Hell, oh hell!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

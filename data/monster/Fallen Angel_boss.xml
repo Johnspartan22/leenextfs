@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Fallen Angel Boss" level="100" maglevel="450" experience="100000" pushable="0" armor="41" defense="53" canpushitems="1" staticattack="40" changetarget="200" speed="600">
+    <health now="50000" max="50000"/>
+    <look type="134" head="94" body="94" legs="94" feet="94" corpse="2916"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="2000"/>
+        <attack name="energy" interval="1000" chance="70" length="8" spread="0" min="-2000" max="-4040">
+            <attribute key="areaEffect" value="energy"/>
+        </attack>
+        <attack name="Sonar_monster" interval="1000" chance="90" min="-1000" max="-1500">
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="fire"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <voices>
+        <voice sentence="You will pay for your sins!"/>
+        <voice sentence="Join with us or burn for eternity!"/>
+        <voice sentence="The fires of hell will make you regret your actions mortal!"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="fallenangelBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

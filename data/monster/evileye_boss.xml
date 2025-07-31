@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="The Evil Eye Boss" nameDescription="The Evil Eye" race="blood" experience="1000" speed="380" manacost="0">
+    <health now="2200" max="2200"/>
+    <look type="210" head="0" body="0" legs="0" feet="0" corpse="3052"/>
+    <targetchange interval="2000" chance="30"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="4"/>
+        <flag runonhealth="0"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="theevileyeBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="65" attack="48"/>
+        <attack name="energy" interval="1000" chance="15" range="7" min="-120" max="-260">
+            <attribute key="shootEffect" value="energy"/>
+        </attack>
+        <attack name="fire" interval="1000" chance="13" range="7" min="-170" max="-230">
+            <attribute key="shootEffect" value="fire"/>
+        </attack>
+        <attack name="physical" interval="1000" chance="17" range="7" min="-270" max="-350">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+        <attack name="poison" interval="1000" chance="15" range="7" min="-80" max="-240">
+            <attribute key="shootEffect" value="poison"/>
+        </attack>
+        <attack name="lifedrain" interval="1000" chance="12" range="7" min="-220" max="-260">
+            <attribute key="areaEffect" value="redshimmer"/>
+        </attack>
+        <attack name="speed" interval="1000" chance="10" range="7" speedchange="-633" duration="20000">
+            <attribute key="areaEffect" value="redshimmer"/>
+        </attack>
+        <attack name="poison" interval="1000" chance="8" length="8" spread="3" min="-70" max="-170">
+            <attribute key="areaEffect" value="greenbubble"/>
+        </attack>
+        <attack name="lifedrain" interval="1000" chance="6" length="8" spread="3" min="-150" max="-170">
+            <attribute key="areaEffect" value="redshimmer"/>
+        </attack>
+        <attack name="manadrain" interval="1000" chance="9" length="8" spread="3" min="-300" max="-500">
+            <attribute key="areaEffect" value="bluebubble"/>
+        </attack>
+    </attacks>
+    <defenses armor="19" defense="35">
+        <defense name="healing" interval="1000" chance="9" min="1" max="219">
+            <attribute key="areaEffect" value="blueshimmer"/>
+        </defense>
+    </defenses>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="0"/>
+        <immunity fire="0"/>
+        <immunity poison="1"/>
+        <immunity lifedrain="1"/>
+        <immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+        <immunity invisible="1"/>
+    </immunities>
+    <summons max="12">
+        <summon name="demon skeleton" interval="1000" chance="13" max="6"/>
+        <summon name="ghost" interval="1000" chance="12" max="6"/>
+    </summons>
+    <voices interval="5000" chance="10">
+        <voice sentence="653768764!"/>
+        <voice sentence="Let me take a look at you!"/>
+        <voice sentence="Inferior creatures, bow before my power!"/>
+        <voice sentence="659978 54764!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>
