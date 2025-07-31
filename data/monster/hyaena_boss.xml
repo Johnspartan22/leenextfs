@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Hyaena" nameDescription="a hyaena" race="blood" experience="20" speed="196" manacost="275">
-    <health now="60" max="60"/>
+<monster name="Hyaena Boss" nameDescription="a hyaena" race="blood" experience="40" speed="392" manacost="275">
+    <health now="120" max="120"/>
     <look type="94" head="0" body="0" legs="0" feet="0" corpse="3019"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
@@ -15,9 +15,13 @@
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="30"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="hyaenaBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="18" attack="11"/>
+        <attack name="melee" interval="2000" skill="18" attack="22"/>
     </attacks>
     <defenses armor="1" defense="5"/>
     <immunities>
@@ -31,15 +35,11 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <voices interval="5000" chance="10">
         <voice sentence="Grrrrrr"/>
         <voice sentence="Hou hou hou!"/>
     </voices>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2666" countmax="3" chance="90000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

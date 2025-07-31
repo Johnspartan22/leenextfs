@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Hyaena" nameDescription="a hyaena" race="blood" experience="20" speed="196" manacost="275">
-    <health now="60" max="60"/>
-    <look type="94" head="0" body="0" legs="0" feet="0" corpse="3019"/>
+<monster name="Lion Boss" nameDescription="a lion" race="blood" experience="60" speed="380" manacost="320">
+    <health now="160" max="160"/>
+    <look type="41" head="0" body="0" legs="0" feet="0" corpse="2889"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
     <flags>
@@ -10,16 +10,20 @@
         <flag hostile="1"/>
         <flag illusionable="1"/>
         <flag convinceable="1"/>
-        <flag pushable="1"/>
+        <flag pushable="0"/>
         <flag canpushitems="0"/>
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
-        <flag runonhealth="30"/>
+        <flag runonhealth="10"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="lionBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="18" attack="11"/>
+        <attack name="melee" interval="2000" skill="32" attack="40"/>
     </attacks>
-    <defenses armor="1" defense="5"/>
+    <defenses armor="6" defense="13"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
@@ -31,15 +35,10 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <voices interval="5000" chance="10">
-        <voice sentence="Grrrrrr"/>
-        <voice sentence="Hou hou hou!"/>
+        <voice sentence="Groarrr!"/>
     </voices>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2666" countmax="3" chance="90000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

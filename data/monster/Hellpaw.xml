@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Hellpaw" level="1160" maglevel="1960" experience="560000000" pushable="0" speed="374" armor="120" defense="98" canpushitems="1" staticattack="50" changetarget="200">
+    <health now="20000000" max="20000000"/>
+    <look type="162" corpse="2992"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="60000"/>
+        <attack name="fire" interval="1000" chance="100" range="7" radius="7" target="0" min="-25000" max="-50000">
+            <attribute key="shootEffect" value="fire"/>
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+        <attack name="fire" interval="1000" chance="100" range="7" radius="7" target="0" min="-25000" max="-50000">
+            <attribute key="areaEffect" value="greenbubble"/>
+        </attack>
+        <attack name="fire" interval="1000" chance="100" range="7" radius="7" target="0" min="-25000" max="-50000">
+            <attribute key="areaEffect" value="bluebubble"/>
+        </attack>
+    </attacks>
+    <defenses>
+</defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="Hissss!"/>
+    </voices>
+    <loot>
+        <item id="2088" chance="15"/>
+        <item id="2474" chance="2500"/>
+        <item id="2474" chance="2500"/>
+        <item id="3983" chance="2500"/>
+        <item id="3983" chance="2500"/>
+        <item id="2449" chance="2500"/>
+        <item id="2663" chance="2500"/>
+        <item id="2449" chance="2500"/>
+        <item id="2656" chance="2500"/>
+        <item id="2195" chance="2500"/>
+        <item id="2656" chance="1500"/>
+        <item id="2195" chance="2500"/>
+        <item id="2435" chance="1500"/>
+        <item id="2404" chance="1500"/>
+        <item id="2270" chance="2500"/>
+        <item id="2270" chance="1500"/>
+        <item id="2435" chance="1500"/>
+        <item id="2404" chance="2500"/>
+        <item id="2160" countmax="100" chance1="13333" chancemax="0"/>
+    </loot>
+</monster>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Iceborn Giant Boss" nameDescription="an iceborn giant" race="blood" experience="384000000" speed="440" manacost="0">
+    <health now="5000000" max="5000000"/>
+    <look type="244" head="20" body="30" legs="40" feet="50" corpse="2893"/>
+    <targetchange interval="2000" chance="50"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag runonhealth="50"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="iceborngiantBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="physical" interval="1000" chance="85" range="1" target="1" radius="0" min="-60000" max="-180000">
+            <attribute key="shootEffect" value="CONST_ANI_LARGEROCK"/>
+            <attribute key="areaEffect" value="yellowspark"/>
+        </attack>
+        <attack name="energy" interval="300" chance="95" range="1" min="-80000" max="-120000">
+            <attribute key="shootEffect" value="CONST_ANI_LARGEROCK"/>
+            <attribute key="areaEffect" value="yellowspark"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="invisible"/>
+        <defense immunity="fire"/>
+        <defense immunity="energy"/>
+    </defenses>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

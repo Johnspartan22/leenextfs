@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Khartoum" level="30000" maglevel="5000" experience="8700000" pushable="0" armor="9" defense="13" canpushitems="0" staticattack="50" changetarget="200" speed="400">
+    <health now="35000000" max="35000000"/>
+    <look type="130" head="0" body="109" legs="128" feet="114" corpse="2916"/>
+    <combat targetdistance="3" runonhealth="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="3"/>
+        <flag runonhealth="50"/>
+    </flags>
+    <attacks>
+        <attack name="physical" interval="1000" chance="90" range="7" target="1" radius="4" min="-900000" max="-1500000">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+        <attack name="love_monster" interval="1000" chance="100" min="-250000" max="-600000">
+        </attack>
+    </attacks>
+    <defenses>
+</defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="ARGGHH"/>
+        <voice sentence="Die pathetic human"/>
+        <voice sentence="Burn your neck with the flick of a wrist"/>
+        <voice sentence="Just die!"/>
+    </voices>
+    <loot>
+        <item id="2270" chance="1000000"/>
+    </loot>
+</monster>

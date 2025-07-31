@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Hell screamer" level="2000" maglevel="3000" experience="3500000" pushable="1" armor="29" defense="33" canpushitems="1" staticattack="50" changetarget="200" speed="220">
+    <health now="1000000" max="1000000"/>
+    <look type="78" head="20" body="30" legs="40" feet="50" corpse="2153"/>
+    <combat targetdistance="1" runonhealth="200"/>
+    <attacks>
+        <attack name="lifedrain" interval="1000" chance="70" radius="5" target="0" min="-40000" max="-60000">
+            <attribute key="areaEffect" value="greennote"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="invisible"/>
+        <defense immunity="fire"/>
+        <defense immunity="paralyze"/>
+    </defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="Dance for me your dance of death!"/>
+        <voice sentence="That's what I call easy, listening."/>
+        <voice sentence="Fell my gentle kiss of death."/>
+    </voices>
+    <loot>
+</loot>
+</monster>

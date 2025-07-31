@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Icelander" level="20" maglevel="1" experience="10000" pushable="0" armor="10" defense="11" canpushitems="1" staticattack="50" changetarget="238">
+    <health now="14000" max="140"/>
+    <look type="57" head="20" body="30" legs="40" feet="50" corpse="3128"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack type="melee" maxdamage="50"/>
+        <attack type="distance" name="arrow" mindamage="1200" maxdamage="3000" cycleticks="2000" probability="100"/>
+    </attacks>
+    <defenses>
+</defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="This is our land..."/>
+        <voice sentence="You are not welcome in our villige!"/>
+        <voice sentence="Breath after this!!!"/>
+    </voices>
+    <loot>
+        <item id="2148" countmax="120" chance1="100000" chancemax="0"/>
+        <item id="1949" chance="10000"/>
+        <item id="2467" chance="10000"/>
+        <item id="2802" countmax="13" chance1="5000" chancemax="0"/>
+        <item id="2642" chance="6666"/>
+        <item id="1987" chance="100000">
+            <inside>
+                <item id="2044" chance="6666"/>
+                <item id="2689" countmax="7" chance1="20000" chancemax="0"/>
+                <item id="2401" chance="3333"/>
+                <item id="2166" chance="1428"/>
+            </inside>
+        </item>
+    </loot>
+</monster>

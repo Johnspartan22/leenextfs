@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Kongra" nameDescription="a kongra" race="blood" experience="110" speed="184" manacost="0">
-    <health now="340" max="340"/>
-    <look type="116" head="0" body="0" legs="0" feet="0" corpse="4268"/>
+<monster name="Lizard Templar" nameDescription="a lizard templar" race="blood" experience="145" speed="174" manacost="0">
+    <health now="410" max="410"/>
+    <look type="113" head="0" body="0" legs="0" feet="0" corpse="4256"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
     <flags>
@@ -14,21 +14,17 @@
         <flag canpushitems="1"/>
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
-        <flag runonhealth="10"/>
+        <flag runonhealth="0"/>
     </flags>
     <attacks>
-        <attack name="melee" interval="2000" skill="40" attack="30"/>
+        <attack name="melee" interval="2000" skill="44" attack="30"/>
     </attacks>
-    <defenses armor="18" defense="14">
-        <defense name="speed" interval="1000" chance="7" speedchange="1000" duration="3000">
-            <attribute key="areaEffect" value="redshimmer"/>
-        </defense>
-    </defenses>
+    <defenses armor="26" defense="20"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
         <immunity fire="0"/>
-        <immunity poison="0"/>
+        <immunity poison="1"/>
         <immunity lifedrain="0"/>
         <immunity paralyze="0"/>
         <immunity outfit="0"/>
@@ -39,19 +35,21 @@
         <event name="BossSystem"/>
     </script>
     <voices interval="5000" chance="10">
-        <voice sentence="Hugah!"/>
-        <voice sentence="Ungh! Ungh!"/>
-        <voice sentence="Huaauaauaauaa!"/>
+        <voice sentence="Hissss!"/>
     </voices>
     <loot>
-        <item id="2148" countmax="40" chance="100000"/>
+        <item id="3976" countmax="10" chance="50000"/>
+        <item id="3976" countmax="10" chance="50000"/>
+        <item id="2148" countmax="70" chance="100000"/>
+        <item id="2376" chance="20000"/>
+        <item id="3973" chance="300"/>
+        <item id="2463" chance="2000"/>
+        <item id="5876" countmax="1" chance="5000"/>
         <item id="1987" chance="100000">
             <inside>
-                <item id="2676" countmax="11" chance="5000"/>
-                <item id="2200" chance="2000"/>
-                <item id="2209" chance="3857"/>
-                <item id="2166" chance="1529"/>
-                <item id="2463" chance="1667"/>
+                <item id="3974" chance="500"/>
+                <item id="2457" chance="3333"/>
+                <item id="3963" chance="433"/>
             </inside>
         </item>
     </loot>

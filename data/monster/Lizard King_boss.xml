@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Lizard King Boss" level="1160" maglevel="450" experience="1120000000" pushable="0" speed="748" armor="120" defense="98" canpushitems="1" staticattack="50" changetarget="200">
+    <health now="40000000" max="40000000"/>
+    <look type="113" corpse="4256"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="120000"/>
+        <attack name="fire" interval="1000" chance="100" range="7" radius="7" target="0" min="-50000" max="-100000">
+            <attribute key="shootEffect" value="fire"/>
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+        <attack name="fire" interval="1000" chance="100" range="7" radius="7" target="0" min="-50000" max="-100000">
+            <attribute key="areaEffect" value="greenbubble"/>
+        </attack>
+        <attack name="fire" interval="1000" chance="100" range="7" radius="7" target="0" min="-50000" max="-100000">
+            <attribute key="areaEffect" value="bluebubble"/>
+        </attack>
+    </attacks>
+    <defenses>
+</defenses>
+    <voices>
+        <voice sentence="Hissss!"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="lizardkingBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

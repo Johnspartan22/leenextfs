@@ -1,45 +1,44 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Lion" nameDescription="a lion" race="blood" experience="30" speed="190" manacost="320">
-    <health now="80" max="80"/>
-    <look type="41" head="0" body="0" legs="0" feet="0" corpse="2889"/>
+<monster name="Lizard Templar Boss" nameDescription="a lizard templar" race="blood" experience="290" speed="348" manacost="0">
+    <health now="820" max="820"/>
+    <look type="113" head="0" body="0" legs="0" feet="0" corpse="4256"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
     <flags>
-        <flag summonable="1"/>
+        <flag summonable="0"/>
         <flag attackable="1"/>
         <flag hostile="1"/>
         <flag illusionable="1"/>
-        <flag convinceable="1"/>
+        <flag convinceable="0"/>
         <flag pushable="0"/>
-        <flag canpushitems="0"/>
+        <flag canpushitems="1"/>
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
-        <flag runonhealth="10"/>
+        <flag runonhealth="0"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="lizardtemplarBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="32" attack="20"/>
+        <attack name="melee" interval="2000" skill="44" attack="60"/>
     </attacks>
-    <defenses armor="6" defense="13"/>
+    <defenses armor="26" defense="20"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
         <immunity fire="0"/>
-        <immunity poison="0"/>
+        <immunity poison="1"/>
         <immunity lifedrain="0"/>
         <immunity paralyze="0"/>
         <immunity outfit="0"/>
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <voices interval="5000" chance="10">
-        <voice sentence="Groarrr!"/>
+        <voice sentence="Hissss!"/>
     </voices>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2671" countmax="3" chance="80000"/>
-        <item id="2671" countmax="2" chance="80000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

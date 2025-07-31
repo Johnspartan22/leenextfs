@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Lich" nameDescription="a lich" race="undead" experience="900" speed="210" manacost="0">
-    <health now="880" max="880"/>
+<monster name="Lich Boss" nameDescription="a lich" race="undead" experience="1800" speed="420" manacost="0">
+    <health now="1760" max="1760"/>
     <look type="99" head="0" body="0" legs="0" feet="0" corpse="3025"/>
     <targetchange interval="2000" chance="3"/>
     <strategy attack="80" defense="10"/>
@@ -15,22 +15,26 @@
         <flag canpushcreatures="1"/>
         <flag targetdistance="1"/>
         <flag runonhealth="0"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="lichBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="40" attack="40" poison="400"/>
-        <attack name="lifedrain" interval="1000" chance="4" range="1" min="-50" max="-250">
+        <attack name="melee" interval="2000" skill="40" attack="80" poison="400"/>
+        <attack name="lifedrain" interval="1000" chance="4" range="1" min="-100" max="-500">
             <attribute key="areaEffect" value="blueshimmer"/>
         </attack>
         <attack name="speed" interval="1000" chance="15" range="7" speedchange="-475" duration="30000">
             <attribute key="areaEffect" value="redshimmer"/>
         </attack>
-        <attack name="lifedrain" interval="1000" chance="17" radius="3" target="0" min="-120" max="-200">
+        <attack name="lifedrain" interval="1000" chance="17" radius="3" target="0" min="-240" max="-400">
             <attribute key="areaEffect" value="redshimmer"/>
         </attack>
-        <attack name="lifedrain" interval="1000" chance="9" length="8" spread="0" min="-100" max="-200">
+        <attack name="lifedrain" interval="1000" chance="9" length="8" spread="0" min="-200" max="-400">
             <attribute key="areaEffect" value="redshimmer"/>
         </attack>
-        <attack name="poisoncondition" interval="1000" chance="9" length="8" spread="0" min="-300" max="-400">
+        <attack name="poisoncondition" interval="1000" chance="9" length="8" spread="0" min="-600" max="-800">
             <attribute key="areaEffect" value="greenspark"/>
         </attack>
     </attacks>
@@ -53,9 +57,6 @@
     <summons maxSummons="4">
         <summon name="bonebeast" interval="1000" chance="17" max="4"/>
     </summons>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <voices interval="5000" chance="10">
         <voice sentence="Death awaits all!"/>
         <voice sentence="Doomed be the living!"/>
@@ -66,22 +67,6 @@
         <voice sentence="Thy living flesh offends me!"/>
     </voices>
     <loot>
-        <item id="2148" countmax="100" chance="100000"/>
-        <item id="2401" chance="10000"/>
-        <item id="2171" chance="1666"/>
-        <item id="2656" chance="709"/>
-        <item id="2144" countmax="6" chance="6666"/>
-        <item id="1987" chance="100000">
-            <inside>
-                <item id="2535" chance="588"/>
-                <item id="2165" chance="888"/>
-                <item id="2143" countmax="4" chance="4000"/>
-                <item id="2237" chance="10000"/>
-                <item id="2148" countmax="12" chance="80000"/>
-                <item id="2175" chance="10000"/>
-                <item id="2179" chance="900"/>
-                <item id="3961" chance="1000"/>
-            </inside>
-        </item>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

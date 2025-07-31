@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Keeper Of The Abyss Boss" level="125000" maglevel="450" experience="110000000000" pushable="0" armor="312" defense="322" canpushitems="1" staticattack="50" changetarget="200" speed="1800">
+    <health now="300000000" max="300000000"/>
+    <look type="80" head="20" body="30" legs="40" feet="50" corpse="3001"/>
+    <combat targetdistance="8" runonhealth="50000000"/>
+    <attacks>
+        <attack type="melee" mindamage="4500000" maxdamage="8000000" probability="100"/>
+        <attack type="rune" name="quarksd" cycleticks="100" probability="100"/>
+        <attack type="instant" name="exura life" exhaustion="10" cycleticks="1000" probability="90"/>
+        <attack type="instant" name="smite" exhaustion="500" cycleticks="3000" probability="70"/>
+        <attack type="instant" name="exura life" exhaustion="10" cycleticks="1000" probability="90"/>
+    </attacks>
+    <defenses>
+</defenses>
+    <voices>
+        <voice sentence="I am oblivion"/>
+        <voice sentence="ARGGHH"/>
+        <voice sentence="Die pathetic human"/>
+        <voice sentence="When you die, I dine on your soul"/>
+        <voice sentence="Just die!"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="keeperoftheabyssBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

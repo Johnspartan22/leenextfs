@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Leprechaun Boss" level="520" maglevel="450" experience="900000" pushable="0" armor="250" defense="250" canpushitems="1" staticattack="15" changetarget="200" speed="660">
+    <health now="1220000" max="1220000"/>
+    <look type="216" corpse="4310"/>
+    <combat targetdistance="4" runonhealth="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="5"/>
+        <flag runonhealth="50"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="leprechaunBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="physical" interval="2000" chance="30" range="5" target="1" radius="0" min="-24000" max="-30000">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+        <attack name="energy" interval="300" chance="100" range="5" min="-24000" max="-30000">
+            <attribute key="shootEffect" value="fire"/>
+            <attribute key="areaEffect" value="energy"/>
+        </attack>
+        <attack name="glittering_prizes_monster" interval="700" chance="30" min="0" max="0">
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="paralyze"/>
+        <defense immunity="drunk"/>
+        <defense immunity="invisible"/>
+    </defenses>
+    <voices>
+        <voice sentence="'You cant have my gold!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

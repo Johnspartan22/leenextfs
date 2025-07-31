@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Lizard Sentinel Boss" nameDescription="a lizard sentinel" race="blood" experience="210" speed="360" manacost="560">
+    <health now="530" max="530"/>
+    <look type="114" head="0" body="0" legs="0" feet="0" corpse="4259"/>
+    <targetchange interval="2000" chance="50"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="4"/>
+        <flag runonhealth="10"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="lizardsentinelBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="35" attack="52"/>
+        <attack name="physical" interval="1000" chance="7" range="7" min="-80" max="-140">
+            <attribute key="shootEffect" value="spear"/>
+        </attack>
+    </attacks>
+    <defenses armor="17" defense="24"/>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="0"/>
+        <immunity fire="0"/>
+        <immunity poison="1"/>
+        <immunity lifedrain="0"/>
+        <immunity paralyze="0"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+        <immunity invisible="1"/>
+    </immunities>
+    <voices interval="5000" chance="10">
+        <voice sentence="Tssss!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>
