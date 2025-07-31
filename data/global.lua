@@ -1,6 +1,9 @@
 math.randomseed(os.time())
 dofile('data/lib/lib.lua')
 
+ITEM_FLAWLESS_SKULL = 2229
+ITEM_CHIPPED_SKULL = 2320
+
 ropeSpots = {
 	384, 418, 8278, 8592, 13189, 14435, 14436, 14857, 15635, 19518, 24621, 24622, 24623, 24624, 26019
 }
