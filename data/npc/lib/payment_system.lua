@@ -21,23 +21,32 @@ end
 
 -- Helper function to return change in mixed currency.
 PaymentSystem.giveChange = function(cid, change)
+   print("DEBUG: Giving change of " .. change .. " to player " .. cid)
+   
    -- Calculate number of flawless skulls to give back
    local numFlawless = math.floor(change / VAL_FLAWLESS)
    change = change - (numFlawless * VAL_FLAWLESS)
+   print("DEBUG: Flawless skulls: " .. numFlawless .. ", remaining: " .. change)
    
    -- Calculate number of chipped skulls to give back
    local numChipped = math.floor(change / VAL_CHIPPED)
    change = change - (numChipped * VAL_CHIPPED)
+   print("DEBUG: Chipped skulls: " .. numChipped .. ", remaining: " .. change)
 
    if numFlawless > 0 then
+      print("DEBUG: Adding " .. numFlawless .. " flawless skulls")
       doPlayerAddItem(cid, ITEM_FLAWLESS_SKULL, numFlawless)
    end
    if numChipped > 0 then
+      print("DEBUG: Adding " .. numChipped .. " chipped skulls")
       doPlayerAddItem(cid, ITEM_CHIPPED_SKULL, numChipped)
    end
    if change > 0 then
+      print("DEBUG: Adding " .. change .. " gold coins")
       doPlayerAddMoney(cid, change)
    end
+   
+   print("DEBUG: Change distribution complete")
 end
 
 -- Process payment: first use coins; if not enough, use skull items.
