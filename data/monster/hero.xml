@@ -1,72 +1,120 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<monster name="hero" nameDescription="a hero" race="blood" experience="1200" speed="280" manacost="0">
-	<health now="1400" max="1400"/>
-	<look type="73" corpse="3128"/>
-	<targetchange interval="1000" chance="5"/>
-	<targetstrategies nearest="80" health="10" damage="10" random="0"/>
-	<flags>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag summonable="0"/>
-		<flag convinceable="0"/>
-		<flag illusionable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="80"/>
-		<flag runonhealth="0"/>
-	</flags>
-	<attacks>
-		<attack name="melee" skill="80" attack="58"/>
-		<attack name="physical" checkshield="1" chance="25" range="7" min="-75" max="-125">
-			<attribute key="shootEffect" value="arrow"/>
-		</attack>
-	</attacks>
-	<defenses armor="35" defense="200">
-		<defense name="healing" chance="10" min="200" max="250">
-			<attribute key="areaEffect" value="blueshimmer"/>
-		</defense>
-	</defenses>
-	<elements>
-		<element firePercent="100"/>
-		<element earthPercent="100"/>
-		<element energyPercent="100"/>
-	</elements>
-	<immunities>
-		<immunity paralyze="1"/>
-		<immunity invisible="1"/>
-	</immunities>
-	<voices interval="1000" chance="5">
-		<voice sentence="Let's have a fight!"/>
-		<voice sentence="Welcome to my battleground."/>
-		<voice sentence="Have you seen princess Lumelia?"/>
-		<voice sentence="I will sing a tune at your grave."/>
-	</voices>
-	<loot>
-		<item id="2666" chance="18000" countmax="2"/><!-- 2 18% meat -->
-		<item id="2681" chance="20000"/><!-- 20% grapes -->
-		<item id="2148" chance="60000" countmax="100"/><!-- 100 60% gold coin-->
-		<item id="2544" chance="27000" countmax="13"/><!-- 13 27% arrow -->
-		<item id="1949" chance="45000"/><!-- 45% scroll -->
-		<item id="2744" chance="20000"/><!-- 20% red rose -->
-		<item id="2071" chance="15000"/><!-- 15% lyre -->
-		<item id="2121" chance="5000"/><!-- 5% wedding ring -->
-		<item id="2120" chance="20000"/><!-- 20% rope -->
-		<item id="2661" chance="12000"/><!-- 12% scarf -->
-		<item id="2652" chance="8000"/><!-- 8% green tunic -->
-		<item id="2491" chance="500"/><!-- 0.5% crown helmet -->
-		<item id="2487" chance="600"/><!-- 0.6% crown armor -->
-		<item id="2488" chance="500"/><!-- 0.5% crown legs -->
-		<item id="1987" chance="100000"><!-- bag -->
-			<inside>
-				<item id="2456" chance="13000"/><!-- 13% bow -->
-				<item id="2392" chance="500"/><!-- 0.5% fire sword -->
-				<item id="2377" chance="1500"/><!-- 1.5% two handed sword -->
-				<item id="2391" chance="1000"/><!-- 1% war hammer -->
-				<item id="2519" chance="400"/><!-- 0.4% crown shield -->
-				<item id="2164" chance="500"/><!-- 0.5% might ring -->
-			</inside>
-		</item>
-	</loot>
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Hero" level="30" maglevel="50" experience="1200" pushable="0" armor="41" defense="42" canpushitems="1" staticattack="50" changetarget="200" speed="278">
+    <health now="1400" max="1400" />
+    <look type="73" head="20" body="30" legs="40" feet="50" corpse="3128" />
+    <combat targetdistance="1" runonhealth="0" />
+    <attacks>
+        <attack name="physical" interval="1000" range="1" chance="100" min="-30" max="-50" />
+    </attacks>
+    <defenses>
+        <defense immunity="invisible" />
+        <defense immunity="energy" />
+    </defenses>
+    <script>
+        <event name="BossSystem" />
+    </script>
+    <voices>
+        <voice sentence="Let's have a fight!" />
+        <voice sentence="I will sing a tune at your grave." />
+        <voice sentence="Have you seen princess Lumelia?" />
+        <voice sentence="Welcome to my battleground!" />
+    </voices>
+    <loot>
+        <item id="2160" countmax="100" chance1="4400" chancemax="0" />
+        <item id="2148" countmax="100" chance1="400" chancemax="0" />
+        <item id="2152" countmax="100" chance1="400" chancemax="0" />
+        <item id="2671" countmax="100" chance1="400" chancemax="0" />
+        <item id="2143" countmax="30" chance1="400" chancemax="0" />
+        <item id="2144" countmax="30" chance1="400" chancemax="0" />
+        <item id="2145" countmax="30" chance1="400" chancemax="0" />
+        <item id="2146" countmax="30" chance1="400" chancemax="0" />
+        <item id="2147" countmax="30" chance1="400" chancemax="0" />
+        <item id="2149" countmax="30" chance1="400" chancemax="0" />
+        <item id="2150" countmax="30" chance1="400" chancemax="0" />
+        <item id="2157" countmax="30" chance1="400" chancemax="0" />
+        <item id="2159" countmax="30" chance1="400" chancemax="0" />
+        <item id="2383" chance="1300" />
+        <item id="2390" chance="1300" />
+        <item id="2391" chance="1300" />
+        <item id="2392" chance="1300" />
+        <item id="2393" chance="1300" />
+        <item id="2396" chance="1300" />
+        <item id="2400" chance="1300" />
+        <item id="2407" chance="1300" />
+        <item id="2409" chance="1300" />
+        <item id="2414" chance="1300" />
+        <item id="2415" chance="1300" />
+        <item id="2418" chance="1300" />
+        <item id="2421" chance="1300" />
+        <item id="2427" chance="1300" />
+        <item id="2430" chance="1300" />
+        <item id="2431" chance="1300" />
+        <item id="2432" chance="1300" />
+        <item id="2434" chance="1300" />
+        <item id="2436" chance="1300" />
+        <item id="2437" chance="1300" />
+        <item id="2438" chance="1300" />
+        <item id="2445" chance="1300" />
+        <item id="2451" chance="1300" />
+        <item id="2514" chance="1300" />
+        <item id="2515" chance="1300" />
+        <item id="2516" chance="1300" />
+        <item id="2518" chance="3100" />
+        <item id="2519" chance="3010" />
+        <item id="2528" chance="3010" />
+        <item id="2532" chance="3010" />
+        <item id="2534" chance="3010" />
+        <item id="2536" chance="3010" />
+        <item id="2537" chance="3010" />
+        <item id="2539" chance="3010" />
+        <item id="2540" chance="3010" />
+        <item id="2542" chance="3010" />
+        <item id="2123" chance="3010" />
+        <item id="2130" chance="300" />
+        <item id="2131" chance="3010" />
+        <item id="2133" chance="300" />
+        <item id="2135" chance="1300" />
+        <item id="2138" chance="3100" />
+        <item id="2142" chance="3010" />
+        <item id="2319" chance="300" />
+        <item id="2342" chance="300" />
+        <item id="2343" chance="300" />
+        <item id="2358" chance="300" />
+        <item id="2457" chance="300" />
+        <item id="2462" chance="300" />
+        <item id="2463" chance="300" />
+        <item id="2472" chance="300" />
+        <item id="2475" chance="300" />
+        <item id="2476" chance="300" />
+        <item id="2477" chance="300" />
+        <item id="2479" chance="300" />
+        <item id="2486" chance="300" />
+        <item id="2487" chance="300" />
+        <item id="2488" chance="300" />
+        <item id="2489" chance="300" />
+        <item id="2490" chance="300" />
+        <item id="2491" chance="300" />
+        <item id="2492" chance="300" />
+        <item id="2496" chance="300" />
+        <item id="2497" chance="300" />
+        <item id="2498" chance="300" />
+        <item id="2642" chance="300" />
+        <item id="2644" chance="300" />
+        <item id="2645" chance="300" />
+        <item id="2647" chance="300" />
+        <item id="2660" chance="300" />
+        <item id="2662" chance="300" />
+        <item id="2664" chance="300" />
+        <item id="2665" chance="300" />
+        <item id="3967" chance="300" />
+        <item id="3968" chance="300" />
+        <item id="3969" chance="300" />
+        <item id="3970" chance="300" />
+        <item id="3971" chance="300" />
+        <item id="3972" chance="300" />
+        <item id="2171" chance="300" />
+        <item id="2507" chance="300" />
+        <item id="2499" chance="300" />
+        <item id="2500" chance="300" />
+    </loot>
 </monster>

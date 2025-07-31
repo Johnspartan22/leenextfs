@@ -1,64 +1,130 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<monster name="merlkin" nameDescription="a merlkin" race="blood" experience="135" speed="194" manacost="0">
-	<health now="230" max="230"/>
-	<look type="117" corpse="4271"/>
-	<targetchange interval="1000" chance="50"/>
-	<targetstrategies nearest="100" health="0" damage="0" random="0"/>
-	<flags>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag summonable="0"/>
-		<flag convinceable="0"/>
-		<flag illusionable="1"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="4"/>
-		<flag staticattack="80"/>
-		<flag runonhealth="0"/>
-	</flags>
-	<attacks>
-		<attack name="melee" skill="25" attack="15"/>
-		<attack name="fire" chance="13" range="7" min="-30" max="-90">
-			<attribute key="shootEffect" value="fire"/>
-			<attribute key="areaEffect" value="firearea"/>
-		</attack>
-		<attack name="energy" interval="3000" chance="34" range="7" min="-15" max="-45">
-			<attribute key="shootEffect" value="energy"/>
-			<attribute key="areaEffect" value="energy"/>
-		</attack>
-		<attack name="poisonfield" chance="15" range="7" radius="1" target="1">
-			<attribute key="shootEffect" value="energy"/>
-		</attack>
-	</attacks>
-	<defenses armor="16" defense="50">
-		<defense name="healing" chance="9" min="10" max="40">
-			<attribute key="areaEffect" value="blueshimmer"/>
-		</defense>
-	</defenses>
-	<elements>
-		<element energyPercent="100"/>
-	</elements>
-	<immunities>
-		<immunity invisible="1"/>
-	</immunities>
-	<voices interval="1000" chance="5">
-		<voice sentence="Ugh! Ugh! Ugh!"/>
-		<voice sentence="Holy banana!"/>
-		<voice sentence="Chakka! Chakka!"/>
-	</voices>
-	<loot>
-		<item id="2676" chance="30000" countmax="2"/><!-- 2 30% banana -->
-		<item id="2676" chance="5000" countmax="10"/><!-- 10 5% banana -->
-		<item id="2675" chance="1000" countmax="5"/><!-- 5 1% orange -->
-		<item id="2148" chance="80000" countmax="25"/><!-- 25 80% gold coin -->
-		<item id="2150" chance="500"/><!-- 0.5% small amethyst -->
-		<item id="1987" chance="100000"><!-- bag -->
-			<inside>
-				<item id="2188" chance="1000"/><!-- 1% wand of plague -->
-				<item id="3966" chance="100"/><!-- 0.1% banana staff -->
-				<item id="2162" chance="5000"/><!-- 5% magic lightwand -->
-			</inside>
-		</item>
-	</loot>
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Maelstrom" level="75" maglevel="50" experience="55000" pushable="0" speed="200" armor="100" defense="100" canpushitems="1" staticattack="50" changetarget="200">
+    <health now="160000" max="160000" />
+    <look type="117" corpse="4271" />
+    <combat targetdistance="3" runonhealth="0" />
+    <attacks>
+        <attack name="energy" interval="300" chance="95" range="7" min="-720" max="-1450">
+            <attribute key="shootEffect" value="energy" />
+            <attribute key="areaEffect" value="energy" />
+        </attack>
+    </attacks>
+    <defenses>
+</defenses>
+    <loot>
+        <item id="2160" countmax="100" chance1="100" chancemax="0" />
+        <item id="2148" countmax="100" chance1="100" chancemax="0" />
+        <item id="2152" countmax="100" chance1="100" chancemax="0" />
+        <item id="2671" countmax="100" chance1="100" chancemax="0" />
+        <item id="2143" countmax="30" chance1="100" chancemax="0" />
+        <item id="2144" countmax="30" chance1="100" chancemax="0" />
+        <item id="2145" countmax="30" chance1="100" chancemax="0" />
+        <item id="2146" countmax="30" chance1="100" chancemax="0" />
+        <item id="2147" countmax="30" chance1="100" chancemax="0" />
+        <item id="2149" countmax="30" chance1="100" chancemax="0" />
+        <item id="2150" countmax="30" chance1="100" chancemax="0" />
+        <item id="2157" countmax="30" chance1="100" chancemax="0" />
+        <item id="2159" countmax="30" chance1="100" chancemax="0" />
+        <item id="2424" chance="800" />
+        <item id="3963" chance="800" />
+        <item id="3964" chance="800" />
+        <item id="2502" chance="800" />
+        <item id="2503" chance="800" />
+        <item id="2504" chance="800" />
+        <item id="2641" chance="800" />
+        <item id="2517" chance="800" />
+        <item id="2168" chance="800" />
+        <item id="2214" chance="800" />
+        <item id="2383" chance="100" />
+        <item id="2390" chance="100" />
+        <item id="2391" chance="100" />
+        <item id="2392" chance="100" />
+        <item id="2393" chance="100" />
+        <item id="2396" chance="100" />
+        <item id="2400" chance="100" />
+        <item id="2407" chance="100" />
+        <item id="2409" chance="100" />
+        <item id="2414" chance="100" />
+        <item id="2415" chance="100" />
+        <item id="2418" chance="100" />
+        <item id="2421" chance="100" />
+        <item id="2427" chance="100" />
+        <item id="2430" chance="100" />
+        <item id="2431" chance="100" />
+        <item id="2432" chance="100" />
+        <item id="2434" chance="100" />
+        <item id="2436" chance="100" />
+        <item id="2437" chance="100" />
+        <item id="2438" chance="100" />
+        <item id="2445" chance="100" />
+        <item id="2451" chance="100" />
+        <item id="2514" chance="100" />
+        <item id="2515" chance="100" />
+        <item id="2516" chance="100" />
+        <item id="2518" chance="100" />
+        <item id="2519" chance="100" />
+        <item id="2528" chance="100" />
+        <item id="2532" chance="100" />
+        <item id="2534" chance="100" />
+        <item id="2536" chance="100" />
+        <item id="2537" chance="100" />
+        <item id="2539" chance="100" />
+        <item id="2540" chance="100" />
+        <item id="2542" chance="100" />
+        <item id="2123" chance="100" />
+        <item id="2130" chance="100" />
+        <item id="2131" chance="100" />
+        <item id="2133" chance="100" />
+        <item id="2135" chance="100" />
+        <item id="2138" chance="100" />
+        <item id="2142" chance="100" />
+        <item id="2319" chance="100" />
+        <item id="2342" chance="100" />
+        <item id="2343" chance="100" />
+        <item id="2358" chance="100" />
+        <item id="2457" chance="100" />
+        <item id="2462" chance="100" />
+        <item id="2463" chance="100" />
+        <item id="2472" chance="100" />
+        <item id="2475" chance="100" />
+        <item id="2476" chance="100" />
+        <item id="2477" chance="100" />
+        <item id="2479" chance="100" />
+        <item id="2486" chance="100" />
+        <item id="2487" chance="100" />
+        <item id="2488" chance="100" />
+        <item id="2489" chance="100" />
+        <item id="2490" chance="100" />
+        <item id="2491" chance="100" />
+        <item id="2492" chance="100" />
+        <item id="2496" chance="100" />
+        <item id="2497" chance="100" />
+        <item id="2498" chance="100" />
+        <item id="2642" chance="100" />
+        <item id="2644" chance="100" />
+        <item id="2645" chance="100" />
+        <item id="2647" chance="100" />
+        <item id="2660" chance="100" />
+        <item id="2662" chance="100" />
+        <item id="2664" chance="100" />
+        <item id="2665" chance="100" />
+        <item id="3967" chance="100" />
+        <item id="3968" chance="100" />
+        <item id="3969" chance="100" />
+        <item id="3970" chance="100" />
+        <item id="3971" chance="100" />
+        <item id="3972" chance="100" />
+        <item id="2171" chance="100" />
+        <item id="2507" chance="100" />
+        <item id="2499" chance="100" />
+        <item id="2500" chance="100" />
+    </loot>
+    <script>
+        <event name="BossSystem" />
+    </script>
+    <voices>
+        <voice sentence="Chakka! Chakka!" />
+        <voice sentence="Ugh! Ugh! Ugh!" />
+        <voice sentence="Holy banana!" />
+    </voices>
 </monster>

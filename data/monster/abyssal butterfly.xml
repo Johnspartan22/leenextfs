@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Abyssal Butterfly" level="500" maglevel="50000000" experience="0" pushable="1" speed="100" armor="0" defense="0" canpushitems="1" staticattack="20" changetarget="20">
+    <health now="5000" max="5000" />
+    <look type="249" corpse="4298" />
+    <combat targetdistance="0" runonhealth="0" />
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="0" />
+        <attack name="manadrain" interval="1000" chance="90" range="7" min="-0" max="-0">
+            <attribute key="areaEffect" value="redshimmer" />
+        </attack>
+        <attack name="physical" interval="1000" chance="0.1" range="7" radius="7" target="0" min="-0" max="-0">
+            <attribute key="areaEffect" value="yellowspark" />
+        </attack>
+    </attacks>
+    <defenses>
+        <defense name="healing" interval="1000" chance="90" min="3000000" max="1000000">
+            <attribute key="areaEffect" value="blueshimmer" />
+        </defense>
+    </defenses>
+    <script>
+        <event name="BossSystem" />
+    </script>
+    <voices>
+</voices>
+    <loot>
+        <item id="4845" chance="20000" />
+        </loot>
+</monster>

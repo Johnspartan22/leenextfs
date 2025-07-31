@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Ghost of Hex" level="100" maglevel="250" experience="50000" pushable="0" armor="41" defense="53" canpushitems="1" staticattack="40" changetarget="200" speed="350">
+    <health now="25000" max="25000" />
+    <look type="262" head="19" body="0" legs="0" feet="0" corpse="3065" />
+    <combat targetdistance="1" runonhealth="0" />
+    <attacks>
+        <attack name="angel_energy2" interval="1000" range="1" chance="100" min="-320" max="-420" />
+    </attacks>
+    <defenses>
+        <defense immunity="energy" />
+        <defense immunity="paralyze" />
+        <defense immunity="invisible" />
+        <defense immunity="drunk" />
+    </defenses>
+    <immunities>
+        <immunity invisible="1" />
+        <immunity fire="1" />
+        <immunity physical="1" />
+        <immunity poison="1" />
+        <immunity lifedrain="1" />
+        <immunity drown="1" />
+        <immunity energy="1" />
+        <immunity death="1" />
+    </immunities>
+    <script>
+        <event name="BossSystem" />
+    </script>
+    <voices>
+        <voice sentence="screech!" />
+        <voice sentence="I swear I'm important!" />
+        <voice sentence="I'm not a bitch!" />
+        <voice sentence="I need attention" />
+    </voices>
+    <loot>
+        <item id="2160" countmax="100" chance1="4000" chancemax="0" />
+        <item id="2148" countmax="100" chance1="400" chancemax="0" />
+        <item id="2152" countmax="100" chance1="400" chancemax="0" />
+        <item id="2671" countmax="100" chance1="400" chancemax="0" />
+        <item id="2143" countmax="30" chance1="400" chancemax="0" />
+        <item id="2144" countmax="30" chance1="400" chancemax="0" />
+        <item id="2145" countmax="30" chance1="400" chancemax="0" />
+        <item id="2146" countmax="30" chance1="400" chancemax="0" />
+        <item id="2147" countmax="30" chance1="400" chancemax="0" />
+        <item id="2149" countmax="30" chance1="400" chancemax="0" />
+        <item id="2150" countmax="30" chance1="400" chancemax="0" />
+        <item id="2157" countmax="30" chance1="400" chancemax="0" />
+        <item id="2159" countmax="30" chance1="400" chancemax="0" />
+        <item id="2424" chance="100" />
+        <item id="2383" chance="100" />
+        <item id="3963" chance="100" />
+        <item id="2383" chance="1000" />
+        <item id="2390" chance="1000" />
+        <item id="2391" chance="1000" />
+        <item id="2392" chance="1000" />
+        <item id="2393" chance="1000" />
+        <item id="2396" chance="1000" />
+        <item id="2400" chance="1000" />
+        <item id="2407" chance="1000" />
+        <item id="2409" chance="1000" />
+        <item id="2414" chance="1000" />
+        <item id="2415" chance="1000" />
+        <item id="2418" chance="1000" />
+        <item id="2421" chance="1000" />
+        <item id="2427" chance="1000" />
+        <item id="2430" chance="1000" />
+        <item id="2431" chance="1000" />
+        <item id="2432" chance="1000" />
+        <item id="2434" chance="1000" />
+        <item id="2436" chance="1000" />
+        <item id="2437" chance="1000" />
+        <item id="2438" chance="1000" />
+        <item id="2445" chance="1000" />
+        <item id="2451" chance="1000" />
+        <item id="2514" chance="1000" />
+        <item id="2515" chance="1000" />
+        <item id="2516" chance="1800" />
+        <item id="2518" chance="1800" />
+        <item id="2519" chance="1800" />
+        <item id="2528" chance="1800" />
+        <item id="2532" chance="1800" />
+        <item id="2534" chance="1800" />
+        <item id="2536" chance="1800" />
+        <item id="2537" chance="1800" />
+        <item id="2539" chance="1800" />
+        <item id="2540" chance="1800" />
+        <item id="2542" chance="1800" />
+        <item id="2123" chance="1800" />
+        <item id="2130" chance="1800" />
+        <item id="2131" chance="1800" />
+        <item id="2133" chance="1000" />
+        <item id="2135" chance="1000" />
+        <item id="2138" chance="1000" />
+        <item id="2142" chance="1000" />
+        <item id="2319" chance="1000" />
+        <item id="2342" chance="1000" />
+        <item id="2343" chance="1000" />
+        <item id="2358" chance="1000" />
+        <item id="2457" chance="1000" />
+        <item id="2462" chance="1000" />
+        <item id="2463" chance="1000" />
+        <item id="2472" chance="1000" />
+        <item id="2475" chance="1000" />
+        <item id="2476" chance="1000" />
+        <item id="2477" chance="1000" />
+        <item id="2479" chance="1000" />
+        <item id="2486" chance="1000" />
+        <item id="2487" chance="1000" />
+        <item id="2488" chance="800" />
+        <item id="2489" chance="800" />
+        <item id="2490" chance="800" />
+        <item id="2491" chance="800" />
+        <item id="2492" chance="800" />
+        <item id="2496" chance="800" />
+        <item id="2497" chance="800" />
+        <item id="2498" chance="800" />
+        <item id="2642" chance="800" />
+        <item id="2644" chance="800" />
+        <item id="2645" chance="800" />
+        <item id="2647" chance="800" />
+        <item id="2660" chance="800" />
+        <item id="2662" chance="800" />
+        <item id="2664" chance="800" />
+        <item id="2665" chance="800" />
+        <item id="3967" chance="800" />
+        <item id="3968" chance="800" />
+        <item id="3969" chance="800" />
+        <item id="3970" chance="800" />
+        <item id="3971" chance="800" />
+        <item id="3972" chance="800" />
+        <item id="2171" chance="800" />
+        <item id="2507" chance="800" />
+        <item id="2499" chance="800" />
+        <item id="2500" chance="800" />
+    </loot>
+</monster>

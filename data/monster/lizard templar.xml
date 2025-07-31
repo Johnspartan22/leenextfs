@@ -1,48 +1,159 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<monster name="lizard templar" nameDescription="a lizard templar" race="blood" experience="145" speed="174" manacost="0">
-	<health now="410" max="410"/>
-	<look type="113" corpse="4256"/>
-	<targetchange interval="1000" chance="0"/>
-	<targetstrategies nearest="100" health="0" damage="0" random="0"/>
-	<flags>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag summonable="0"/>
-		<flag convinceable="0"/>
-		<flag illusionable="1"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="80"/>
-		<flag runonhealth="0"/>
-	</flags>
-	<attacks>
-		<attack name="melee" skill="44" attack="30"/>
-	</attacks>
-	<defenses armor="26" defense="44">
-	</defenses>
-	<elements>
-		<element earthPercent="100"/>
-	</elements>
-	<immunities>
-	</immunities>
-	<voices interval="1000" chance="5">
-		<voice sentence="Hissss!"/>
-	</voices>
-	<loot>
-		<item id="2148" chance="80000" countmax="20"/><!-- 20 80% gold coin -->
-		<item id="2149" chance="300"/><!-- 0.3% small emerald -->
-		<item id="2457" chance="2000"/><!-- 2% steel helmet -->
-		<item id="2463" chance="1000"/><!-- 1% plate armor -->
-		<item id="1987" chance="100000"><!-- bag -->
-			<inside>
-				<item id="2406" chance="20000"/><!-- 20% short sword -->
-				<item id="2376" chance="5000"/><!-- 5% sword -->
-				<item id="2394" chance="700"/><!-- 0.7% morning star -->
-				<item id="3963" chance="500"/><!-- 0.5% templar scytheblade -->
-				<item id="3975" chance="100"/><!-- 0.1% salamander shield -->
-			</inside>
-		</item>
-	</loot>
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Lizard Templar" level="160" maglevel="160" experience="3000000" pushable="0" speed="374" armor="53" defense="95" canpushitems="1" staticattack="50" changetarget="200">
+    <health now="3000000" max="3000000" />
+    <look type="113" corpse="4256" />
+    <combat targetdistance="1" runonhealth="0" />
+    <attacks>
+        <attack name="physical" interval="1000" chance="100" range="7" target="1" min="-1000" max="-2300">
+            <attribute key="shootEffect" value="suddendeath" />
+            <attribute key="areaEffect" value="mortarea" />
+        </attack>
+        <attack name="physical" interval="1000" chance="100" range="7" target="1" min="-1000" max="-2300">
+            <attribute key="shootEffect" value="suddendeath" />
+            <attribute key="areaEffect" value="mortarea" />
+        </attack>
+    </attacks>
+    <defenses>
+</defenses>
+    <script>
+        <event name="BossSystem" />
+    </script>
+    <voices>
+        <voice sentence="Hissss!" />
+    </voices>
+    <loot>
+        <item id="2529" chance="7000" />
+        <item id="3965" chance="7000" />
+        <item id="2450" chance="7000" />
+        <item id="2453" chance="7000" />
+        <item id="2468" chance="7000" />
+        <item id="2164" chance="7000" />
+        <item id="2352" chance="7000" />
+        <item id="2505" chance="7000" />
+        <item id="2506" chance="7000" />
+        <item id="2469" chance="7000" />
+        <item id="3982" chance="7000" />
+        <item id="2522" chance="7000" />
+        <item id="2160" countmax="100" chance1="10000" chancemax="0" />
+        <item id="2148" countmax="100" chance1="1000" chancemax="0" />
+        <item id="2152" countmax="100" chance1="9000" chancemax="0" />
+        <item id="2671" countmax="100" chance1="9000" chancemax="0" />
+        <item id="2143" countmax="30" chance1="9000" chancemax="0" />
+        <item id="2144" countmax="30" chance1="9000" chancemax="0" />
+        <item id="2145" countmax="30" chance1="9000" chancemax="0" />
+        <item id="2146" countmax="30" chance1="9000" chancemax="0" />
+        <item id="2147" countmax="30" chance1="9000" chancemax="0" />
+        <item id="2149" countmax="30" chance1="9000" chancemax="0" />
+        <item id="2150" countmax="30" chance1="9000" chancemax="0" />
+        <item id="2157" countmax="30" chance1="9000" chancemax="0" />
+        <item id="2159" countmax="30" chance1="9000" chancemax="0" />
+        <item id="2160" countmax="100" chance1="9400" chancemax="0" />
+        <item id="2148" countmax="100" chance1="400" chancemax="0" />
+        <item id="2152" countmax="100" chance1="400" chancemax="0" />
+        <item id="2671" countmax="100" chance1="400" chancemax="0" />
+        <item id="2143" countmax="30" chance1="400" chancemax="0" />
+        <item id="2144" countmax="30" chance1="400" chancemax="0" />
+        <item id="2145" countmax="30" chance1="400" chancemax="0" />
+        <item id="2146" countmax="30" chance1="400" chancemax="0" />
+        <item id="2147" countmax="30" chance1="400" chancemax="0" />
+        <item id="2149" countmax="30" chance1="400" chancemax="0" />
+        <item id="2150" countmax="30" chance1="400" chancemax="0" />
+        <item id="2157" countmax="30" chance1="400" chancemax="0" />
+        <item id="2159" countmax="30" chance1="400" chancemax="0" />
+        <item id="2424" chance="5000" />
+        <item id="3963" chance="5000" />
+        <item id="3964" chance="5000" />
+        <item id="2502" chance="5000" />
+        <item id="2503" chance="5000" />
+        <item id="2504" chance="5000" />
+        <item id="2641" chance="5000" />
+        <item id="2517" chance="5000" />
+        <item id="2168" chance="5000" />
+        <item id="2214" chance="10000" />
+        <item id="2383" chance="1300" />
+        <item id="2390" chance="1300" />
+        <item id="2391" chance="3100" />
+        <item id="2392" chance="1300" />
+        <item id="2393" chance="1300" />
+        <item id="2396" chance="1300" />
+        <item id="2400" chance="1300" />
+        <item id="2407" chance="1300" />
+        <item id="2409" chance="1300" />
+        <item id="2414" chance="1300" />
+        <item id="2415" chance="1300" />
+        <item id="2418" chance="1300" />
+        <item id="2421" chance="1300" />
+        <item id="2427" chance="1300" />
+        <item id="2430" chance="1300" />
+        <item id="2431" chance="1300" />
+        <item id="2432" chance="1300" />
+        <item id="2434" chance="1300" />
+        <item id="2436" chance="1300" />
+        <item id="2437" chance="1300" />
+        <item id="2438" chance="1300" />
+        <item id="2445" chance="1300" />
+        <item id="2451" chance="1300" />
+        <item id="2514" chance="1300" />
+        <item id="2515" chance="1300" />
+        <item id="2516" chance="1300" />
+        <item id="2518" chance="1300" />
+        <item id="2519" chance="1300" />
+        <item id="2528" chance="1300" />
+        <item id="2532" chance="1300" />
+        <item id="2534" chance="1300" />
+        <item id="2536" chance="1300" />
+        <item id="2537" chance="1300" />
+        <item id="2539" chance="1300" />
+        <item id="2540" chance="1300" />
+        <item id="2542" chance="1300" />
+        <item id="2123" chance="1300" />
+        <item id="2130" chance="1300" />
+        <item id="2131" chance="1300" />
+        <item id="2133" chance="1300" />
+        <item id="2135" chance="1300" />
+        <item id="2138" chance="1300" />
+        <item id="2142" chance="1300" />
+        <item id="2319" chance="1300" />
+        <item id="2342" chance="1300" />
+        <item id="2343" chance="1300" />
+        <item id="2358" chance="1300" />
+        <item id="2457" chance="1300" />
+        <item id="2462" chance="1300" />
+        <item id="2463" chance="1300" />
+        <item id="2472" chance="1300" />
+        <item id="2475" chance="1300" />
+        <item id="2476" chance="1300" />
+        <item id="2477" chance="1300" />
+        <item id="2479" chance="1300" />
+        <item id="2486" chance="1300" />
+        <item id="2487" chance="1300" />
+        <item id="2488" chance="1300" />
+        <item id="2489" chance="1300" />
+        <item id="2490" chance="1300" />
+        <item id="2491" chance="1300" />
+        <item id="2492" chance="1300" />
+        <item id="2496" chance="1300" />
+        <item id="2497" chance="1300" />
+        <item id="2498" chance="1300" />
+        <item id="2642" chance="1300" />
+        <item id="2644" chance="1300" />
+        <item id="2645" chance="1300" />
+        <item id="2647" chance="1300" />
+        <item id="2660" chance="1300" />
+        <item id="2662" chance="1300" />
+        <item id="2664" chance="1300" />
+        <item id="2665" chance="1300" />
+        <item id="3967" chance="1300" />
+        <item id="3968" chance="1300" />
+        <item id="3969" chance="1300" />
+        <item id="3970" chance="1300" />
+        <item id="3971" chance="1300" />
+        <item id="3972" chance="1300" />
+        <item id="2171" chance="1300" />
+        <item id="2507" chance="1300" />
+        <item id="2499" chance="1300" />
+        <item id="2500" chance="1000" />
+    </loot>
+    <summons maxSummons="0">
+</summons>
 </monster>

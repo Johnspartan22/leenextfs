@@ -1,89 +1,127 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<monster name="demon" nameDescription="a demon" race="fire" experience="6000" speed="240" manacost="0">
-	<health now="8200" max="8200"/>
-	<look type="35" corpse="2916"/>
-	<targetchange interval="1000" chance="10"/>
-	<targetstrategies nearest="70" health="10" damage="10" random="10"/>
-	<flags>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag summonable="0"/>
-		<flag convinceable="0"/>
-		<flag illusionable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="80"/>
-		<flag runonhealth="0"/>
-	</flags>
-	<attacks>
-		<attack name="melee" skill="120" attack="80"/>
-		<attack name="manadrain" chance="13" range="7" min="-40" max="-100"/>
-		<attack name="fire" chance="34" range="7" radius="7" target="1" min="-110" max="-200">
-			<attribute key="shootEffect" value="fire"/>
-			<attribute key="areaEffect" value="firearea"/>
-		</attack>
-		<attack name="firefield" chance="15" range="7" radius="1" target="1">
-			<attribute key="shootEffect" value="fire"/>
-		</attack>
-		<attack name="energy" chance="10" length="8" spread="0" min="-300" max="-420">
-			<attribute key="areaEffect" value="energy"/>
-		</attack>
-	</attacks>
-	<defenses armor="40" defense="390">
-		<defense name="healing" chance="15" min="90" max="150">
-			<attribute key="areaEffect" value="blueshimmer"/>
-		</defense>
-	</defenses>
-	<summons maxSummons="1">
-		<summon name="fire elemental" chance="9" max="1"/>
-	</summons>
-	<elements>
-		<element firePercent="100"/>
-		<element earthPercent="100"/>
-		<element energyPercent="100"/>
-	</elements>
-	<immunities>
-		<immunity lifedrain="1"/>
-		<immunity paralyze="1"/>
-		<immunity invisible="1"/>
-	</immunities>
-	<voices interval="1000" chance="5">
-		<voice sentence="MUHAHAHAHA!" yell="1"/>
-		<voice sentence="I SMELL FEEEEEAAAR!" yell="1"/>
-		<voice sentence="CHAMEK ATH UTHUL ARAK!" yell="1"/>
-		<voice sentence="Your resistance is futile!"/>
-		<voice sentence="Your soul will be mine!" yell="1"/>
-	</voices>
-	<loot>
-		<item id="2795" chance="20000" countmax="6"/><!-- 6 20% fire mushroom -->
-		<item id="2148" chance="80000" countmax="100"/><!-- 100 40% gold coin -->
-		<item id="2148" chance="70000" countmax="100"/><!-- 100 70% gold coin -->
-		<item id="2148" chance="60000" countmax="100"/><!-- 100 60% gold coin -->
-		<item id="2148" chance="50000" countmax="100"/><!-- 100 50% gold coin -->
-		<item id="2151" chance="3500"/><!-- 3.5% talon -->
-		<item id="2149" chance="11000"/><!-- 11% small emerald -->
-		<item id="2176" chance="3000"/><!-- 3% orb -->
-		<item id="1982" chance="1300"/><!-- 1.3% purple tome -->
-		<item id="2179" chance="1100"/><!-- 1.1% gold ring -->
-		<item id="2171" chance="700"/><!-- 0.7% platinum amulet -->
-		<item id="2462" chance="1200"/><!-- 1.2% devil helmet -->
-		<item id="2470" chance="400"/><!-- 0.4% golden legs -->
-		<item id="2472" chance="100"/><!-- 0.1% magic plate armor -->
-		<item id="1987" chance="100000"><!-- bag -->
-			<inside>
-				<item id="2432" chance="4000"/><!-- 4% fire axe -->
-				<item id="2393" chance="2000"/><!-- 2% giant sword -->
-				<item id="2387" chance="20000"/><!-- 20% double axe -->
-				<item id="2396" chance="600"/><!-- 0.6% ice rapier -->
-				<item id="2418" chance="1500"/><!-- 1.5% golden sickle -->
-				<item id="2520" chance="700"/><!-- 0.7% demon shield -->
-				<item id="2514" chance="500"/><!-- 0.5% mastermind shield -->
-				<item id="2214" chance="500"/><!-- 0.5% ring of healing -->
-				<item id="2164" chance="200"/><!-- 0.2% might ring -->
-				<item id="2165" chance="1400"/><!-- 1.4% stealth ring -->
-			</inside>
-		</item>
-	</loot>
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Demon" level="20" maglevel="20" experience="6000" pushable="0" armor="49" defense="51" canpushitems="1" staticattack="40" changetarget="200" speed="210">
+    <health now="8200" max="8200" />
+    <look type="35" head="20" body="30" legs="40" feet="50" corpse="2916" />
+    <combat targetdistance="1" runonhealth="0" />
+    <blood color="199" effect="0" splash="255" />
+    <attacks>
+        <attack type="melee" mindamage="192" maxdamage="510" probability="100" />
+        <attack type="instant" name="exura" cycleticks="5000" probability="50" />
+        <attack type="rune" name="firefield" cycleticks="3000" probability="40" />
+        <attack type="instant" name="d exevo gran vis lux" exhaustion="500" cycleticks="7000" probability="60" />
+        <attack type="rune" name="demon fireball" exhaustion="500" cycleticks="3500" probability="60" />
+    </attacks>
+    <defenses>
+        <defense immunity="energy" />
+        <defense immunity="fire" />
+        <defense immunity="paralyze" />
+        <defense immunity="invisible" />
+        <defense immunity="drunk" />
+    </defenses>
+    <script>
+    </script>
+    <voices>
+        <voice sentence="Your soul will be mine!" />
+        <voice sentence="Your resistance is futile!" />
+        <voice sentence="MWA HA HA HA HA!" />
+        <voice sentence="I SMELLLL FEARRR!" />
+    </voices>
+    <loot>
+        <item id="2160" countmax="100" chance1="400" chancemax="0" />
+        <item id="2148" countmax="100" chance1="400" chancemax="0" />
+        <item id="2152" countmax="100" chance1="400" chancemax="0" />
+        <item id="2671" countmax="100" chance1="400" chancemax="0" />
+        <item id="2143" countmax="30" chance1="400" chancemax="0" />
+        <item id="2144" countmax="30" chance1="400" chancemax="0" />
+        <item id="2145" countmax="30" chance1="400" chancemax="0" />
+        <item id="2146" countmax="30" chance1="400" chancemax="0" />
+        <item id="2147" countmax="30" chance1="400" chancemax="0" />
+        <item id="2149" countmax="30" chance1="400" chancemax="0" />
+        <item id="2150" countmax="30" chance1="400" chancemax="0" />
+        <item id="2157" countmax="30" chance1="400" chancemax="0" />
+        <item id="2159" countmax="30" chance1="400" chancemax="0" />
+        <item id="2383" chance="300" />
+        <item id="2390" chance="300" />
+        <item id="2391" chance="300" />
+        <item id="2392" chance="300" />
+        <item id="2393" chance="300" />
+        <item id="2396" chance="300" />
+        <item id="2400" chance="300" />
+        <item id="2407" chance="300" />
+        <item id="2409" chance="300" />
+        <item id="2414" chance="300" />
+        <item id="2415" chance="300" />
+        <item id="2418" chance="300" />
+        <item id="2421" chance="300" />
+        <item id="2427" chance="300" />
+        <item id="2430" chance="300" />
+        <item id="2431" chance="300" />
+        <item id="2432" chance="300" />
+        <item id="2434" chance="300" />
+        <item id="2436" chance="300" />
+        <item id="2437" chance="300" />
+        <item id="2438" chance="300" />
+        <item id="2445" chance="300" />
+        <item id="2451" chance="300" />
+        <item id="2514" chance="300" />
+        <item id="2515" chance="300" />
+        <item id="2516" chance="300" />
+        <item id="2518" chance="300" />
+        <item id="2519" chance="300" />
+        <item id="2528" chance="300" />
+        <item id="2532" chance="300" />
+        <item id="2534" chance="300" />
+        <item id="2536" chance="300" />
+        <item id="2537" chance="300" />
+        <item id="2539" chance="300" />
+        <item id="2540" chance="300" />
+        <item id="2542" chance="300" />
+        <item id="2123" chance="300" />
+        <item id="2130" chance="300" />
+        <item id="2131" chance="300" />
+        <item id="2133" chance="300" />
+        <item id="2135" chance="300" />
+        <item id="2138" chance="300" />
+        <item id="2142" chance="300" />
+        <item id="2319" chance="300" />
+        <item id="2342" chance="300" />
+        <item id="2343" chance="300" />
+        <item id="2358" chance="300" />
+        <item id="2457" chance="300" />
+        <item id="2462" chance="300" />
+        <item id="2463" chance="300" />
+        <item id="2472" chance="300" />
+        <item id="2475" chance="300" />
+        <item id="2476" chance="300" />
+        <item id="2477" chance="300" />
+        <item id="2479" chance="300" />
+        <item id="2486" chance="300" />
+        <item id="2487" chance="300" />
+        <item id="2488" chance="300" />
+        <item id="2489" chance="300" />
+        <item id="2490" chance="300" />
+        <item id="2491" chance="300" />
+        <item id="2492" chance="300" />
+        <item id="2496" chance="300" />
+        <item id="2497" chance="300" />
+        <item id="2498" chance="300" />
+        <item id="2642" chance="300" />
+        <item id="2644" chance="300" />
+        <item id="2645" chance="300" />
+        <item id="2647" chance="300" />
+        <item id="2660" chance="300" />
+        <item id="2662" chance="300" />
+        <item id="2664" chance="300" />
+        <item id="2665" chance="300" />
+        <item id="3967" chance="300" />
+        <item id="3968" chance="300" />
+        <item id="3969" chance="300" />
+        <item id="3970" chance="300" />
+        <item id="3971" chance="300" />
+        <item id="3972" chance="300" />
+        <item id="2171" chance="300" />
+        <item id="2507" chance="300" />
+        <item id="2499" chance="300" />
+        <item id="2500" chance="300" />
+    </loot>
 </monster>

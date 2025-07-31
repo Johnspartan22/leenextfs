@@ -1,58 +1,121 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<monster name="giant spider" nameDescription="a giant spider" race="venom" experience="900" speed="240" manacost="0">
-	<health now="1300" max="1300"/>
-	<look type="38" corpse="2857"/>
-	<targetchange interval="1000" chance="10"/>
-	<targetstrategies nearest="70" health="20" damage="0" random="10"/>
-	<flags>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag summonable="0"/>
-		<flag convinceable="0"/>
-		<flag illusionable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="80"/>
-		<flag runonhealth="0"/>
-	</flags>
-	<attacks>
-		<attack name="melee" skill="80" attack="65"/>
-		<attack name="poisonfield" chance="17" range="7" radius="1" target="1">
-			<attribute key="shootEffect" value="poison"/>
-		</attack>
-	</attacks>
-	<defenses armor="30" defense="160">
-		<defense name="haste_giantspider" chance="6"/>
-	</defenses>
-	<summons maxSummons="2">
-		<summon name="poison spider" chance="10" max="2"/>
-	</summons>
-	<elements>
-		<element firePercent="100"/>
-		<element earthPercent="100"/>
-	</elements>
-	<immunities>
-		<immunity lifedrain="1"/>
-		<immunity invisible="1"/>
-	</immunities>
-	<voices interval="1000" chance="5">
-	</voices>
-	<loot>
-		<item id="2148" chance="33300" countmax="55"/><!-- 55 33.3% gold coin -->
-		<item id="2148" chance="99900" countmax="11"/><!-- 11 99.9% gold coin -->
-		<item id="2148" chance="66600" countmax="33"/><!-- 33 66.6% gold coin -->
-		<item id="2463" chance="10000"/><!-- 10% plate armor -->
-		<item id="2478" chance="8000"/><!-- 8% brass legs -->
-		<item id="2457" chance="5000"/><!-- 5% steel helmet -->
-		<item id="2477" chance="300"/><!-- 0.3% knight legs -->
-		<item id="2476" chance="300"/><!-- 0.3% knight armor -->
-		<item id="2171" chance="100"/><!-- 0.1% platinum amulet -->
-		<item id="1987" chance="100000"><!-- bag -->
-			<inside>
-				<item id="2169" chance="700"/><!-- 0.7% time ring -->
-			</inside>
-		</item>
-	</loot>
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Giant Spider" level="14" maglevel="60" experience="900" pushable="0" armor="35" defense="37" canpushitems="1" staticattack="50" changetarget="200" speed="270">
+    <health now="1300" max="1300" />
+    <look type="38" corpse="2857" />
+    <combat targetdistance="1" runonhealth="0" />
+    <blood color="30" effect="16" splash="4" />
+    <attacks>
+        <attack type="melee" mindamage="120" maxdamage="300" probability="100" />
+        <attack type="rune" name="gs poison" exhaustion="500" cycleticks="5000" probability="65" />
+        <attack type="instant" name="gs_haste" exhaustion="500" cycleticks="8000" probability="75" />
+        <attack type="instant" name="exura" exhaustion="500" cycleticks="3850" probability="40" />
+    </attacks>
+    <defenses>
+        <defense immunity="fire" />
+        <defense immunity="invisible" />
+        <defense immunity="drunk" />
+    </defenses>
+    <script>
+        <event name="BossSystem" />
+    </script>
+    <loot>
+        <item id="2160" countmax="100" chance1="400" chancemax="0" />
+        <item id="2148" countmax="100" chance1="400" chancemax="0" />
+        <item id="2152" countmax="100" chance1="400" chancemax="0" />
+        <item id="2671" countmax="100" chance1="400" chancemax="0" />
+        <item id="2143" countmax="30" chance1="400" chancemax="0" />
+        <item id="2144" countmax="30" chance1="400" chancemax="0" />
+        <item id="2145" countmax="30" chance1="400" chancemax="0" />
+        <item id="2146" countmax="30" chance1="400" chancemax="0" />
+        <item id="2147" countmax="30" chance1="400" chancemax="0" />
+        <item id="2149" countmax="30" chance1="400" chancemax="0" />
+        <item id="2150" countmax="30" chance1="400" chancemax="0" />
+        <item id="2157" countmax="30" chance1="400" chancemax="0" />
+        <item id="2159" countmax="30" chance1="400" chancemax="0" />
+        <item id="2383" chance="300" />
+        <item id="2390" chance="300" />
+        <item id="2391" chance="300" />
+        <item id="2392" chance="300" />
+        <item id="2393" chance="300" />
+        <item id="2396" chance="300" />
+        <item id="2400" chance="300" />
+        <item id="2407" chance="300" />
+        <item id="2409" chance="300" />
+        <item id="2414" chance="300" />
+        <item id="2415" chance="300" />
+        <item id="2418" chance="300" />
+        <item id="2421" chance="300" />
+        <item id="2427" chance="300" />
+        <item id="2430" chance="300" />
+        <item id="2431" chance="300" />
+        <item id="2432" chance="300" />
+        <item id="2434" chance="300" />
+        <item id="2436" chance="300" />
+        <item id="2437" chance="300" />
+        <item id="2438" chance="300" />
+        <item id="2445" chance="300" />
+        <item id="2451" chance="300" />
+        <item id="2514" chance="300" />
+        <item id="2515" chance="300" />
+        <item id="2516" chance="300" />
+        <item id="2518" chance="300" />
+        <item id="2519" chance="300" />
+        <item id="2528" chance="300" />
+        <item id="2532" chance="300" />
+        <item id="2534" chance="300" />
+        <item id="2536" chance="300" />
+        <item id="2537" chance="300" />
+        <item id="2539" chance="300" />
+        <item id="2540" chance="300" />
+        <item id="2542" chance="300" />
+        <item id="2123" chance="300" />
+        <item id="2130" chance="300" />
+        <item id="2131" chance="300" />
+        <item id="2133" chance="300" />
+        <item id="2135" chance="300" />
+        <item id="2138" chance="300" />
+        <item id="2142" chance="300" />
+        <item id="2319" chance="300" />
+        <item id="2342" chance="300" />
+        <item id="2343" chance="300" />
+        <item id="2358" chance="300" />
+        <item id="2457" chance="300" />
+        <item id="2462" chance="300" />
+        <item id="2463" chance="300" />
+        <item id="2472" chance="300" />
+        <item id="2475" chance="300" />
+        <item id="2476" chance="300" />
+        <item id="2477" chance="300" />
+        <item id="2479" chance="300" />
+        <item id="2486" chance="300" />
+        <item id="2487" chance="300" />
+        <item id="2488" chance="300" />
+        <item id="2489" chance="300" />
+        <item id="2490" chance="300" />
+        <item id="2491" chance="300" />
+        <item id="2492" chance="300" />
+        <item id="2496" chance="300" />
+        <item id="2497" chance="300" />
+        <item id="2498" chance="300" />
+        <item id="2642" chance="300" />
+        <item id="2644" chance="300" />
+        <item id="2645" chance="300" />
+        <item id="2647" chance="300" />
+        <item id="2660" chance="300" />
+        <item id="2662" chance="300" />
+        <item id="2664" chance="300" />
+        <item id="2665" chance="300" />
+        <item id="3967" chance="300" />
+        <item id="3968" chance="300" />
+        <item id="3969" chance="300" />
+        <item id="3970" chance="300" />
+        <item id="3971" chance="300" />
+        <item id="3972" chance="300" />
+        <item id="2171" chance="300" />
+        <item id="2507" chance="300" />
+        <item id="2499" chance="300" />
+        <item id="2500" chance="300" />
+    </loot>
+    <summons maxSummons="0">
+</summons>
 </monster>
