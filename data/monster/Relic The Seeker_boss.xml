@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Relic The Seeker Boss" level="20" maglevel="450" experience="72000" pushable="0" armor="70" defense="70" canpushitems="1" staticattack="50" changetarget="200" speed="400">
+    <health now="180000" max="180000"/>
+    <look type="134" head="95" body="57" legs="113" feet="115" corpse="3128"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack type="melee" mindamage="6000" maxdamage="10000" cycleticks="2000" probability="100"/>
+    </attacks>
+    <voices>
+        <voice sentence="I make chaos cry then I stole the power!"/>
+        <voice sentence="No use crying over split blood!"/>
+    </voices>
+    <defenses>
+</defenses>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="relictheseekerBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Smuggler Boss" nameDescription="a smuggler" race="blood" experience="96" speed="352" manacost="390">
+    <health now="260" max="260"/>
+    <look type="134" head="95" body="0" legs="113" feet="115" corpse="3058"/>
+    <targetchange interval="2000" chance="50"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+        <flag summonable="1"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="0"/>
+        <flag targetdistance="1"/>
+        <flag runonhealth="18"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="smugglerBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="23" attack="38"/>
+    </attacks>
+    <defenses armor="10" defense="13"/>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="0"/>
+        <immunity fire="0"/>
+        <immunity poison="0"/>
+        <immunity lifedrain="0"/>
+        <immunity paralyze="0"/>
+        <immunity outfit="0"/>
+        <immunity drunk="0"/>
+        <immunity invisible="0"/>
+    </immunities>
+    <voices interval="5000" chance="10">
+        <voice sentence="I will silence you forever!"/>
+        <voice sentence="You saw something you shouldn't!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

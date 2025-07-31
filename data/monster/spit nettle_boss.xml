@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Spit Nettle Boss" level="10" maglevel="450" experience="30000" pushable="0" speed="20" armor="3" defense="5" canpushitems="0" staticattack="50" changetarget="200">
+    <health now="24300" max="24300"/>
+    <look type="221" corpse="2253"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="30" effect="16" splash="4"/>
+    <attacks>
+        <attack type="distance" name="poisonfield" mindamage="500" maxdamage="100"/>
+    </attacks>
+    <defenses>
+        <defense immunity="poison"/>
+        <defense immunity="energy"/>
+        <defense immunity="fire"/>
+    </defenses>
+    <voices>
+</voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="spitnettleBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

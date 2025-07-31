@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Stalker" nameDescription="a stalker" race="blood" experience="90" speed="260" manacost="0">
-    <health now="120" max="120"/>
+<monster name="Stalker Boss" nameDescription="a stalker" race="blood" experience="180" speed="520" manacost="0">
+    <health now="240" max="240"/>
     <look type="128" head="97" body="116" legs="95" feet="95" corpse="3058"/>
     <targetchange interval="2000" chance="10"/>
     <strategy attack="60" defense="0"/>
@@ -15,10 +15,14 @@
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="0"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="stalkerBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="40" attack="30"/>
-        <attack name="lifedrain" interval="1000" chance="17" range="1" min="-20" max="-30"/>
+        <attack name="melee" interval="2000" skill="40" attack="60"/>
+        <attack name="lifedrain" interval="1000" chance="17" range="1" min="-40" max="-60"/>
     </attacks>
     <defenses armor="14" defense="20">
         <defense name="invisible" interval="1000" chance="25" duration="30000">
@@ -36,19 +40,7 @@
         <immunity drunk="1"/>
         <immunity invisible="1"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <loot>
-        <item id="2148" countmax="20" chance="100000"/>
-        <item id="2649" chance="6666"/>
-        <item id="1987" chance="100000">
-            <inside>
-                <item id="2260" chance="4000"/>
-                <item id="2399" countmax="1" chance="20000"/>
-                <item id="2478" chance="3333"/>
-                <item id="2425" chance="2000"/>
-            </inside>
-        </item>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

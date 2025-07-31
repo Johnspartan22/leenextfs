@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Spider" nameDescription="a spider" race="venom" experience="12" speed="152" manacost="210">
-    <health now="20" max="20"/>
-    <look type="30" head="0" body="0" legs="0" feet="0" corpse="2807"/>
-    <targetchange interval="2000" chance="0"/>
-    <strategy attack="100" defense="0"/>
+<monster name="Scorpion Boss" nameDescription="a scorpion" race="venom" experience="90" speed="300" manacost="310">
+    <health now="90" max="90"/>
+    <look type="43" head="0" body="0" legs="0" feet="0" corpse="2897"/>
+    <targetchange interval="2000" chance="10"/>
+    <strategy attack="60" defense="0"/>
     <flags>
         <flag summonable="1"/>
         <flag attackable="1"/>
@@ -14,27 +14,28 @@
         <flag canpushitems="0"/>
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
-        <flag runonhealth="6"/>
+        <flag runonhealth="5"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="scorpionBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="19" attack="7"/>
+        <attack name="melee" interval="2000" skill="35" attack="42" poison="350"/>
     </attacks>
-    <defenses armor="2" defense="2"/>
+    <defenses armor="14" defense="5"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
         <immunity fire="0"/>
-        <immunity poison="0"/>
+        <immunity poison="1"/>
         <immunity lifedrain="0"/>
         <immunity paralyze="0"/>
         <immunity outfit="0"/>
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <loot>
-        <item id="2148" countmax="6" chance="70000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

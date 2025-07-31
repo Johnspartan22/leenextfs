@@ -1,25 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Slime" nameDescription="a slime" race="venom" experience="0" speed="120" manacost="0">
-    <health now="150" max="150"/>
-    <look type="19" head="0" body="0" legs="0" feet="0" corpse="1490"/>
+<monster name="Poison Spider" nameDescription="a poison spider" race="venom" experience="22" speed="160" manacost="270">
+    <health now="26" max="26"/>
+    <look type="36" head="0" body="0" legs="0" feet="0" corpse="2848"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
     <flags>
-        <flag summonable="0"/>
+        <flag summonable="1"/>
         <flag attackable="1"/>
         <flag hostile="1"/>
-        <flag illusionable="0"/>
-        <flag convinceable="0"/>
-        <flag pushable="0"/>
-        <flag canpushitems="1"/>
+        <flag illusionable="1"/>
+        <flag convinceable="1"/>
+        <flag pushable="1"/>
+        <flag canpushitems="0"/>
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
-        <flag runonhealth="0"/>
+        <flag runonhealth="6"/>
     </flags>
     <attacks>
-        <attack name="melee" interval="2000" skill="22" attack="42"/>
+        <attack name="melee" interval="2000" skill="25" attack="12" poison="30"/>
     </attacks>
-    <defenses armor="3" defense="10"/>
+    <defenses armor="2" defense="6"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
@@ -34,7 +34,7 @@
     <script>
         <event name="BossSystem"/>
     </script>
-    <voices interval="5000" chance="10">
-        <voice sentence="Blubb"/>
-    </voices>
+    <loot>
+        <item id="2148" countmax="4" chance="37000"/>
+    </loot>
 </monster>

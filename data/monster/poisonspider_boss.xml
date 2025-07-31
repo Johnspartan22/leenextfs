@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Skunk" nameDescription="a skunk" race="blood" experience="3" speed="136" manacost="200">
-    <health now="20" max="20"/>
-    <look type="106" head="0" body="0" legs="0" feet="0" corpse="3046"/>
+<monster name="Poison Spider Boss" nameDescription="a poison spider" race="venom" experience="44" speed="320" manacost="270">
+    <health now="52" max="52"/>
+    <look type="36" head="0" body="0" legs="0" feet="0" corpse="2848"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
     <flags>
@@ -14,31 +14,28 @@
         <flag canpushitems="0"/>
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
-        <flag runonhealth="8"/>
+        <flag runonhealth="6"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="poisonspiderBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="15" attack="4"/>
-        <attack name="poison" interval="1000" chance="2" range="1" radius="1" target="1" min="-1" max="-3">
-            <attribute key="areaEffect" value="poison"/>
-        </attack>
+        <attack name="melee" interval="2000" skill="25" attack="24" poison="30"/>
     </attacks>
-    <defenses armor="1" defense="5"/>
+    <defenses armor="2" defense="6"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
         <immunity fire="0"/>
-        <immunity poison="0"/>
+        <immunity poison="1"/>
         <immunity lifedrain="0"/>
         <immunity paralyze="0"/>
         <immunity outfit="0"/>
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2671" chance="50000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

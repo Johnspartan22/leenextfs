@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Souls Servent Boss" level="300" maglevel="450" experience="300000" pushable="0" armor="35" defense="40" canpushitems="1" staticattack="50" changetarget="200" speed="400">
+    <health now="300000" max="300000"/>
+    <look type="99" head="95" body="116" legs="119" feet="115" corpse="3025"/>
+    <combat targetdistance="1" runonhealth="80"/>
+    <immunities>
+        <immunity physical="1"/>
+        <immunity energy="1"/>
+        <immunity earth="1"/>
+        <immunity ice="1"/>
+        <immunity holy="1"/>
+        <immunity death="1"/>
+        <immunity lifedrain="1"/>
+        <immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+        <immunity invisible="1"/>
+        <immunity poison="1"/>
+    </immunities>
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="150000"/>
+        <attack name="physical" interval="1000" chance="90" range="7" target="1" min="-80000" max="-90000">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+    </attacks>
+    <voices>
+        <voice sentence="Oh... A little intruder..."/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="soulsserventBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

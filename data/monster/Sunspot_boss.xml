@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Sunspot Boss" level="125000" maglevel="450" experience="138" pushable="0" armor="312" defense="322" canpushitems="1" staticattack="50" changetarget="200" speed="38380">
+    <health now="300000000" max="300000000"/>
+    <look type="49" head="20" body="30" legs="40" feet="50" corpse="3069"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="14000000"/>
+        <attack name="manadrain" interval="1000" chance="90" range="7" min="0" max="0">
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+        <attack name="smite_monster" interval="1000" chance="30" min="-6000000" max="-34000000">
+        </attack>
+        <attack name="physical" interval="200" chance="100" range="5" radius="5" target="1" min="-8893046" max="-10071672">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense name="healing" interval="3000" chance="90" min="300000" max="100000">
+            <attribute key="areaEffect" value="blueshimmer"/>
+        </defense>
+    </defenses>
+    <voices>
+        <voice sentence="I am oblivion"/>
+        <voice sentence="ARGGHH"/>
+        <voice sentence="Die pathetic human"/>
+        <voice sentence="Burn your neck with the flick of a wrist"/>
+        <voice sentence="Just die!"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="sunspotBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

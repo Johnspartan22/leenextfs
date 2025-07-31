@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Soul Destroyer Boss" level="125000" maglevel="450" experience="70000000000" pushable="0" armor="312" defense="322" canpushitems="1" staticattack="50" changetarget="200" speed="360">
+    <health now="300000000" max="300000000"/>
+    <look type="9" head="20" body="30" legs="40" feet="50" corpse="3069"/>
+    <combat targetdistance="8" runonhealth="50000000"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="9"/>
+        <flag runonhealth="50"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="souldestroyerBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="physical" interval="1000" chance="90" range="9" target="1" min="-40000000" max="-50000000">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+        <attack name="physical" interval="1000" chance="100" range="1" min="-80000000" max="-160000000">
+        </attack>
+    </attacks>
+    <defenses>
+</defenses>
+    <voices>
+        <voice sentence="I am oblivion"/>
+        <voice sentence="ARGGHH"/>
+        <voice sentence="Die pathetic human"/>
+        <voice sentence="When you die, I dine on your soul"/>
+        <voice sentence="Just die!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>
