@@ -33,6 +33,15 @@ PaymentSystem.giveChange = function(cid, change)
    change = change - (numChipped * VAL_CHIPPED)
    print("DEBUG: Chipped skulls: " .. numChipped .. ", remaining: " .. change)
 
+   -- Handle coin denominations manually
+   local crystalCoins = math.floor(change / 10000)
+   change = change - (crystalCoins * 10000)
+   
+   local platinumCoins = math.floor(change / 100)
+   change = change - (platinumCoins * 100)
+   
+   local goldCoins = change
+
    if numFlawless > 0 then
       print("DEBUG: Adding " .. numFlawless .. " flawless skulls")
       doPlayerAddItem(cid, ITEM_FLAWLESS_SKULL, numFlawless)
@@ -41,9 +50,17 @@ PaymentSystem.giveChange = function(cid, change)
       print("DEBUG: Adding " .. numChipped .. " chipped skulls")
       doPlayerAddItem(cid, ITEM_CHIPPED_SKULL, numChipped)
    end
-   if change > 0 then
-      print("DEBUG: Adding " .. change .. " gold coins")
-      doPlayerAddMoney(cid, change)
+   if crystalCoins > 0 then
+      print("DEBUG: Adding " .. crystalCoins .. " crystal coins")
+      doPlayerAddItem(cid, 2160, crystalCoins) -- Crystal coin ID
+   end
+   if platinumCoins > 0 then
+      print("DEBUG: Adding " .. platinumCoins .. " platinum coins")
+      doPlayerAddItem(cid, 2152, platinumCoins) -- Platinum coin ID
+   end
+   if goldCoins > 0 then
+      print("DEBUG: Adding " .. goldCoins .. " gold coins")
+      doPlayerAddItem(cid, 2148, goldCoins) -- Gold coin ID
    end
    
    print("DEBUG: Change distribution complete")
