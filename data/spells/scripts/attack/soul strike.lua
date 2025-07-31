@@ -1,17 +1,18 @@
 local combat = createCombatObject()
-setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE)
-setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_EXPLOSIONAREA)
-
+setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_LIFEDRAIN)
+setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_HITBYPOISON)
+setCombatParam(combat, COMBAT_PARAM_TARGETCASTERORTOPMOST, 1)
+setCombatParam(combat, COMBAT_PARAM_AGGRESSIVE, 0)
 
 local helmetMultipliers = {
-   [2656] = 2.0,
+   [2506] = 1.1,
    [4337] = 3.0,
    [2663] = 1.5
 }
 local armorMultipliers = {
    [2656] = 2.0,
    [4338] = 3.0,
-   [2465] = 1.3
+   [2505] = 1.1
 }
 local necklaceMultipliers = {
    [2161] = 1.1,
@@ -50,34 +51,15 @@ function getDamageMultiplier(cid)
    return multiplier
 end
 
-
-
 function onGetFormulaValues(cid, level, maglevel)
     local multiplier = getDamageMultiplier(cid)
-    local min = -(level * 7 + maglevel * 6) * 4.0 * multiplier
-    local max = -(level * 7 + maglevel * 6) * 4.3 * multiplier
+    local min = -(level * 3 + maglevel * 1) * 5 * multiplier
+    local max = -(level * 3 + maglevel * 1) * 5.2 * multiplier
     return min, max
 end
 
-
 setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
-arr = {
-{0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-{0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
-{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-{0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
-{0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-}
-
-local area = createCombatArea(arr)
-setCombatArea(combat, area)
 
 function onCastSpell(cid, var)
-    return doCombat(cid, combat, var)
+	return doCombat(cid, combat, var)
 end

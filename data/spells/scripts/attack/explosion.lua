@@ -1,7 +1,9 @@
-local combat = createCombatObject()
-setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE)
-setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_EXPLOSIONAREA)
-
+local combat = Combat()
+combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE)
+combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_EXPLOSIONAREA)
+combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_EXPLOSION)
+combat:setParameter(COMBAT_PARAM_BLOCKARMOR, true)
+combat:setArea(createCombatArea(AREA_CROSS1X1))
 
 local helmetMultipliers = {
    [2656] = 2.0,
@@ -51,33 +53,17 @@ function getDamageMultiplier(cid)
 end
 
 
-
 function onGetFormulaValues(cid, level, maglevel)
     local multiplier = getDamageMultiplier(cid)
-    local min = -(level * 7 + maglevel * 6) * 4.0 * multiplier
-    local max = -(level * 7 + maglevel * 6) * 4.3 * multiplier
+    local min = -(level * 4 + maglevel * 11) * 2.5 * multiplier
+    local max = -(level * 4 + maglevel * 11) * 3.1 * multiplier
     return min, max
 end
 
 
-setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
-arr = {
-{0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-{0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
-{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-{0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
-{0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-}
+combat:setCallback(CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
 
-local area = createCombatArea(arr)
-setCombatArea(combat, area)
 
-function onCastSpell(cid, var)
-    return doCombat(cid, combat, var)
+function onCastSpell(creature, variant)
+	return combat:execute(creature, variant)
 end

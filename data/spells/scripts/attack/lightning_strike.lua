@@ -1,6 +1,6 @@
 local combat = createCombatObject()
 setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_ENERGYDAMAGE)
-setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_LIGHTNING)
+setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_SMALLLIGHTNING)
 setCombatFormula(combat, COMBAT_FORMULA_LEVELMAGIC, -0.35, -10, -0.65, 0)
 
 local arr = {

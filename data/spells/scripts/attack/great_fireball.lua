@@ -1,26 +1,25 @@
 local combat = createCombatObject()
 setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE)
 setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_FIREAREA)
+setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_FIRE)
 
 function onGetFormulaValues(cid, level, maglevel)
-if getPlayerVocation(cid) == 1 or getPlayerVocation(cid) == 5 then
-	min = -(level * 0.6 + maglevel * 0.8) * 1.9
-	max = -(level * 0.7 + maglevel * 0.9) * 2.1
-else
-	min = -(level * 0.6 + maglevel * 0.7) * 1.9
-	max = -(level * 0.7 + maglevel * 0.8) * 2.1
-end	
+	min = -(level * 0.5 + maglevel * 0.8) * 1.9
+	max = -(level * 0.6 + maglevel * 1.1) * 2.1
+	
 	return min, max
 end
 
 setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
 
 local arr = {
-{0, 0, 0},
-{0, 0, 0},
-{0, 0, 0},
-{0, 0, 0},
-{0, 3, 0}
+{0, 0, 1, 1, 1, 0, 0},
+{0, 1, 1, 1, 1, 1, 0},
+{1, 1, 1, 1, 1, 1, 1},
+{1, 1, 1, 3, 1, 1, 1},
+{1, 1, 1, 1, 1, 1, 1},
+{0, 1, 1, 1, 1, 1, 0},
+{0, 0, 1, 1, 1, 0, 0}
 }
 
 local area = createCombatArea(arr)

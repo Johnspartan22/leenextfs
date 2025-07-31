@@ -1,17 +1,16 @@
 local combat = createCombatObject()
 setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE)
-setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_EXPLOSIONAREA)
-
+setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_LOSEENERGY)
 
 local helmetMultipliers = {
-   [2656] = 2.0,
+   [2506] = 1.1,
    [4337] = 3.0,
    [2663] = 1.5
 }
 local armorMultipliers = {
    [2656] = 2.0,
    [4338] = 3.0,
-   [2465] = 1.3
+   [2505] = 1.1
 }
 local necklaceMultipliers = {
    [2161] = 1.1,
@@ -52,32 +51,37 @@ end
 
 
 
-function onGetFormulaValues(cid, level, maglevel)
-    local multiplier = getDamageMultiplier(cid)
-    local min = -(level * 7 + maglevel * 6) * 4.0 * multiplier
-    local max = -(level * 7 + maglevel * 6) * 4.3 * multiplier
-    return min, max
-end
-
-
-setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
-arr = {
-{0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-{0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
-{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
-{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
-{0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
-{0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-}
+local arr = {
+ {0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
+ {0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
+ {0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
+ {0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
+ {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+ {1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1},
+ {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+ {0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
+ {0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
+ {0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
+ {0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
+ }
 
 local area = createCombatArea(arr)
 setCombatArea(combat, area)
 
 function onCastSpell(cid, var)
-    return doCombat(cid, combat, var)
+    local centerpos = {x = getCreaturePosition(cid).x, y = getCreaturePosition(cid).y, z = getCreaturePosition(cid).z}
+    local level = getPlayerLevel(cid)
+    local maglv = getPlayerMagLevel(cid)
+    
+    -- Calculate base damage as in the original script
+    local minDmg = (level *4 + maglv * 5) * 5 
+    local maxDmg = (level * 6 + maglv * 5) * 8.5
+    
+    -- Apply item multipliers
+    local multiplier = getDamageMultiplier(cid)
+    minDmg = math.floor(minDmg * multiplier)
+    maxDmg = math.floor(maxDmg * multiplier)
+    
+    doAreaCombatHealth(cid, COMBAT_PHYSICALDAMAGE, centerpos, area, -minDmg, -maxDmg, CONST_ME_LOSEENERGY)
+    return true
 end

@@ -1,28 +1,26 @@
-local combat = Combat()
-combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE)
-combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_HITAREA)
-combat:setParameter(COMBAT_PARAM_BLOCKARMOR, true)
-combat:setParameter(COMBAT_PARAM_USECHARGES, true)
-combat:setArea(createCombatArea(AREA_SQUARE1X1))
+local combat = createCombatObject()
+setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_HITAREA)
+setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE)
 
-function onGetFormulaValues(player, skill, attack, factor)
-	local min = (player:getLevel() / 5) + (skill * attack * 0.03) + 7
-	local max = (player:getLevel() / 5) + (skill * attack * 0.05) + 11
-	return -min, -max
+function onGetFormulaValues(cid, level, maglevel)
+	min = -(level * 18) / 10
+	max = -(level * 19.5) / 8
+	return min, max
 end
 
-combat:setCallback(CALLBACK_PARAM_SKILLVALUE, "onGetFormulaValues")
+setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
 
-function onCastSpell(creature, variant)
-	local manaCost = creature:getLevel() * 4
-	if creature:getMana() < manaCost and not creature:hasFlag(PlayerFlag_HasInfiniteMana) then
-		creature:sendCancelMessage(RETURNVALUE_NOTENOUGHMANA)
-		creature:getPosition():sendMagicEffect(CONST_ME_POFF)
-		return false
-	end
+local arr = {
+{0, 0, 0, 0, 0},
+{0, 1, 1, 1, 0},
+{0, 1, 3, 1, 0},
+{0, 1, 1, 1, 0},
+{0, 0, 0, 0, 0}
+}
 
-	creature:addManaSpent(manaCost)
-	creature:addMana(-manaCost)
+local area = createCombatArea(arr)
+setCombatArea(combat, area)
 
-	return combat:execute(creature, variant)
+function onCastSpell(cid, var)
+	return doCombat(cid, combat, var)
 end

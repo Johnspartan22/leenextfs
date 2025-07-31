@@ -1,17 +1,30 @@
-local combat = Combat()
-combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_EARTHDAMAGE)
-combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_GREEN_RINGS)
+local combat = createCombatObject(COMBAT_POISONDAMAGE)
+setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_POISONDAMAGE)
+setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_GREEN_RINGS)
+setCombatFormula(combat, COMBAT_FORMULA_LEVELMAGIC, -0.9, -0, -1.5, -0)
 
-combat:setArea(createCombatArea(AREA_CIRCLE6X6))
+local condition = createConditionObject(CONDITION_POISON)
+setConditionParam(condition, CONDITION_PARAM_DELAYED, 1)
+addDamageCondition(condition, 10, 2000, -10)
+setCombatCondition(combat, condition)
 
-function onGetFormulaValues(player, level, magicLevel)
-	local min = (level / 5) + (magicLevel * 4) + 75
-	local max = (level / 5) + (magicLevel * 10) + 150
-	return -min, -max
-end
+local arr = {
+{0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+{0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
+{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+{1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1},
+{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+{0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+{0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+{0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
+{0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}
+}
 
-combat:setCallback(CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
+local area = createCombatArea(arr)
+setCombatArea(combat, area)
 
-function onCastSpell(creature, variant)
-	return combat:execute(creature, variant)
+function onCastSpell(cid, var)
+	return doCombat(cid, combat, var)
 end
