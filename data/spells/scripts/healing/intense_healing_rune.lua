@@ -6,15 +6,12 @@ setCombatParam(combat, COMBAT_PARAM_AGGRESSIVE, 0)
 setCombatParam(combat, COMBAT_PARAM_DISPEL, CONDITION_PARALYZE)
 
 function onGetFormulaValues(cid, level, maglevel)
-if getPlayerVocation(cid) == 1 or getPlayerVocation(cid) == 5 then
-	min = (level * 0.2 + maglevel * 0.4) * 1.9 + 20
-	max = (level * 0.3 + maglevel * 0.5) * 2.1 + 30
-elseif getPlayerVocation(cid) == 2 or getPlayerVocation(cid) == 4 then
-	min = (level * 0.2 + maglevel * 0.4) * 2.1 + 20
-	max = (level * 0.3 + maglevel * 0.5) * 2.9 + 30
+if getPlayerVocation(cid) == 2 or getPlayerVocation(cid) == 4 then
+	min = (level * 0.4 + maglevel * 0.9) * 1.9 + 11
+	max = (level * 0.7 + maglevel * 1.1) * 2.1 + 33
 else
-	min = (level * 0.2 + maglevel * 0.4) * 1.9 + 20
-	max = (level * 0.3 + maglevel * 0.5) * 2.1 + 30
+	min = (level * 0.4 + maglevel * 0.6) * 1.9 + 11
+	max = (level * 0.6 + maglevel * 0.9) * 2.1 + 33
 end
 	return min, max
 end
