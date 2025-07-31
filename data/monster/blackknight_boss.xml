@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Black Knight Boss" nameDescription="a black knight" race="blood" experience="3200" speed="780" manacost="0">
+    <health now="3600" max="3600"/>
+    <look type="131" head="95" body="95" legs="95" feet="95" corpse="3058"/>
+    <targetchange interval="2000" chance="3"/>
+    <strategy attack="80" defense="10"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag runonhealth="0"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="blackknightBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="88" attack="120"/>
+        <attack name="physical" interval="1000" chance="15" range="7" min="-290" max="-370">
+            <attribute key="shootEffect" value="spear"/>
+        </attack>
+    </attacks>
+    <defenses armor="42" defense="60"/>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="1"/>
+        <immunity fire="1"/>
+        <immunity poison="1"/>
+        <immunity lifedrain="0"/>
+        <immunity paralyze="1"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+        <immunity invisible="1"/>
+    </immunities>
+    <voices interval="5000" chance="10">
+        <voice sentence="MINE!" yell="1"/>
+        <voice sentence="NO PRISONERS!" yell="1"/>
+        <voice sentence="NO MERCY!" yell="1"/>
+        <voice sentence="By Bolg's Blood!"/>
+        <voice sentence="You're no match for me!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

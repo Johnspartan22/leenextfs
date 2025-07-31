@@ -1,0 +1,259 @@
+Agent Smith_boss.xml
+Ancient Necropharus_boss.xml
+Arch Angel_boss.xml
+ArchAngel_boss.xml
+Archdemon Kalius_boss.xml
+Captain Jack_boss.xml
+Chuck Norris_boss.xml
+Crypt Lord_boss.xml
+Deck Hand_boss.xml
+Demonic Acolyte_boss.xml
+Demonic Summoner_boss.xml
+Doom Lord_boss.xml
+Drukus the Dwarf_boss.xml
+Dwarf Geomancer_boss.xml
+Dwarf Guard_boss.xml
+Dwarf Soldier_boss.xml
+Echoes of oblivion_boss.xml
+Enraged Skeletor_boss.xml
+Evil_boss.xml
+Fallen Angel_boss.xml
+Fire Storm_boss.xml
+First Mate_boss.xml
+Flesh Fiend_boss.xml
+Ghostly Visage_boss.xml
+God_boss.xml
+Hell Screamer_boss.xml
+Ice Cyclops_boss.xml
+Icelander_boss.xml
+Izual_boss.xml
+Juggernaught_boss.xml
+Keeper Of The Abyss_boss.xml
+Khartoum_boss.xml
+Leprechaun_boss.xml
+Lizard King_boss.xml
+Lucifer_boss.xml
+Minotaur Archer_boss.xml
+Minotaur Guard_boss.xml
+Minotaur Mage_boss.xml
+Mutalisk_boss.xml
+Nefarious Acolyte_boss.xml
+Oblivination_boss.xml
+Oblivion Badger_boss.xml
+Oblivion Chicken_boss.xml
+Oblivion Dragon_boss.xml
+Oblivion Slug_boss.xml
+Oblivion Tiger_boss.xml
+OblivionMinion_boss.xml
+Orc Berserker_boss.xml
+Orc Leader_boss.xml
+Orc Shaman_boss.xml
+Orc Spearman_boss.xml
+Orc Warlord_boss.xml
+Orc Warrior_boss.xml
+Orc rider_boss.xml
+Petrified Hell Hound_boss.xml
+Pirate_boss.xml
+Relic The Seeker_boss.xml
+Skeletor_boss.xml
+Soul Destroyer_boss.xml
+Soul King_boss.xml
+Souls Servent_boss.xml
+Sunspot_boss.xml
+The Creator_boss.xml
+The Soul_boss.xml
+Tunneler_boss.xml
+Ultralisk_boss.xml
+Vlad Tepes_boss.xml
+abyssal butterfly_boss.xml
+amazon_boss.xml
+amazonian_boss.xml
+ancient scarab_boss.xml
+ancient_necropharus_boss.xml
+ancientscarab_boss.xml
+angel_boss.xml
+apocalypse_boss.xml
+ashmunrah_boss.xml
+assasin_boss.xml
+assassin_boss.xml
+badger_boss.xml
+bandit_boss.xml
+banshee_boss.xml
+bat_boss.xml
+bazir_boss.xml
+bear_boss.xml
+behemoth_boss.xml
+beholder_boss.xml
+black knight_boss.xml
+black sheep_boss.xml
+blackknight_boss.xml
+blacksheep_boss.xml
+blue djinn_boss.xml
+bluedjinn_boss.xml
+bone beast_boss.xml
+bonebeast_boss.xml
+bug_boss.xml
+butterfly_boss.xml
+butterflyblue_boss.xml
+butterflypurple_boss.xml
+butterflyred_boss.xml
+butterflyyellow_boss.xml
+captain_jack_boss.xml
+carniphila_boss.xml
+caverat_boss.xml
+centipede_boss.xml
+chicken_boss.xml
+cobra_boss.xml
+crab_boss.xml
+crocodile_boss.xml
+crypt shambler_boss.xml
+cryptshambler_boss.xml
+cyclops_boss.xml
+dark monk_boss.xml
+darkmonk_boss.xml
+deathslicer_boss.xml
+deer_boss.xml
+demodras_boss.xml
+demon_boss.xml
+demonic_summoner_boss.xml
+demonicsummoner_boss.xml
+demonskeleton_boss.xml
+dharalion_boss.xml
+dipthrah_boss.xml
+dog_boss.xml
+dragon lord_boss.xml
+dragon_boss.xml
+dragonlord_boss.xml
+dwarf_boss.xml
+dwarfgeomancer_boss.xml
+dwarfguard_boss.xml
+dwarfsoldier_boss.xml
+dworcfleshhunter_boss.xml
+dworcvenomsniper_boss.xml
+dworcvoodoomaster_boss.xml
+efreet_boss.xml
+elder beholder_boss.xml
+elderbeholder_boss.xml
+elephant_boss.xml
+elf_boss.xml
+elfarcanist_boss.xml
+elfscout_boss.xml
+evileye_boss.xml
+fernfang_boss.xml
+ferumbras_boss.xml
+firedevil_boss.xml
+fireelemental_boss.xml
+flamethrower_boss.xml
+flamingo_boss.xml
+frosttroll_boss.xml
+gargoyle_boss.xml
+gazer_boss.xml
+ghost_boss.xml
+ghostlyvisage_boss.xml
+ghoul_boss.xml
+giant spider_boss.xml
+giantspider_boss.xml
+goblin_boss.xml
+greendjinn_boss.xml
+grorlam_boss.xml
+hero_boss.xml
+hornedfox_boss.xml
+hunter_boss.xml
+hyaena_boss.xml
+hydra_boss.xml
+infernatil_boss.xml
+kongra_boss.xml
+larva_boss.xml
+lich_boss.xml
+lion_boss.xml
+lizard sentinel_boss.xml
+lizard snakecharmer_boss.xml
+lizard templar_boss.xml
+lizard_king_boss.xml
+lizardsentinel_boss.xml
+lizardsnakecharmer_boss.xml
+lizardtemplar_boss.xml
+magicthrower_boss.xml
+mahrdis_boss.xml
+marid_boss.xml
+merlkin_boss.xml
+mimic_boss.xml
+minotaur_boss.xml
+minotaurarcher_boss.xml
+minotaurguard_boss.xml
+minotaurmage_boss.xml
+monk - Copy_boss.xml
+monk_boss.xml
+morgaroth_boss.xml
+morguthis_boss.xml
+mummy_boss.xml
+murius_boss.xml
+necromancer_boss.xml
+necropharus_boss.xml
+old widow_boss.xml
+oldwidow_boss.xml
+omruc_boss.xml
+orc_boss.xml
+orcberserker_boss.xml
+orcleader_boss.xml
+orcrider_boss.xml
+orcshaman_boss.xml
+orcspearman_boss.xml
+orcwarlord_boss.xml
+orcwarrior_boss.xml
+orshabaal_boss.xml
+panda_boss.xml
+parrot_boss.xml
+pig_boss.xml
+plague spitter_boss.xml
+plaguethrower_boss.xml
+poisonspider_boss.xml
+polarbear_boss.xml
+priestess_boss.xml
+rabbit_boss.xml
+rahemos_boss.xml
+rat_boss.xml
+rotworm_boss.xml
+scarab_boss.xml
+scorpion_boss.xml
+serpentspawn_boss.xml
+sheep_boss.xml
+shredderthrower_boss.xml
+sibang_boss.xml
+skeleton_boss.xml
+skunk_boss.xml
+slime2_boss.xml
+slime_boss.xml
+smuggler_boss.xml
+snake_boss.xml
+spider_boss.xml
+spit nettle_boss.xml
+spitnettle_boss.xml
+stalker_boss.xml
+stone golem_boss.xml
+stonegolem_boss.xml
+swamp troll_boss.xml
+swamptroll_boss.xml
+tarantula_boss.xml
+terrorbird_boss.xml
+thalas_boss.xml
+the_creator_boss.xml
+the_soul_boss.xml
+tiger_boss.xml
+trainer_boss.xml
+troll_boss.xml
+valkyrie commander_boss.xml
+valkyrie_boss.xml
+vampire - Copy_boss.xml
+vampire_boss.xml
+vashresamun_boss.xml
+vladtepes_boss.xml
+warlock_boss.xml
+warwolf_boss.xml
+wasp_boss.xml
+wildwarrior_boss.xml
+winterwolf_boss.xml
+witch_boss.xml
+wolf_boss.xml
+wolfboss_boss.xml
+yeti_boss.xml

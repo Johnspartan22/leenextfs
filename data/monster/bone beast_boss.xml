@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Bone Beast Boss" level="20" maglevel="450" experience="1160" pushable="0" armor="34" defense="36" canpushitems="1" staticattack="50" changetarget="200">
+    <health now="1030" max="1030"/>
+    <look type="101" head="20" body="30" legs="40" feet="50" corpse="3031"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="86" effect="9" splash="255"/>
+    <attacks>
+        <attack type="melee" mindamage="49" maxdamage="160"/>
+        <attack type="instant" name="bb exori" cycleticks="3049" probability="45"/>
+    </attacks>
+    <defenses>
+        <defense immunity="paralyze"/>
+    </defenses>
+    <voices>
+        <voice sentence="Knooorrr!"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="bonebeastBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Butterfly" nameDescription="a butterfly" race="venom" experience="0" speed="320" manacost="0">
-    <health now="2" max="2"/>
+<monster name="Butterfly Boss" nameDescription="a butterfly" race="venom" experience="0" speed="640" manacost="0">
+    <health now="4" max="4"/>
     <look type="213" head="0" body="0" legs="0" feet="0" corpse="4993"/>
     <targetchange interval="2000" chance="10"/>
     <strategy attack="60" defense="0"/>
@@ -15,7 +15,11 @@
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="2"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="butterflyBoss" type="spawn"/>
+    </events>
     <attacks>
         <attack name="melee" interval="2000" skill="5" attack="0"/>
     </attacks>
@@ -31,7 +35,7 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
 </monster>

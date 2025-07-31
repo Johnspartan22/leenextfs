@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Captain Jack Boss" level="1000" maglevel="450" experience="560000000" pushable="0" speed="548" armor="120" defense="198" canpushitems="1" staticattack="50" changetarget="700">
+    <health now="40000000" max="40000000"/>
+    <look type="134" head="95" body="57" legs="113" feet="115" corpse="3128"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack name="physical" interval="1000" chance="90" range="7" target="1" min="-240000" max="-800000">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+    </attacks>
+    <defenses>
+</defenses>
+    <voices>
+        <voice sentence="I shall rob you all blind! fools!!"/>
+    </voices>
+    <summons maxSummons="0">
+</summons>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="captainjackBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

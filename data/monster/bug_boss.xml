@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Bat" nameDescription="a bat" race="blood" experience="10" speed="200" manacost="250">
-    <health now="30" max="30"/>
-    <look type="122" head="0" body="0" legs="0" feet="0" corpse="4298"/>
+<monster name="Bug Boss" nameDescription="a bug" race="venom" experience="36" speed="320" manacost="250">
+    <health now="58" max="58"/>
+    <look type="45" head="0" body="0" legs="0" feet="0" corpse="2902"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
     <flags>
@@ -14,12 +14,16 @@
         <flag canpushitems="0"/>
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
-        <flag runonhealth="3"/>
+        <flag runonhealth="0"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="bugBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="16" attack="8"/>
+        <attack name="melee" interval="2000" skill="23" attack="18"/>
     </attacks>
-    <defenses armor="1" defense="6"/>
+    <defenses armor="2" defense="3"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
@@ -31,16 +35,7 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
-    <voices interval="5000" chance="10">
-        <voice sentence="Flap! Flap!"/>
-    </voices>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2671" countmax="2" chance="100000"/>
-        <item id="2681" chance="20000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

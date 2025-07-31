@@ -1,25 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Badger" nameDescription="a badger" race="blood" experience="5" speed="140" manacost="200">
-    <health now="23" max="23"/>
-    <look type="105" head="0" body="0" legs="0" feet="0" corpse="3043"/>
-    <targetchange interval="2000" chance="0"/>
-    <strategy attack="100" defense="0"/>
+<monster name="Butterfly" nameDescription="a butterfly" race="venom" experience="0" speed="320" manacost="0">
+    <health now="2" max="2"/>
+    <look type="227" head="0" body="0" legs="0" feet="0" corpse="4994"/>
+    <targetchange interval="2000" chance="10"/>
+    <strategy attack="60" defense="0"/>
     <flags>
-        <flag summonable="1"/>
+        <flag summonable="0"/>
         <flag attackable="1"/>
-        <flag hostile="1"/>
+        <flag hostile="0"/>
         <flag illusionable="1"/>
-        <flag convinceable="1"/>
+        <flag convinceable="0"/>
         <flag pushable="1"/>
         <flag canpushitems="0"/>
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
-        <flag runonhealth="10"/>
+        <flag runonhealth="2"/>
     </flags>
     <attacks>
-        <attack name="melee" interval="2000" skill="17" attack="10"/>
+        <attack name="melee" interval="2000" skill="5" attack="0"/>
     </attacks>
-    <defenses armor="1" defense="3"/>
+    <defenses armor="0" defense="14"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
@@ -34,8 +34,4 @@
     <script>
         <event name="BossSystem"/>
     </script>
-    <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2671" chance="50000"/>
-    </loot>
 </monster>

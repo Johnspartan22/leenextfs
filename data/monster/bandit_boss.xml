@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Bandit Boss" level="20" maglevel="450" experience="130" pushable="0" armor="17" defense="18" canpushitems="1" staticattack="50" changetarget="200" speed="360">
+    <health now="490" max="490"/>
+    <look type="129" head="58" body="59" legs="45" feet="114" corpse="3128"/>
+    <combat targetdistance="1" runonhealth="55"/>
+    <attacks>
+        <attack type="melee" mindamage="22" maxdamage="65"/>
+    </attacks>
+    <defenses>
+</defenses>
+    <voices>
+        <voice sentence="Your money or your life!"/>
+        <voice sentence="Hand me your purse!"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="banditBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

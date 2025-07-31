@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Banshee Boss" level="10" maglevel="450" experience="1800" pushable="0" armor="29" defense="33" canpushitems="1" staticattack="50" changetarget="200" speed="440">
+    <health now="2000" max="2000"/>
+    <look type="78" head="20" body="30" legs="40" feet="50" corpse="2998"/>
+    <combat targetdistance="1" runonhealth="200"/>
+    <attacks>
+        <attack type="melee" mindamage="80" maxdamage="250" probability="80"/>
+        <attack type="instant" name="banshee_sonar" exhaustion="500" cycleticks="4300" probability="70"/>
+        <attack type="instant" name="exura vita" exhaustion="500" cycleticks="5000" probability="40"/>
+    </attacks>
+    <defenses>
+        <defense immunity="invisible"/>
+        <defense immunity="fire"/>
+        <defense immunity="paralyze"/>
+    </defenses>
+    <voices>
+        <voice sentence="Dance for me your dance of death!"/>
+        <voice sentence="That's what I call easy, listening."/>
+        <voice sentence="Fell my gentle kiss of death."/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="bansheeBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

@@ -1,70 +1,119 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<monster name="ancient scarab" nameDescription="an ancient scarab" race="venom" experience="720" speed="218" manacost="0">
-	<health now="1000" max="1000"/>
-	<look type="79" corpse="3004"/>
-	<targetchange interval="1000" chance="5"/>
-	<targetstrategies nearest="70" health="20" damage="0" random="10"/>
-	<flags>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag summonable="0"/>
-		<flag convinceable="0"/>
-		<flag illusionable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="80"/>
-		<flag runonhealth="0"/>
-	</flags>
-	<attacks>
-		<attack name="melee" skill="80" attack="50"/>
-		<attack name="poison" chance="12" range="7" min="-15" max="-135">
-			<attribute key="shootEffect" value="poison"/>
-			<attribute key="areaEffect" value="poison"/>
-		</attack>
-		<attack name="paralyze_ancientscarab" chance="13" range="7"/>
-		<attack name="poisoncondition" chance="17" radius="5" target="0" min="-440" max="-520">
-			<attribute key="areaEffect" value="poison"/>
-		</attack>
-		<attack name="poisoncondition" chance="17" radius="5" target="0" min="-440" max="-520">
-			<attribute key="areaEffect" value="poison"/>
-		</attack>
-		<attack name="paralyze_ancientscarab2" chance="25" range="7"/>
-	</attacks>
-	<summons maxSummons="3">
-		<summon name="larva" chance="15" max="3"/>
-	</summons>
-	<defenses armor="36" defense="132">
-		<defense name="haste_ancientscarab" chance="8"/>
-	</defenses>
-	<elements>
-		<element earthPercent="100"/>
-	</elements>
-	<immunities>
-		<immunity lifedrain="1"/>
-		<immunity paralyze="1"/>
-		<immunity invisible="1"/>
-	</immunities>
-	<voices interval="1000" chance="5">
-	</voices>
-	<loot>
-		<item id="2148" chance="44400" countmax="100"/><!-- 100 44.4% gold coin -->
-	    <item id="2148" chance="75700" countmax="66"/><!-- 66 75.7% gold coin -->
-		<item id="2148" chance="99900" countmax="22"/><!-- 22 99.9% gold coin -->
-		<item id="2150" chance="1200" countmax="4"/><!-- 4 1.2% small amethyst -->
-		<item id="2149" chance="600" countmax="3"/><!-- 3 0.6% small emerald -->
-		<item id="2159" chance="5000" countmax="2"/><!-- 2 5% scarab coin -->
-		<item id="2159" chance="1000"/><!-- 1% scarab coin -->
-		<item id="2135" chance="500"/><!-- 0.5% scarab amulet -->
-		<item id="2142" chance="1000"/><!-- 1% ancient amulet -->
-		<item id="2463" chance="10000"/><!-- 10% plate armor -->
-		<item id="1987" chance="100000"><!-- bag -->
-			<inside>
-				<item id="2162" chance="10900"/><!-- 10.9% magic light wand -->
-				<item id="2440" chance="300"/><!-- 0.3% daramanian waraxe -->
-				<item id="2540" chance="500"/><!-- 0.5% scarab shield -->
-			</inside>
-		</item>		
-	</loot>
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Ancient Scarab" level="1" maglevel="30" experience="720" pushable="0" armor="32" defense="33" canpushitems="1" staticattack="50" changetarget="200" speed="212">
+    <health now="1000" max="1000" />
+    <look type="79" head="20" body="30" legs="40" feet="50" corpse="3004" />
+    <combat targetdistance="1" runonhealth="0" />
+    <blood color="30" effect="16" splash="4" />
+    <attacks>
+        <attack type="melee" mindamage="54" maxdamage="180" probability="100" />
+        <attack type="distance" name="poisonfield" maxdamage="90" probability="60" cycleticks="3000" />
+        <attack type="instant" name="as exevo gran mas pox" exhaustion="500" cycleticks="3000" probability="40" />
+        <attack type="instant" name="as_haste" exhaustion="500" cycleticks="10000" probability="40" />
+    </attacks>
+    <defenses>
+        <defense immunity="invisible" />
+    </defenses>
+    <script>
+        <event name="BossSystem" />
+    </script>
+    <loot>
+        <item id="2160" countmax="100" chance1="400" chancemax="0" />
+        <item id="2148" countmax="100" chance1="400" chancemax="0" />
+        <item id="2152" countmax="100" chance1="400" chancemax="0" />
+        <item id="2671" countmax="100" chance1="400" chancemax="0" />
+        <item id="2143" countmax="30" chance1="400" chancemax="0" />
+        <item id="2144" countmax="30" chance1="400" chancemax="0" />
+        <item id="2145" countmax="30" chance1="400" chancemax="0" />
+        <item id="2146" countmax="30" chance1="400" chancemax="0" />
+        <item id="2147" countmax="30" chance1="400" chancemax="0" />
+        <item id="2149" countmax="30" chance1="400" chancemax="0" />
+        <item id="2150" countmax="30" chance1="400" chancemax="0" />
+        <item id="2157" countmax="30" chance1="400" chancemax="0" />
+        <item id="2159" countmax="30" chance1="400" chancemax="0" />
+        <item id="2383" chance="300" />
+        <item id="2390" chance="300" />
+        <item id="2391" chance="300" />
+        <item id="2392" chance="300" />
+        <item id="2393" chance="300" />
+        <item id="2396" chance="300" />
+        <item id="2400" chance="300" />
+        <item id="2407" chance="300" />
+        <item id="2409" chance="300" />
+        <item id="2414" chance="300" />
+        <item id="2415" chance="300" />
+        <item id="2418" chance="300" />
+        <item id="2421" chance="300" />
+        <item id="2427" chance="300" />
+        <item id="2430" chance="300" />
+        <item id="2431" chance="300" />
+        <item id="2432" chance="300" />
+        <item id="2434" chance="300" />
+        <item id="2436" chance="300" />
+        <item id="2437" chance="300" />
+        <item id="2438" chance="300" />
+        <item id="2445" chance="300" />
+        <item id="2451" chance="300" />
+        <item id="2514" chance="300" />
+        <item id="2515" chance="300" />
+        <item id="2516" chance="300" />
+        <item id="2518" chance="300" />
+        <item id="2519" chance="300" />
+        <item id="2528" chance="300" />
+        <item id="2532" chance="300" />
+        <item id="2534" chance="300" />
+        <item id="2536" chance="300" />
+        <item id="2537" chance="300" />
+        <item id="2539" chance="300" />
+        <item id="2540" chance="300" />
+        <item id="2542" chance="300" />
+        <item id="2123" chance="300" />
+        <item id="2130" chance="300" />
+        <item id="2131" chance="300" />
+        <item id="2133" chance="300" />
+        <item id="2135" chance="300" />
+        <item id="2138" chance="300" />
+        <item id="2142" chance="300" />
+        <item id="2319" chance="300" />
+        <item id="2342" chance="300" />
+        <item id="2343" chance="300" />
+        <item id="2358" chance="300" />
+        <item id="2457" chance="300" />
+        <item id="2462" chance="300" />
+        <item id="2463" chance="300" />
+        <item id="2472" chance="300" />
+        <item id="2475" chance="300" />
+        <item id="2476" chance="300" />
+        <item id="2477" chance="300" />
+        <item id="2479" chance="300" />
+        <item id="2486" chance="300" />
+        <item id="2487" chance="300" />
+        <item id="2488" chance="300" />
+        <item id="2489" chance="300" />
+        <item id="2490" chance="300" />
+        <item id="2491" chance="300" />
+        <item id="2492" chance="300" />
+        <item id="2496" chance="300" />
+        <item id="2497" chance="300" />
+        <item id="2498" chance="300" />
+        <item id="2642" chance="300" />
+        <item id="2644" chance="300" />
+        <item id="2645" chance="300" />
+        <item id="2647" chance="300" />
+        <item id="2660" chance="300" />
+        <item id="2662" chance="300" />
+        <item id="2664" chance="300" />
+        <item id="2665" chance="300" />
+        <item id="3967" chance="300" />
+        <item id="3968" chance="300" />
+        <item id="3969" chance="300" />
+        <item id="3970" chance="300" />
+        <item id="3971" chance="300" />
+        <item id="3972" chance="300" />
+        <item id="2171" chance="300" />
+        <item id="2507" chance="300" />
+        <item id="2499" chance="300" />
+        <item id="2500" chance="300" />
+    </loot>
+    <summons maxSummons="0">
+</summons>
 </monster>

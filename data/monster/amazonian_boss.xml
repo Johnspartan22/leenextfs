@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Amazonian Boss" level="50" maglevel="450" experience="160000" pushable="0" armor="18" defense="33" canpushitems="0" staticattack="50" changetarget="200" speed="544">
+    <health now="80000" max="80000"/>
+    <look type="137" head="113" body="120" legs="114" feet="132" corpse="3065"/>
+    <combat targetdistance="3" runonhealth="0"/>
+    <targetchange interval="2000" chance="50"/>
+    <strategy attack="100" defense="0"/>
+    <attacks>
+        <attack name="melee" interval="1000" skill="300" attack="600"/>
+        <attack name="physical" interval="1000" chance="90" range="7" min="12000" max="12000">
+            <attribute key="shootEffect" value="throwingknife"/>
+        </attack>
+        <attack type="distance" name="throwingknife" mindamage="6000" maxdamage="6000" cycleticks="2000" probability="60"/>
+    </attacks>
+    <defenses>
+</defenses>
+    <voices>
+        <voice sentence="Your head shall be mine!"/>
+        <voice sentence="Yeeee ha!"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="amazonianBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

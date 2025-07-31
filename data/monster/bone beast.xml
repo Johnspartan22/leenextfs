@@ -1,25 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Beholder" level="1" maglevel="5" experience="370" pushable="0" armor="13" defense="17" canpushitems="1" staticattack="50" changetarget="200" speed="150">
-    <health now="260" max="260" />
-    <look type="17" head="20" body="30" legs="40" feet="50" corpse="2908" />
+<monster name="Bone Beast" level="20" maglevel="30" experience="580" pushable="0" armor="34" defense="36" canpushitems="1" staticattack="50" changetarget="200">
+    <health now="515" max="515" />
+    <look type="101" head="20" body="30" legs="40" feet="50" corpse="3031" />
     <combat targetdistance="1" runonhealth="0" />
-    <blood color="30" effect="16" splash="4" />
+    <blood color="86" effect="9" splash="255" />
     <attacks>
-        <attack type="melee" maxdamage="20" />
-        <attack type="rune" name="bh missile" exhaustion="500" cycleticks="2000" probability="40" />
-        <attack type="rune" name="beholder_manadrain" exhaustion="1000" cycleticks="3000" probability="20" />
+        <attack type="melee" mindamage="49" maxdamage="160" />
+        <attack type="instant" name="bb exori" cycleticks="3049" probability="45" />
     </attacks>
     <defenses>
-        <defense immunity="drunkness" />
-        <defense immunity="invisible" />
+        <defense immunity="paralyze" />
     </defenses>
     <script>
         <event name="BossSystem" />
     </script>
     <voices>
-        <voice sentence="Let me take a look at you!" />
-        <voice sentence="I've got to look!" />
-        <voice sentence="Eye for eye!" />
+        <voice sentence="Knooorrr!" />
     </voices>
     <loot>
         <item id="2160" countmax="100" chance1="400" chancemax="0" />
@@ -119,6 +115,4 @@
         <item id="2499" chance="300" />
         <item id="2500" chance="300" />
     </loot>
-    <summons maxSummons="0">
-</summons>
 </monster>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Arch Angel Boss" level="200" maglevel="450" experience="120000" pushable="0" armor="41" defense="53" canpushitems="1" staticattack="40" changetarget="200" speed="800">
+    <health now="70000" max="70000"/>
+    <look type="134" head="0" body="0" legs="0" feet="0" corpse="3058"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack name="lifedrain" interval="1000" chance="90" range="7" target="1" min="-1200" max="-2600">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="energy"/>
+        <defense immunity="paralyze"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <voices>
+        <voice sentence="You will never make it through the gates!"/>
+        <voice sentence="You cannot challenge the creator!"/>
+        <voice sentence="Are you here to prove you are worthy?"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="archangelBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>
