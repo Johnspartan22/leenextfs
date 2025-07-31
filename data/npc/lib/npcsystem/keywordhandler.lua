@@ -1,6 +1,6 @@
 -- Advanced NPC System by Jiddo
 
-if not KeywordHandler then
+if KeywordHandler == nil then
 	KeywordNode = {
 		keywords = nil,
 		callback = nil,
@@ -23,19 +23,19 @@ if not KeywordHandler then
 
 	-- Calls the underlying callback function if it is not nil.
 	function KeywordNode:processMessage(cid, message)
-		return (not self.callback or self.callback(cid, message, self.keywords, self.parameters, self))
+		return (self.callback == nil or self.callback(cid, message, self.keywords, self.parameters, self))
 	end
 
 	-- Returns true if message contains all patterns/strings found in keywords.
 	function KeywordNode:checkMessage(message)
-		if self.keywords.callback then
+		if self.keywords.callback ~= nil then
 			return self.keywords.callback(self.keywords, message)
 		end
 
 		for _, v in ipairs(self.keywords) do
 			if type(v) == 'string' then
 				local a, b = string.find(message, v)
-				if not a or not b then
+				if a == nil or b == nil then
 					return false
 				end
 			end
@@ -61,21 +61,6 @@ if not KeywordHandler then
 	-- Adds a childNode to this node. Creates the childNode based on the parameters (k = keywords, c = callback, p = parameters)
 	function KeywordNode:addChildKeyword(keywords, callback, parameters)
 		local new = KeywordNode:new(keywords, callback, parameters)
-		return self:addChildKeywordNode(new)
-	end
-
-	-- Adds an alias keyword. Should be used if you have to answer the same thing to several keywords.
-	function KeywordNode:addAliasKeyword(keywords)
-		if #self.children == 0 then
-			print('KeywordNode:addAliasKeyword no previous node found')
-			return false
-		end
-
-		local prevNode = self.children[#self.children]
-		local new = KeywordNode:new(keywords, prevNode.callback, prevNode.parameters, prevNode.condition, prevNode.action)
-		for i = 1, #prevNode.children do
-			new:addChildKeywordNode(prevNode.children[i])
-		end
 		return self:addChildKeywordNode(new)
 	end
 
@@ -111,7 +96,7 @@ if not KeywordHandler then
 	-- Makes sure the correct childNode of lastNode gets a chance to process the message.
 	function KeywordHandler:processMessage(cid, message)
 		local node = self:getLastNode(cid)
-		if not node then
+		if node == nil then
 			error('No root node found.')
 			return false
 		end
@@ -172,19 +157,14 @@ if not KeywordHandler then
 		return self:getRoot():addChildKeyword(keys, callback, parameters)
 	end
 
-	-- Adds an alias keyword for the previous node.
-	function KeywordHandler:addAliasKeyword(keys)
-		return self:getRoot():addAliasKeyword(keys)
-	end
-
 	-- Moves the current position in the keyword hierarchy steps upwards. Steps defalut value = 1.
 	function KeywordHandler:moveUp(cid, steps)
-		if not steps or type(steps) ~= "number" then
+		if steps == nil or type(steps) ~= "number" then
 			steps = 1
 		end
 
 		for i = 1, steps do
-			if not self.lastNode[cid] then
+			if self.lastNode[cid] == nil then
 				return nil
 			end
 			self.lastNode[cid] = self.lastNode[cid]:getParent() or self:getRoot()
