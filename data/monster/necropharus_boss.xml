@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Necropharus Boss" level="761" maglevel="450" experience="2000000" pushable="0" armor="229" defense="131" canpushitems="1" staticattack="50" changetarget="100" speed="576">
+    <health now="2000000" max="2000000"/>
+    <look type="9" head="20" body="30" legs="40" feet="50" corpse="3128"/>
+    <combat targetdistance="5" runonhealth="10000"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="5"/>
+        <flag runonhealth="50"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="necropharusBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="fire" interval="2000" chance="45" range="7" radius="3" target="1" min="-300" max="-440">
+            <attribute key="shootEffect" value="burstarrow"/>
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+        <attack name="firefield" interval="1000" chance="20" range="7" radius="2" target="1">
+            <attribute key="shootEffect" value="fire"/>
+        </attack>
+        <attack name="physical" interval="700" chance="100" range="7" target="1" radius="4" min="-40000" max="-46000">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="energy"/>
+        <defense immunity="fire"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <voices>
+        <voice sentence="Taste the sweetness of death!"/>
+        <voice sentence="Your corpse will be mine!"/>
+    </voices>
+    <summons maxSummons="2">
+        <summon name="orshabaal" chance="2000"/>
+        <summon name="demodras" chance="1818"/>
+        <summon name="old widow" chance="1428"/>
+    </summons>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

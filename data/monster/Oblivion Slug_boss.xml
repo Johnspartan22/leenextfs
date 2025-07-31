@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Oblivion Slug Boss" level="125000" maglevel="450" experience="10000000000" pushable="0" armor="312" defense="322" canpushitems="1" staticattack="50" changetarget="200" speed="600">
+    <health now="300000000" max="300000000"/>
+    <look type="82" head="20" body="30" legs="40" feet="50" corpse="3010"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="7000000"/>
+        <attack name="fire" interval="1000" chance="60" length="7" spread="3" min="-1600000" max="-1800000">
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense name="healing" interval="1000" chance="30" min="300000" max="1000000">
+            <attribute key="areaEffect" value="blueshimmer"/>
+        </defense>
+    </defenses>
+    <voices>
+        <voice sentence="I am oblivion  (in training lol)"/>
+        <voice sentence="ARGGHH"/>
+        <voice sentence="Die pathetic human"/>
+        <voice sentence="Is it hot in here or is it just me?"/>
+        <voice sentence="So sad, you cant handle me and think you can challenge my masters?"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="oblivionslugBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

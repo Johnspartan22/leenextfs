@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="General Murius Boss" nameDescription="General Murius" race="blood" experience="600" speed="500" manacost="0">
+    <health now="1100" max="1100"/>
+    <look type="207" head="0" body="0" legs="0" feet="0" corpse="2876"/>
+    <targetchange interval="2000" chance="5"/>
+    <strategy attack="70" defense="10"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="1"/>
+        <flag runonhealth="0"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="generalmuriusBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="melee" interval="2000" skill="70" attack="110"/>
+        <attack name="physical" interval="1000" chance="12" range="7" min="-100" max="-240">
+            <attribute key="shootEffect" value="bolt"/>
+        </attack>
+        <attack name="physical" interval="1000" chance="10" radius="3" target="0" min="-100" max="-160">
+            <attribute key="areaEffect" value="blackspark"/>
+        </attack>
+    </attacks>
+    <defenses armor="26" defense="52">
+        <defense name="healing" interval="1000" chance="15" min="50" max="100">
+            <attribute key="areaEffect" value="redshimmer"/>
+        </defense>
+    </defenses>
+    <immunities>
+        <immunity physical="0"/>
+        <immunity energy="0"/>
+        <immunity fire="0"/>
+        <immunity poison="0"/>
+        <immunity lifedrain="1"/>
+        <immunity paralyze="0"/>
+        <immunity outfit="1"/>
+        <immunity drunk="1"/>
+        <immunity invisible="1"/>
+    </immunities>
+    <summons maxSummons="4">
+        <summon name="minotaur archer" interval="1000" chance="15" max="2"/>
+        <summon name="minotaur guard" interval="1000" chance="12" max="2"/>
+    </summons>
+    <voices interval="5000" chance="10">
+        <voice sentence="Feel the power of the Mooh'Tah!"/>
+        <voice sentence="You will get what you deserve!"/>
+        <voice sentence="For the king!"/>
+        <voice sentence="Guards!"/>
+    </voices>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Necromancer Boss" level="60" maglevel="450" experience="1160" pushable="0" armor="29" defense="31" canpushitems="1" staticattack="50" changetarget="200" speed="376">
+    <health now="1160" max="1160"/>
+    <look type="9" head="20" body="30" legs="40" feet="50" corpse="3128"/>
+    <combat targetdistance="5" runonhealth="0"/>
+    <attacks>
+        <attack type="melee" maxdamage="50"/>
+        <attack type="instant" name="exura" exhaustion="500" cycleticks="2000" probability="70"/>
+        <attack type="rune" name="necro missile" cycleticks="2500" probability="60"/>
+        <attack type="instant" name="necro_lifedrain" exhaustion="1000" cycleticks="3500" probability="60"/>
+    </attacks>
+    <defenses>
+        <defense immunity="invisible"/>
+    </defenses>
+    <voices>
+        <voice sentence="Taste the sweetness of death!"/>
+        <voice sentence="Your corpse will be mine!"/>
+    </voices>
+    <summons maxSummons="5">
+        <summon name="Skeleton" chance="2000"/>
+        <summon name="Ghoul" chance="1818"/>
+        <summon name="Mummy" chance="1428"/>
+    </summons>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="necromancerBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

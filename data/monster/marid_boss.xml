@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Marid" nameDescription="a marid" race="blood" experience="300" speed="234" manacost="0">
-    <health now="550" max="550"/>
+<monster name="Marid Boss" nameDescription="a marid" race="blood" experience="600" speed="468" manacost="0">
+    <health now="1100" max="1100"/>
     <look type="104" head="0" body="0" legs="0" feet="0" corpse="3040"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
@@ -15,16 +15,20 @@
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="0"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="maridBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="55" attack="35"/>
-        <attack name="fire" interval="1000" chance="50" range="7" min="-40" max="-110">
+        <attack name="melee" interval="2000" skill="55" attack="70"/>
+        <attack name="fire" interval="1000" chance="50" range="7" min="-80" max="-220">
             <attribute key="shootEffect" value="fire"/>
         </attack>
-        <attack name="energy" interval="1000" chance="25" range="7" min="-65" max="-115">
+        <attack name="energy" interval="1000" chance="25" range="7" min="-130" max="-230">
             <attribute key="shootEffect" value="energy"/>
         </attack>
-        <attack name="lifedrain" interval="1000" chance="20" range="7" min="-60" max="-120">
+        <attack name="lifedrain" interval="1000" chance="20" range="7" min="-120" max="-240">
             <attribute key="shootEffect" value="suddendeath"/>
         </attack>
         <attack name="speed" interval="1000" chance="13" range="7" speedchange="-300" duration="15000">
@@ -37,7 +41,7 @@
         <attack name="outfit" interval="1000" chance="17" range="7" monster="rabbit" duration="20000">
             <attribute key="areaEffect" value="blueshimmer"/>
         </attack>
-        <attack name="energycondition" interval="1000" chance="17" radius="3" target="0" min="-60" max="-100">
+        <attack name="energycondition" interval="1000" chance="17" radius="3" target="0" min="-120" max="-200">
             <attribute key="areaEffect" value="energy"/>
         </attack>
     </attacks>
@@ -60,9 +64,6 @@
     <summons maxSummons="2">
         <summon name="blue djinn" interval="1000" chance="15" max="2"/>
     </summons>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <voices interval="5000" chance="10">
         <voice sentence="Simsalabim"/>
         <voice sentence="Feel the power of my magic, tiny mortal!"/>
@@ -70,20 +71,6 @@
         <voice sentence="Wishes can come true."/>
     </voices>
     <loot>
-        <item id="2158" countmax="1" chance="300"/>
-        <item id="1872" chance="2500"/>
-        <item id="2148" countmax="50" chance="100000"/>
-        <item id="2442" chance="5000"/>
-        <item id="2183" chance="1000"/>
-        <item id="1987" chance="100000">
-            <inside>
-                <item id="2070" chance="300"/>
-                <item id="2148" countmax="14" chance="100000"/>
-                <item id="2146" countmax="3" chance="7000"/>
-                <item id="2063" chance="3333"/>
-                <item id="2677" countmax="4" chance="20000"/>
-                <item id="2177" chance="10000"/>
-            </inside>
-        </item>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

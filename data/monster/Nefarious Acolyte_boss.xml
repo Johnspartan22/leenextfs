@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Nefarious Acolyte Boss" level="30000" maglevel="450" experience="1100000000" pushable="0" armor="11" defense="12" canpushitems="1" staticattack="50" changetarget="200" speed="540">
+    <health now="100000000" max="100000000"/>
+    <look type="54" head="20" body="30" legs="40" feet="50" corpse="2843"/>
+    <combat targetdistance="5" runonhealth="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="4"/>
+        <flag runonhealth="50"/>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="nefariousacolyteBoss" type="spawn"/>
+    </events>
+    <attacks>
+        <attack name="physical" interval="1000" chance="90" range="7" target="1" radius="4" min="-2200000" max="-2400000">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+        <attack name="firestar_monster" interval="1000" chance="90" min="-3600000" max="-4000000">
+</attack>
+    </attacks>
+    <defenses>
+        <defense immunity="energy"/>
+        <defense immunity="fire"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <voices>
+        <voice sentence="I am the last of four guardians of the abyss!"/>
+    </voices>
+    <loot>
+</loot>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>
