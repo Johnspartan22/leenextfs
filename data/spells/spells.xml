@@ -180,13 +180,16 @@
 	</conjure>
 
 
-<conjure name="Conjure wrath " words="adori wrath" maglv="15" mana="500000" soul="0" prem="1" conjureId="2300" conjureCount="1" function="conjureItem">
-		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>
-		<vocation name="Druid"/>    <vocation name="Elder Druid"/>
-		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/>
-		<vocation name="Knight"/>  <vocation name="Elite Knight"/>
-	</conjure>
-
+<instant group="support" name="Conjure wrath" words="adori wrath" maglv="15" mana="500000" soul="0" premium="1" aggressive="0" selftarget="1" cooldown="2000" needlearn="0" script="conjuring/conjure_wrath.lua">
+		<vocation name="Sorcerer" />
+		<vocation name="Master Sorcerer" />
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
+		<vocation name="Knight" />
+		<vocation name="Elite Knight" />
+	</instant>
 
 <conjure name="Conjure Ob Shard " words="adori shard" maglv="15" mana="1000000" soul="0" prem="1" conjureId="2307" conjureCount="1" function="conjureItem">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>
