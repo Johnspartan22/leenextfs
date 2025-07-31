@@ -5,9 +5,9 @@ local lootRare = {2143, 2146, 2149, 7158, 7159}
 local lootVeryRare = {7632, 7633, 10220}
 local useWorms = true
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition)
 	local targetId = target.itemid
-	if not table.contains(waterIds, target.itemid) then
+	if not isInArray(waterIds, target.itemid) then
 		return false
 	end
 
@@ -44,7 +44,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
 	player:addSkillTries(SKILL_FISHING, 1)
 	if math.random(1, 100) <= math.min(math.max(10 + (player:getEffectiveSkillLevel(SKILL_FISHING) - 10) * 0.597, 10), 50) then
-		if useWorms and not player:removeItem(3976, 1) then
+		if useWorms and not player:removeItem("worm", 1) then
 			return true
 		end
 
@@ -72,7 +72,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 				return true
 			end
 		end
-		player:addItem(2267, 1)
+		player:addItem("fish", 1)
 	end
 	return true
 end
