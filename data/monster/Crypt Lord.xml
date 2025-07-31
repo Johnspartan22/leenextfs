@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Crypt Lord" level="15000" maglevel="20000" experience="550000000" pushable="0" armor="24" defense="25" canpushitems="1" staticattack="50" changetarget="200" speed="250">
+    <health now="50000000" max="50000000"/>
+    <look type="65" head="20" body="30" legs="40" feet="50" corpse="2843"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="86" effect="9" splash="255"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="10" attack="400000"/>
+        <attack name="firestar_monster" interval="1000" chance="80" min="-1800000" max="-2000000">
+</attack>
+        <attack name="Sonar_monster" interval="2000" chance="50" min="-800000" max="-1000000">
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="poison"/>
+        <defense immunity="invisible"/>
+        <defense immunity="paralyze"/>
+        <defense immunity="fire"/>
+    </defenses>
+    <loot>
+        <item id="2281" chance="3000"/>
+        <item id="2276" chance="6000"/>
+        <item id="2274" chance="9000"/>
+    </loot>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="I am the first of four guardians of the abyss!"/>
+    </voices>
+    <loot>
+</loot>
+</monster>

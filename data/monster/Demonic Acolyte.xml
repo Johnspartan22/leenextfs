@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Demonic Acolyte" level="30000" maglevel="52000" experience="550000000" pushable="0" armor="11" defense="12" canpushitems="1" staticattack="50" changetarget="200" speed="270">
+    <health now="50000000" max="50000000"/>
+    <look type="58" head="20" body="30" legs="40" feet="50" corpse="2843"/>
+    <combat targetdistance="5" runonhealth="0"/>
+    <flags>
+        <flag summonable="0"/>
+        <flag attackable="1"/>
+        <flag hostile="1"/>
+        <flag illusionable="0"/>
+        <flag convinceable="0"/>
+        <flag pushable="0"/>
+        <flag canpushitems="1"/>
+        <flag canpushcreatures="1"/>
+        <flag targetdistance="4"/>
+        <flag runonhealth="50"/>
+    </flags>
+    <attacks>
+        <attack name="physical" interval="1000" chance="90" range="7" target="1" radius="4" min="-1100000" max="-1200000">
+            <attribute key="shootEffect" value="suddendeath"/>
+            <attribute key="areaEffect" value="mortarea"/>
+        </attack>
+        <attack name="firestar_monster" interval="1000" chance="90" min="-1800000" max="-2000000">
+</attack>
+    </attacks>
+    <defenses>
+        <defense immunity="energy"/>
+        <defense immunity="fire"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <loot>
+        <item id="2281" chance="3000"/>
+        <item id="2276" chance="6000"/>
+        <item id="2274" chance="9000"/>
+    </loot>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <voices>
+        <voice sentence="I am the third of four guardians of the abyss!"/>
+    </voices>
+    <loot>
+</loot>
+</monster>

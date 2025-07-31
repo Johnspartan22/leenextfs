@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Cobra" nameDescription="a cobra" race="blood" experience="30" speed="120" manacost="275">
-    <health now="65" max="65"/>
-    <look type="81" head="0" body="0" legs="0" feet="0" corpse="3007"/>
+<monster name="Crab Boss" nameDescription="a crab" race="blood" experience="60" speed="400" manacost="305">
+    <health now="110" max="110"/>
+    <look type="112" head="0" body="0" legs="0" feet="0" corpse="4253"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
     <flags>
@@ -15,14 +15,15 @@
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="0"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="crabBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="23" attack="15" poison="100"/>
-        <attack name="poisoncondition" interval="1000" chance="25" range="5" min="-14" max="-26">
-            <attribute key="shootEffect" value="poison"/>
-        </attack>
+        <attack name="melee" interval="2000" skill="25" attack="30"/>
     </attacks>
-    <defenses armor="1" defense="6"/>
+    <defenses armor="28" defense="30"/>
     <immunities>
         <immunity physical="0"/>
         <immunity energy="0"/>
@@ -34,14 +35,7 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
-    <voices interval="5000" chance="10">
-        <voice sentence="Zzzzzz"/>
-    </voices>
     <loot>
-        <item id="2220" chance="33333"/>
-        <item id="2230" chance="20000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

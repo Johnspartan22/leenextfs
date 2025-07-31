@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Deer" nameDescription="a deer" race="blood" experience="0" speed="196" manacost="260">
-    <health now="25" max="25"/>
+<monster name="Deer Boss" nameDescription="a deer" race="blood" experience="0" speed="392" manacost="260">
+    <health now="50" max="50"/>
     <look type="31" head="0" body="0" legs="0" feet="0" corpse="2835"/>
     <targetchange interval="2000" chance="0"/>
     <strategy attack="100" defense="0"/>
@@ -15,9 +15,13 @@
         <flag canpushcreatures="0"/>
         <flag targetdistance="1"/>
         <flag runonhealth="25"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="deerBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="10" attack="2"/>
+        <attack name="melee" interval="2000" skill="10" attack="4"/>
     </attacks>
     <defenses armor="2" defense="2"/>
     <immunities>
@@ -31,11 +35,7 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2666" countmax="4" chance="100000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

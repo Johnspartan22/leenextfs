@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Dragon King Boss" level="70" maglevel="450" experience="110000" pushable="0" armor="75" defense="75" canpushitems="1" staticattack="50" changetarget="200" speed="680">
+    <health now="160000" max="160000"/>
+    <look type="39" head="20" body="30" legs="40" feet="50" corpse="2881"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <attacks>
+        <attack name="physical" interval="1000" range="1" chance="100" min="-6000" max="-10000"/>
+        <attack name="physical" interval="1000" chance="60" range="5" target="1" radius="4" min="-8000" max="-10000">
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+        <attack name="fire" interval="1000" chance="20" length="7" spread="3" min="-1000" max="-2000">
+            <attribute key="areaEffect" value="firearea"/>
+        </attack>
+    </attacks>
+    <defenses>
+        <defense immunity="fire"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <voices>
+        <voice sentence="I WILL PROTECT MY BROOD!"/>
+        <voice sentence="ZCHHHHHHH!"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="dragonkingBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

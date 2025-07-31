@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Crypt Shambler Boss" level="20" maglevel="450" experience="390" pushable="0" armor="25" defense="26" canpushitems="1" staticattack="50" changetarget="200" speed="300">
+    <health now="660" max="660"/>
+    <look type="100" head="20" body="30" legs="40" feet="50" corpse="3028"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="86" effect="9" splash="255"/>
+    <attacks>
+        <attack name="melee" interval="2000" skill="60" attack="78"/>
+        <attack name="lifedrain" interval="1000" chance="13" range="1" min="-50" max="-110"/>
+    </attacks>
+    <defenses>
+        <defense immunity="paralyze"/>
+    </defenses>
+    <voices>
+        <voice sentence="Chhhhhhh!"/>
+        <voice sentence="Hooooohhh!"/>
+        <voice sentence="Aaaaaahhh!"/>
+    </voices>
+    <flags>
+        <flag skull="5"/>
+    </flags>
+    <events>
+        <event name="cryptshamblerBoss" type="spawn"/>
+    </events>
+    <loot>
+        <item id="4313" chance="150000"/>
+    </loot>
+</monster>

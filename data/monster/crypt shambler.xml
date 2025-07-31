@@ -1,56 +1,120 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<monster name="crypt shambler" nameDescription="a crypt shambler" race="undead" experience="195" speed="140" manacost="580">
-	<health now="330" max="330"/>
-	<look type="100" corpse="3028"/>
-	<targetchange interval="1000" chance="4"/>
-	<targetstrategies nearest="70" health="0" damage="30" random="0"/>
-	<flags>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag summonable="0"/>
-		<flag convinceable="1"/>
-		<flag illusionable="1"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="80"/>
-		<flag runonhealth="0"/>
-	</flags>
-	<attacks>
-		<attack name="melee" skill="60" attack="39"/>
-		<attack name="lifedrain" chance="13" range="1" min="-25" max="-55"/>
-	</attacks>
-	<defenses armor="30" defense="75">
-	</defenses>
-	<elements>
-		<element earthPercent="100"/>
-	</elements>
-	<immunities>
-		<immunity lifedrain="1"/>
-		<immunity paralyze="1"/>
-	</immunities>
-	<voices interval="1000" chance="5">
-		<voice sentence="Uhhhhhhh!"/>
-		<voice sentence="Aaaaahhhh!"/>
-		<voice sentence="Hoooohhh!"/>
-		<voice sentence="Chhhhhhh!"/>
-	</voices>
-	<loot>
-		<item id="3976" chance="90000" countmax="10"/><!-- 10 90% worm -->
-		<item id="2148" chance="30000" countmax="30"/><!-- 30 30% gold coin -->
-		<item id="2148" chance="40000" countmax="25"/><!-- 25 40% gold coin -->
-		<item id="2145" chance="500"/><!-- 0.5% small diamond -->
-		<item id="2399" chance="1000" countmax="3"/><!-- 3 1% throwing star -->
-		<item id="2230" chance="50000"/><!-- 50% bone -->
-		<item id="2227" chance="20000"/> <!-- 20% rotten meat -->
-		<item id="2459" chance="2000"/><!-- 2% iron helmet -->
-		<item id="1987" chance="100000"><!-- bag -->
-			<inside>
-				<item id="2377" chance="2000"/><!-- 2% two handed sword -->
-				<item id="2450" chance="1000"/><!-- 1% bone sword -->
-				<item id="2541" chance="1000"/><!-- 1% bone shield -->
-			</inside>
-		</item>
-	</loot>
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Crypt Shambler" level="20" maglevel="30" experience="195" pushable="0" armor="25" defense="26" canpushitems="1" staticattack="50" changetarget="200" speed="150">
+    <health now="330" max="330" />
+    <look type="100" head="20" body="30" legs="40" feet="50" corpse="3028" />
+    <combat targetdistance="1" runonhealth="0" />
+    <blood color="86" effect="9" splash="255" />
+    <attacks>
+        <attack name="melee" interval="2000" skill="60" attack="39" />
+        <attack name="lifedrain" interval="1000" chance="13" range="1" min="-25" max="-55" />
+    </attacks>
+    <defenses>
+        <defense immunity="paralyze" />
+    </defenses>
+    <script>
+        <event name="BossSystem" />
+    </script>
+    <voices>
+        <voice sentence="Chhhhhhh!" />
+        <voice sentence="Hooooohhh!" />
+        <voice sentence="Aaaaaahhh!" />
+    </voices>
+    <loot>
+        <item id="2160" countmax="100" chance1="400" chancemax="0" />
+        <item id="2148" countmax="100" chance1="400" chancemax="0" />
+        <item id="2152" countmax="100" chance1="400" chancemax="0" />
+        <item id="2671" countmax="100" chance1="400" chancemax="0" />
+        <item id="2143" countmax="30" chance1="400" chancemax="0" />
+        <item id="2144" countmax="30" chance1="400" chancemax="0" />
+        <item id="2145" countmax="30" chance1="400" chancemax="0" />
+        <item id="2146" countmax="30" chance1="400" chancemax="0" />
+        <item id="2147" countmax="30" chance1="400" chancemax="0" />
+        <item id="2149" countmax="30" chance1="400" chancemax="0" />
+        <item id="2150" countmax="30" chance1="400" chancemax="0" />
+        <item id="2157" countmax="30" chance1="400" chancemax="0" />
+        <item id="2159" countmax="30" chance1="400" chancemax="0" />
+        <item id="2383" chance="300" />
+        <item id="2390" chance="300" />
+        <item id="2391" chance="300" />
+        <item id="2392" chance="300" />
+        <item id="2393" chance="300" />
+        <item id="2396" chance="300" />
+        <item id="2400" chance="300" />
+        <item id="2407" chance="300" />
+        <item id="2409" chance="300" />
+        <item id="2414" chance="300" />
+        <item id="2415" chance="300" />
+        <item id="2418" chance="300" />
+        <item id="2421" chance="300" />
+        <item id="2427" chance="300" />
+        <item id="2430" chance="300" />
+        <item id="2431" chance="300" />
+        <item id="2432" chance="300" />
+        <item id="2434" chance="300" />
+        <item id="2436" chance="300" />
+        <item id="2437" chance="300" />
+        <item id="2438" chance="300" />
+        <item id="2445" chance="300" />
+        <item id="2451" chance="300" />
+        <item id="2514" chance="300" />
+        <item id="2515" chance="300" />
+        <item id="2516" chance="300" />
+        <item id="2518" chance="300" />
+        <item id="2519" chance="300" />
+        <item id="2528" chance="300" />
+        <item id="2532" chance="300" />
+        <item id="2534" chance="300" />
+        <item id="2536" chance="300" />
+        <item id="2537" chance="300" />
+        <item id="2539" chance="300" />
+        <item id="2540" chance="300" />
+        <item id="2542" chance="300" />
+        <item id="2123" chance="300" />
+        <item id="2130" chance="300" />
+        <item id="2131" chance="300" />
+        <item id="2133" chance="300" />
+        <item id="2135" chance="300" />
+        <item id="2138" chance="300" />
+        <item id="2142" chance="300" />
+        <item id="2319" chance="300" />
+        <item id="2342" chance="300" />
+        <item id="2343" chance="300" />
+        <item id="2358" chance="300" />
+        <item id="2457" chance="300" />
+        <item id="2462" chance="300" />
+        <item id="2463" chance="300" />
+        <item id="2472" chance="300" />
+        <item id="2475" chance="300" />
+        <item id="2476" chance="300" />
+        <item id="2477" chance="300" />
+        <item id="2479" chance="300" />
+        <item id="2486" chance="300" />
+        <item id="2487" chance="300" />
+        <item id="2488" chance="300" />
+        <item id="2489" chance="300" />
+        <item id="2490" chance="300" />
+        <item id="2491" chance="300" />
+        <item id="2492" chance="300" />
+        <item id="2496" chance="300" />
+        <item id="2497" chance="300" />
+        <item id="2498" chance="300" />
+        <item id="2642" chance="300" />
+        <item id="2644" chance="300" />
+        <item id="2645" chance="300" />
+        <item id="2647" chance="300" />
+        <item id="2660" chance="300" />
+        <item id="2662" chance="300" />
+        <item id="2664" chance="300" />
+        <item id="2665" chance="300" />
+        <item id="3967" chance="300" />
+        <item id="3968" chance="300" />
+        <item id="3969" chance="300" />
+        <item id="3970" chance="300" />
+        <item id="3971" chance="300" />
+        <item id="3972" chance="300" />
+        <item id="2171" chance="300" />
+        <item id="2507" chance="300" />
+        <item id="2499" chance="300" />
+        <item id="2500" chance="300" />
+    </loot>
 </monster>

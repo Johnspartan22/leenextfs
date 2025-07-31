@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<monster name="Crocodile" nameDescription="a crocodile" race="blood" experience="40" speed="156" manacost="350">
-    <health now="105" max="105"/>
+<monster name="Crocodile Boss" nameDescription="a crocodile" race="blood" experience="80" speed="312" manacost="350">
+    <health now="210" max="210"/>
     <look type="119" head="0" body="0" legs="0" feet="0" corpse="4277"/>
     <targetchange interval="2000" chance="5"/>
     <strategy attack="70" defense="0"/>
@@ -15,9 +15,13 @@
         <flag canpushcreatures="1"/>
         <flag targetdistance="1"/>
         <flag runonhealth="10"/>
+        <flag skull="5"/>
     </flags>
+    <events>
+        <event name="crocodileBoss" type="spawn"/>
+    </events>
     <attacks>
-        <attack name="melee" interval="2000" skill="21" attack="32"/>
+        <attack name="melee" interval="2000" skill="21" attack="64"/>
     </attacks>
     <defenses armor="13" defense="5"/>
     <immunities>
@@ -31,14 +35,7 @@
         <immunity drunk="0"/>
         <immunity invisible="0"/>
     </immunities>
-    <script>
-        <event name="BossSystem"/>
-    </script>
     <loot>
-        <item id="3976" countmax="10" chance="50000"/>
-        <item id="2148" countmax="100" chance="100000"/>
-        <item id="3982" chance="4000"/>
-        <item id="3983" chance="200"/>
-        <item id="3976" countmax="10" chance="50000"/>
+        <item id="4313" chance="150000"/>
     </loot>
 </monster>

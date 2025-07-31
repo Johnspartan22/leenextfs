@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<monster name="Doom Spire" level="20" maglevel="30" experience="1000000" pushable="1" armor="989" defense="990" canpushitems="1" staticattack="20" changetarget="200" speed="200">
+    <health now="5000000" max="5000000"/>
+    <look type="102" head="20" body="30" legs="40" feet="50" corpse="2453"/>
+    <combat targetdistance="1" runonhealth="0"/>
+    <blood color="86" effect="9" splash="255"/>
+    <attacks>
+        <attack type="melee" mindamage="500000" maxdamage="500000" probability="100"/>
+        <attack type="melee" mindamage="500000" maxdamage="500000" cycleticks="50" probability="100"/>
+    </attacks>
+    <defenses>
+        <defense immunity="physical"/>
+        <defense immunity="energy"/>
+        <defense immunity="fire"/>
+        <defense immunity="poison"/>
+        <defense immunity="paralyze"/>
+        <defense immunity="invisible"/>
+        <defense immunity="drunk"/>
+    </defenses>
+    <script>
+        <event name="BossSystem"/>
+    </script>
+    <loot>
+</loot>
+</monster>
