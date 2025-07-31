@@ -38,16 +38,22 @@ local foods = {
 	[2794] = {3, "Munch."}, -- some mushrooms
 	[2795] = {36, "Munch."}, -- fire mushroom
 	[2796] = {5, "Munch."}, -- green mushroom
+	[4375] = {5, "Salty."}, -- SARDINE
+	[4376] = {5, "Fishy bleh."}, -- green mushroom
+	[4377] = {5, "Slimy."}, -- green mushroom
+	[4378] = {5, "Crunchy."}, -- green mushroom
+	[4379] = {5, "Bon Appetit."}, -- green mushroom
+	[4380] = {5, "Bon Appetit."}, -- green mushroom	
 }
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition)
 	local food = foods[item.itemid]
-	if not food then
+	if food == nil then
 		return false
 	end
 
 	local condition = player:getCondition(CONDITION_REGENERATION, CONDITIONID_DEFAULT)
-	if condition and math.floor(condition:getTicks() / 1000 + (food[1] * 12)) >= 1200 then
+	if condition and math.floor(condition:getTicks() / 1000 + food[1]) >= 1200 then
 		player:sendTextMessage(MESSAGE_STATUS_SMALL, "You are full.")
 	else
 		player:feed(food[1] * 12)

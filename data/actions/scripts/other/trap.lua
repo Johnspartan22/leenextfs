@@ -1,6 +1,5 @@
 function onUse(player, item, fromPosition, target, toPosition)
-	item:transform(2786)
-	item:decay()
-	Game.createItem(2677, 3, fromPosition)
+	item:transform(item:getId() - 1)
+	fromPosition:sendMagicEffect(CONST_ME_POFF)
 	return true
 end
