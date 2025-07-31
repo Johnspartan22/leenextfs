@@ -1,0 +1,11 @@
+<npc name="Dufi" script="aol.lua" access="3">
+    <look type="128" head="24" body="77" legs="10" feet="20"/>
+    <parameters>
+        <parameter key="idletime" value="30"/>
+        <parameter key="message_greet" value="Hello |PLAYERNAME|. I sell amulets of loss, parcels and labels."/>
+        <parameter key="message_placedinqueue" value="Sorry |PLAYERNAME|, I am already talking to a customer. Take a seat, please."/>
+        <parameter key="message_walkaway" value="Good bye."/>
+        <parameter key="message_farewell" value="Good bye."/>
+        <parameter key="message_idletimeout" value="Good bye."/>
+    </parameters>
+</npc>
